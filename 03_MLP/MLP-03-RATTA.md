@@ -1,0 +1,105 @@
+# 🎯 MLP-03 — RATTA (concept MCQ/MSQ + answers)
+
+## ⭐ HIGH (repeat across 3+ papers — memorize cold)
+- `make_blobs/clusters` generator → **make_blobs()** (NOT make_clusters/make_normal_clusters)
+- R² → **can be negative when worse than mean-model**
+- Hyperparameter → **L1-ratio / pruning / lr / ALL** · NOT-hyperparameter → **Bias** · IS-hyperparameter → **degree / n_neighbors / max_depth** (NOT intercept_)
+- partial_fit → **SGDRegressor** (+GaussianNB/MultinomialNB; NOT trees/RF/Logistic)
+- Softmax pipeline blank → **LogisticRegression(multi_class='multinomial')**
+- SVC `support_` → **indices** · `predict_proba` → **posteriors**
+- KNN-smooth-boundary model pair (k=2 vs 5) → **model2 smoother**
+- gamma (SVM) → **high gamma = close-points-same-class**
+- Overfit-tree → **ccp_alpha=0 / max_depth=None,min_split=2,leaf=1 / tree_1**
+- max_depth ↑ on TRAIN score → **increase**
+- `clf1(3,2) vs clf2(6,4)` depth → **depth1 ≥ depth2**
+- Pipeline-series-only API → **Pipeline**
+- GridSearch naming → **`step__param`** (bc__/poly__/estimator__)
+- `n_iter=4` → **only 4 tested**
+- `memory=` → **time + CV + tuning** (NOT parallel/generalization)
+- Scaling-hit MSQ → **LR + SVM** (+KNN/KMeans) · Safe MSQ → **DecisionTree**
+- Regularization MSQ → **↑bias + elastic=L1+L2** (NOT anti-underfit, NOT row-select)
+- Overfit-fix MSQ → **more-reg + more-data**
+- SGD-iter MSQ → **more-time + tol-caps + fluctuates**
+- KNN-boundary MSQ → **low-k complex + scale matters** (+small-k noisy)
+- Elbow → **inertia bend** · Silhouette → **no labels needed**
+- Data-snooping MSQ → **biased-test + false-pos + better-train**
+- type_of_target 4-print → **binary / multiclass-multioutput / multilabel-indicator / multilabel-indicator**
+- Photo multi-animal → **multi-label + multiclass** · temp+humidity forecast → **None of these**
+- `fit` learns params ✓ / `transform`-after-classifier ✗ → **S1-True-S2-False**
+- `train_test_split` rs-cases → **same for 1&3** (test.2/rs42 == train.8/rs42)
+- Bagging max_samples → **draws-per-estimator** · max_samples=0.5 → **50%**
+- Voting soft → **avg proba** · hard → **majority**
+- DummyRegressor → **mean/median per strategy**
+- `C` in SVC doc → **NOT in [-1,1]** · degree ↔ **poly only** · big-C → **overfit**
+- LogReg balanced → **equal importance + still regularized**
+- `penalty` → **reg type** · `max_iter` → **cap**
+- liblinear → **L1-small + NO multinomial** · elastic-net → **saga**
+- `coef_` → **coefficients** · C=0.5 → **regularized**
+- Perceptron resume → **warm_start=True** · big-CSV → **chunksize**
+- Dicts-data → **DictVectorizer** · ordinal → **satisfaction rating**
+- `learning_rate='constant'` → **fixed initial value**
+- CV-purpose → **multi-subset evaluation** · LOOCV-n → **n models**
+- LOO-strategy-5-samples → **trains 5 times**
+- Agglomerative → **bottom-up merge** · init → **k-means++** · inertia → **SSE**
+- Segmentation → **K-means** · unlabeled images → **Unsupervised** · labels_ → **cluster index**
+- blobs(8,2) → **two unequal clusters** · KMeans-eval → **Silhouette + Inertia**
+- Ridge → **L2, alpha desensitizes** · Ridge-SGD → **SGDRegressor(l2)+sgd__alpha**
+- W1-constrained → **0.331 / 0.294** (3dp)
+- s1-vs-s2 intercept → **s1 > s2**
+- `include_bias=False` → **no bias column**
+- Poly-missing-part → **`model.fit(X_train, y_train)`**
+- Union-poly+pca → **49 / 36**
+- Impute→scale order; reversed **WRONG**
+- `df.loc[a:b]` ≡ **iloc[[..]] ≡ iloc[slice]** (tick both)
+- `df.apply(no-axis)` → **−1 (column-wise error)**
+- TF-IDF MSQ → **max_features + min_df**
+- ADF low-p → **stationary** · ARIMA-d → **differencing** · fit→summary
+- Multiplicative TS → **trend × seasonal × error**
+- Cold-start+metadata → **content-based** · SVD → **dim-reduce** · user-CF needs → **interaction matrix**
+- NB trio → **independence + Gaussian-continuous + Multinomial-text** ("always beats logreg" FALSE)
+- Cancer→Recall logic applies to imbalanced-MLP too; rare-disease → **precision+recall+F1**
+
+## 🟡 MEDIUM (2 papers / variants — read twice)
+- `SVC(kernel=__)` → **linear/rbf** · `RidgeClassifier(__=0)` → **alpha** · Lasso-0.1-scaled → **alpha=0.1**
+- Lasso α↑ → **smaller coefs + more zeros** (1&2)
+- LogReg-doc statements → **kernel-linear/sigmoid ✓ + degree-poly ✓**
+- DT-doc statements → **depth≤max + tree_.max_depth ✓**
+- RF-diversity → **high-n + max_samples<sub** · RF-split-5 → **5/split**
+- AdaBoost-params → **n_est + lr** · KMeans-params → **k + init + max_iter** (NOT lr)
+- k-select → **elbow + silhouette** (NOT k-fold)
+- Silhouette full-set → **per-sample + higher-better + any-clusterer**
+- metrics-module → **confusion + R2 + AUC**
+- MLP-construction → **full-correct-call option** · hidden-trial → **trial-and-error**
+- MLP-seed → **matters** · mlp2-bigger → **more params**
+- alpha-MLP → **stronger reg** (even in the "underfit" trap stem)
+- MNIST-MLP → **scaling** · nonlinearity → **activation** · (50,30) → **2 layers**
+- 71-params → **(10,)** · regression-out → **identity**
+- assert-96%-imbalanced → **both-true-no-explain** · precision/recall-assert → **both-false**
+- R2-computed-range → **−inf..1**
+- KMeans-9-statements → **silhouette/elbow-valid**
+- PIL-flat → **(40000,)** · PIL-false → **256 + channels + flip**
+- Cal-housing bugs → **Line1 + Line3 + Line4**
+- RF/Boost-false → **no-replacement + bagging-bias + parallel-boost**
+- LogReg-multi → **liblinear CANNOT**
+- GBM-loss → **squared_error + huber** · GBM-scorer → **r2 + neg_MAE** · GBM-fits → **72**
+- Dept-salary filter → **groupby.filter**
+- Groupby-impute → **transform (NOT apply)**
+- 2025-split-cases → **different-1&2** (rs42 vs rs0)
+- Confusion-from-lists → **recount; options misprinted before**
+- KFold-41-options → **tick the 41s + wrong sizes**
+- Groupby-salary-median Q → **option 1 (closest; question imperfect)**
+- Linkage-geo → **Single** · Agglo-outliers → **nearest**
+- `hidden_layer_size` TYPO versions → **None of the options**
+
+## 🟢 LOW (once — skim)
+- `HashingVectorizer` for dicts (alt accepts) · `fetch_california` shape games
+- `Pipeline merger`... covered · `learning-curve` → **train + proba + log_loss**
+- `max leaves depth3` → **8** · `criterion` → **split quality**
+- `class_weight` → **inverse-freq** · `max_features` low → **option 1**
+- `SVC digits score` → **1.0** · `len(classes_)` → **2 (3-point) / 3 (n>k)**
+- `GNB prior` → **0.667** · `out_activation_` → **identity**
+- ` effective_metric_` → **manhattan** · `p=1` ↔ manhattan
+- Employee-filter → **Sara, Mike, Anna, Tom** · row-select-XI → **df[] + query**
+- `sort-for-max` → **highest row** · `groupby-mean` → **per-category**
+- `mean_[3,4]` · `data_max_[5,6]` · `var_[2,200]` · OHE-6-cols
+- MSE-2.56 · `StandardScaler-mean` variants
