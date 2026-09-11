@@ -1,0 +1,2744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MLP End Term — Predicted Practice Paper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --paper: #F6F8FB;
+            --grid: #E2E9F4;
+            --sheet: #FFFFFF;
+            --ink: #17233D;
+            --ink-soft: #54627E;
+            --ink-faint: #8A97AD;
+            --rule: #DEE6F2;
+            --margin-red: #E4B0AC;
+            --pen-red: #C0372E;
+            --pen-green: #1D7A4C;
+            --code-bg: #F0F3F8;
+            --highlight: #FFE9A3;
+            --focus: #2F5FCC;
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        html {
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth
+        }
+        
+        body {
+            margin: 0;
+            background: var(--paper);
+            background-image: repeating-linear-gradient(to right, var(--grid) 0 1px, transparent 1px 26px), repeating-linear-gradient(to bottom, var(--grid) 0 1px, transparent 1px 26px);
+            color: var(--ink);
+            font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 16px 40px
+        }
+        /* ---------- top nav ---------- */
+        
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: var(--sheet);
+            border-bottom: 2px solid var(--ink);
+        }
+        
+        .topbar-in {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 9px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .crumb {
+            flex: 1 1 auto;
+            min-width: 0;
+            font-weight: 600;
+            font-size: .97rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .crumb small {
+            display: block;
+            font-weight: 400;
+            font-size: .74rem;
+            color: var(--ink-faint);
+            line-height: 1.3
+        }
+        
+        .nav-btn {
+            font-family: inherit;
+            font-size: .84rem;
+            font-weight: 500;
+            border: 1.5px solid var(--ink);
+            background: transparent;
+            color: var(--ink);
+            padding: 6px 12px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .nav-btn:hover {
+            background: var(--ink);
+            color: #fff
+        }
+        
+        .nav-btn[disabled] {
+            opacity: .3;
+            cursor: default
+        }
+        
+        .nav-btn[disabled]:hover {
+            background: transparent;
+            color: var(--ink)
+        }
+        
+        .nav-btn:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px
+        }
+        
+        .nav-btn.solid {
+            background: var(--ink);
+            color: #fff
+        }
+        
+        .nav-btn.solid:hover {
+            background: #0E1729
+        }
+        /* ---------- masthead (home only) ---------- */
+        
+        .masthead {
+            background: var(--sheet);
+            border: 1px solid var(--rule);
+            border-top: 5px solid var(--ink);
+            padding: 26px 26px 22px;
+            margin: 22px 0;
+        }
+        
+        .masthead h1 {
+            font-size: 1.9rem;
+            line-height: 1.15;
+            margin: 0 0 4px;
+            font-weight: 600;
+            letter-spacing: -.02em
+        }
+        
+        .masthead .sub {
+            color: var(--ink-soft);
+            margin: 0 0 20px;
+            font-size: .98rem
+        }
+        
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule)
+        }
+        
+        .fact {
+            background: var(--sheet);
+            padding: 11px 13px
+        }
+        
+        .fact dt {
+            font-size: .76rem;
+            color: var(--ink-faint);
+            margin: 0 0 2px
+        }
+        
+        .fact dd {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1rem
+        }
+        /* ---------- headings ---------- */
+        
+        h2.sec {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: -.01em;
+            margin: 34px 0 6px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--ink)
+        }
+        
+        .lede {
+            color: var(--ink-soft);
+            margin: 0 0 18px;
+            font-size: .95rem;
+            max-width: 66ch
+        }
+        /* ---------- weightage ---------- */
+        
+        .panel {
+            background: var(--sheet);
+            border: 1px solid var(--rule);
+            padding: 20px 22px;
+            margin-bottom: 18px
+        }
+        
+        .wtrow {
+            display: grid;
+            grid-template-columns: 1fr 46px;
+            gap: 12px;
+            align-items: center;
+            padding: 5px 0
+        }
+        
+        .wtname {
+            font-size: .92rem
+        }
+        
+        .wtbar {
+            grid-column: 1/-1;
+            height: 7px;
+            background: var(--code-bg);
+            position: relative;
+            margin-top: -4px
+        }
+        
+        .wtbar i {
+            position: absolute;
+            inset: 0 auto 0 0;
+            background: var(--ink);
+            display: block
+        }
+        
+        .wtbar i.hot {
+            background: var(--pen-red)
+        }
+        
+        .wtval {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .82rem;
+            color: var(--ink-soft);
+            text-align: right
+        }
+        /* ---------- contents menu ---------- */
+        
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule)
+        }
+        
+        .mitem {
+            background: var(--sheet);
+            border: 0;
+            text-align: left;
+            font-family: inherit;
+            color: inherit;
+            padding: 15px 16px;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+        
+        .mitem:hover {
+            background: #FAFCFF
+        }
+        
+        .mitem:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: -2px
+        }
+        
+        .mnum {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .8rem;
+            color: var(--ink-faint);
+            border-right: 1.5px solid var(--margin-red);
+            height: 100%;
+            padding-top: 2px;
+        }
+        
+        .mname {
+            font-weight: 600;
+            font-size: .96rem;
+            line-height: 1.35;
+            margin-bottom: 3px
+        }
+        
+        .mmeta {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .76rem;
+            color: var(--ink-faint)
+        }
+        
+        .mprog {
+            margin-top: 7px;
+            height: 5px;
+            background: var(--code-bg);
+            position: relative
+        }
+        
+        .mprog i {
+            position: absolute;
+            inset: 0 auto 0 0;
+            background: var(--pen-green);
+            display: block;
+            width: 0
+        }
+        
+        .mprog i.miss {
+            background: var(--pen-red)
+        }
+        
+        .mscore {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .76rem;
+            margin-top: 5px;
+            color: var(--ink-soft)
+        }
+        /* ---------- formula sheet ---------- */
+        
+        .fgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule)
+        }
+        
+        .fcard {
+            background: var(--sheet);
+            padding: 16px 18px 18px
+        }
+        
+        .fcard h3 {
+            margin: 0 0 3px;
+            font-size: .95rem;
+            font-weight: 600
+        }
+        
+        .fcard p {
+            margin: 6px 0 0;
+            font-size: .85rem;
+            color: var(--ink-soft);
+            line-height: 1.5
+        }
+        
+        .fml {
+            font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+            font-size: 1.22rem;
+            line-height: 2.5;
+            color: var(--ink);
+            padding: 8px 2px 2px;
+            display: block
+        }
+        
+        .fml.sm {
+            font-size: 1.05rem;
+            line-height: 2.3
+        }
+        
+        .v {
+            font-style: italic
+        }
+        
+        .op {
+            padding: 0 .18em
+        }
+        
+        .frac {
+            display: inline-flex;
+            flex-direction: column;
+            text-align: center;
+            vertical-align: -0.62em;
+            margin: 0 .22em
+        }
+        
+        .frac>.n {
+            border-bottom: 1.4px solid currentColor;
+            padding: 0 .38em .1em;
+            line-height: 1.35
+        }
+        
+        .frac>.d {
+            padding: .1em .38em 0;
+            line-height: 1.35
+        }
+        
+        .sqrt {
+            white-space: nowrap
+        }
+        
+        .sqrt>.rad {
+            border-top: 1.4px solid currentColor;
+            padding: 0 .22em 0 .1em;
+            margin-left: -.06em
+        }
+        
+        .sig {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            vertical-align: -0.42em;
+            margin: 0 .16em;
+            line-height: 1
+        }
+        
+        .sig>.top {
+            font-size: .56em
+        }
+        
+        .sig>.gly {
+            font-size: 1.55em;
+            line-height: .9
+        }
+        
+        .sig>.bot {
+            font-size: .56em
+        }
+        
+        sub,
+        sup {
+            font-size: .66em;
+            font-style: italic
+        }
+        
+        .hl {
+            background: linear-gradient(transparent 52%, var(--highlight) 52%);
+            padding: 0 .1em
+        }
+        /* ---------- questions ---------- */
+        
+        .topic-intro {
+            background: var(--sheet);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--ink);
+            padding: 15px 18px;
+            margin: 20px 0 16px
+        }
+        
+        .topic-intro h2 {
+            margin: 0 0 6px;
+            font-size: 1.28rem;
+            font-weight: 600;
+            letter-spacing: -.01em
+        }
+        
+        .topic-intro p {
+            margin: 0;
+            font-size: .92rem;
+            color: var(--ink-soft)
+        }
+        
+        .topic-intro .cnt {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .78rem;
+            color: var(--ink-faint);
+            display: block;
+            margin-bottom: 7px
+        }
+        
+        .q {
+            background: var(--sheet);
+            border: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 52px 1fr;
+            margin-bottom: 12px
+        }
+        
+        .gutter {
+            border-right: 1.5px solid var(--margin-red);
+            padding: 14px 0 0;
+            text-align: center;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .82rem;
+            color: var(--ink-faint)
+        }
+        
+        .gutter .mk {
+            display: block;
+            font-size: .68rem;
+            margin-top: 6px
+        }
+        
+        .qbody {
+            padding: 14px 18px 16px;
+            min-width: 0
+        }
+        
+        .qtype {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .72rem;
+            color: var(--ink-faint);
+            margin-bottom: 6px
+        }
+        
+        .qtext {
+            margin: 0 0 10px;
+            font-size: .98rem
+        }
+        
+        .qtext code,
+        .opt code,
+        .sol code {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .9em;
+            background: var(--code-bg);
+            padding: 1px 4px
+        }
+        
+        pre.code {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .83rem;
+            line-height: 1.62;
+            background: var(--code-bg);
+            border-left: 3px solid var(--ink-faint);
+            padding: 11px 13px;
+            margin: 0 0 12px;
+            overflow-x: auto;
+            white-space: pre
+        }
+        
+        .opts {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+        
+        .opt {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            border: 1px solid var(--rule);
+            padding: 9px 12px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            font-size: .94rem;
+            background: var(--sheet);
+            transition: border-color .12s, background .12s
+        }
+        
+        .opt:hover {
+            border-color: var(--ink-faint)
+        }
+        
+        .opt:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 1px
+        }
+        
+        .opt .box {
+            flex: 0 0 18px;
+            height: 18px;
+            border: 1.5px solid var(--ink-faint);
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .72rem;
+            color: #fff
+        }
+        
+        .opt.radio .box {
+            border-radius: 50%
+        }
+        
+        .opt.picked .box {
+            background: var(--ink);
+            border-color: var(--ink)
+        }
+        
+        .opt.right {
+            border-color: var(--pen-green);
+            background: #F1F9F4
+        }
+        
+        .opt.right .box {
+            background: var(--pen-green);
+            border-color: var(--pen-green)
+        }
+        
+        .opt.wrong {
+            border-color: var(--pen-red);
+            background: #FDF2F1
+        }
+        
+        .opt.wrong .box {
+            background: var(--pen-red);
+            border-color: var(--pen-red)
+        }
+        
+        .sa {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 4px
+        }
+        
+        .sa input {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .95rem;
+            border: 1px solid var(--ink-faint);
+            padding: 8px 11px;
+            width: 170px;
+            background: var(--sheet);
+            color: var(--ink)
+        }
+        
+        .sa input:focus {
+            outline: 2px solid var(--focus);
+            outline-offset: 1px
+        }
+        
+        .btn {
+            font-family: inherit;
+            font-size: .88rem;
+            font-weight: 500;
+            border: 1.5px solid var(--ink);
+            background: var(--ink);
+            color: #fff;
+            padding: 8px 15px;
+            cursor: pointer
+        }
+        
+        .btn.ghost {
+            background: transparent;
+            color: var(--ink)
+        }
+        
+        .btn:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px
+        }
+        
+        .verdict {
+            font-size: .9rem;
+            font-weight: 600
+        }
+        
+        .verdict.ok {
+            color: var(--pen-green)
+        }
+        
+        .verdict.no {
+            color: var(--pen-red)
+        }
+        
+        .sol {
+            border-top: 1px dashed var(--rule);
+            margin-top: 12px;
+            padding-top: 11px;
+            font-size: .91rem;
+            color: var(--ink-soft);
+            display: none
+        }
+        
+        .sol.open {
+            display: block
+        }
+        
+        .sol b {
+            color: var(--ink)
+        }
+        
+        .sol .fml {
+            font-size: 1.06rem;
+            line-height: 2.2
+        }
+        
+        .solbtn {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-top: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: .85rem;
+            color: var(--pen-red);
+            font-weight: 500;
+            border-bottom: 1px solid var(--pen-red)
+        }
+        
+        .solbtn:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: 2px
+        }
+        /* ---------- pager ---------- */
+        
+        .pager {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 26px;
+            padding-top: 18px;
+            border-top: 1px solid var(--rule)
+        }
+        
+        .pager .nav-btn {
+            padding: 10px 16px
+        }
+        
+        .pager .mid {
+            font-size: .82rem;
+            color: var(--ink-faint);
+            text-align: center;
+            font-family: "IBM Plex Mono", monospace
+        }
+        /* ---------- views ---------- */
+        
+        .view {
+            display: none
+        }
+        
+        .view.on {
+            display: block
+        }
+        /* ---------- score dock ---------- */
+        
+        .dock {
+            position: sticky;
+            bottom: 0;
+            z-index: 20;
+            background: var(--sheet);
+            border-top: 2px solid var(--ink);
+            padding: 11px 16px 13px;
+            box-shadow: 0 -1px 0 rgba(23, 35, 61, .06)
+        }
+        
+        .dockrow {
+            max-width: 828px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            flex-wrap: wrap
+        }
+        
+        .dockrow .now {
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 600;
+            font-size: 1.12rem;
+            white-space: nowrap
+        }
+        
+        .dockrow .meta {
+            font-size: .8rem;
+            color: var(--ink-soft);
+            white-space: nowrap
+        }
+        
+        .track {
+            flex: 1 1 160px;
+            height: 9px;
+            background: var(--code-bg);
+            position: relative;
+            min-width: 120px
+        }
+        
+        .track>.fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: var(--ink);
+            width: 0;
+            transition: width .25s
+        }
+        
+        .track>.fill.good {
+            background: var(--pen-green)
+        }
+        
+        .track>.goal {
+            position: absolute;
+            top: -4px;
+            bottom: -4px;
+            left: 95%;
+            width: 2px;
+            background: var(--pen-red)
+        }
+        
+        .track>.goal::after {
+            content: "95";
+            position: absolute;
+            top: -15px;
+            left: -7px;
+            font-size: .65rem;
+            color: var(--pen-red);
+            font-family: "IBM Plex Mono", monospace
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding-top: 16px;
+            border-top: 1px solid var(--rule);
+            font-size: .83rem;
+            color: var(--ink-faint)
+        }
+        /* ---------- layout with sidebar ---------- */
+        
+        .layout {
+            display: flex;
+            align-items: flex-start;
+            min-height: 100vh
+        }
+        
+        main {
+            flex: 1 1 auto;
+            min-width: 0
+        }
+        
+        .side {
+            flex: 0 0 254px;
+            width: 254px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            background: var(--sheet);
+            border-right: 2px solid var(--ink);
+            padding: 16px 0 24px;
+        }
+        
+        .side-head {
+            padding: 6px 18px 14px;
+            border-bottom: 1px solid var(--rule);
+            margin-bottom: 8px
+        }
+        
+        .side-head b {
+            display: block;
+            font-size: 1.02rem;
+            font-weight: 600;
+            letter-spacing: -.01em
+        }
+        
+        .side-head small {
+            display: block;
+            color: var(--ink-faint);
+            font-size: .76rem;
+            line-height: 1.4;
+            margin-top: 2px
+        }
+        
+        .side-group {
+            padding: 14px 18px 5px;
+            font-size: .72rem;
+            color: var(--ink-faint);
+            font-family: "IBM Plex Mono", monospace;
+        }
+        
+        .snav {
+            display: grid;
+            grid-template-columns: 22px 1fr auto;
+            gap: 9px;
+            align-items: baseline;
+            width: 100%;
+            text-align: left;
+            border: 0;
+            background: none;
+            font-family: inherit;
+            color: inherit;
+            padding: 7px 18px 8px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+        }
+        
+        .snav:hover {
+            background: #F3F7FD
+        }
+        
+        .snav:focus-visible {
+            outline: 2px solid var(--focus);
+            outline-offset: -2px
+        }
+        
+        .snav.active {
+            background: #EEF3FB;
+            border-left-color: var(--pen-red);
+            font-weight: 600
+        }
+        
+        .sn-num {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .76rem;
+            color: var(--ink-faint)
+        }
+        
+        .snav.active .sn-num {
+            color: var(--pen-red)
+        }
+        
+        .sn-name {
+            font-size: .9rem;
+            line-height: 1.3;
+            display: block
+        }
+        
+        .sn-meta {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .7rem;
+            color: var(--ink-faint);
+            display: block;
+            margin-top: 1px;
+            font-weight: 400
+        }
+        
+        .sn-score {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: .72rem;
+            color: var(--ink-faint);
+            white-space: nowrap
+        }
+        
+        .sn-score.ok {
+            color: var(--pen-green)
+        }
+        
+        .sn-score.no {
+            color: var(--pen-red)
+        }
+        
+        .side-rule {
+            height: 1px;
+            background: var(--rule);
+            margin: 10px 18px
+        }
+        
+        .backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(23, 35, 61, .42);
+            z-index: 50
+        }
+        
+        .backdrop.on {
+            display: block
+        }
+        
+        #btn-menu {
+            display: none
+        }
+        
+        @media (max-width:900px) {
+            #btn-menu {
+                display: inline-block
+            }
+            .side {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 60;
+                transform: translateX(-100%);
+                transition: transform .2s ease;
+                box-shadow: 2px 0 14px rgba(23, 35, 61, .18);
+            }
+            .side.open {
+                transform: translateX(0)
+            }
+        }
+        
+        @media (max-width:560px) {
+            .wrap {
+                padding: 0 12px 30px
+            }
+            .masthead {
+                padding: 20px 18px
+            }
+            .masthead h1 {
+                font-size: 1.5rem
+            }
+            .q {
+                grid-template-columns: 40px 1fr
+            }
+            .qbody {
+                padding: 12px 13px 14px
+            }
+            pre.code {
+                font-size: .76rem
+            }
+            .fml {
+                font-size: 1.1rem
+            }
+            .crumb {
+                font-size: .9rem
+            }
+            .nav-btn {
+                padding: 6px 10px;
+                font-size: .8rem
+            }
+        }
+        
+        @media (prefers-reduced-motion:reduce) {
+            * {
+                transition: none!important
+            }
+            html {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+<a href="mlp-hub.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:#4f46e5;color:#fff !important;padding:10px 16px;border-radius:10px;font:600 15px system-ui;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)">â† Back to Kit</a>
+
+    <div class="backdrop" id="backdrop"></div>
+    <div class="layout">
+
+        <aside class="side" id="side">
+            <div class="side-head">
+                <b>MLP end term</b>
+                <small>Predicted practice · 79 questions</small>
+            </div>
+            <nav id="sidenav"></nav>
+        </aside>
+
+        <main>
+
+            <div class="topbar">
+                <div class="topbar-in">
+                    <button class="nav-btn" id="btn-menu" type="button" aria-label="Open topic list">☰</button>
+                    <button class="nav-btn" id="btn-home" type="button">Contents</button>
+                    <span class="crumb" id="crumb">Contents<small>79 questions across 15 topics</small></span>
+                    <button class="nav-btn" id="btn-prev" type="button" aria-label="Previous topic">←</button>
+                    <button class="nav-btn" id="btn-next" type="button" aria-label="Next topic">→</button>
+                </div>
+            </div>
+
+            <div class="wrap">
+
+                <!-- ============ HOME ============ -->
+                <section class="view on" id="v-home">
+                    <header class="masthead">
+                        <h1>Machine Learning Practice — predicted end term</h1>
+                        <p class="sub">Built from 10 past papers (Apr 2023 → May 2026, 380 questions). Pick a topic below, or work straight through with the arrows.</p>
+                        <dl class="facts">
+                            <div class="fact"><dt>Subject</dt>
+                                <dd>MLP · Diploma</dd>
+                            </div>
+                            <div class="fact"><dt>Expected pattern</dt>
+                                <dd>26–31 questions</dd>
+                            </div>
+                            <div class="fact"><dt>Total marks</dt>
+                                <dd>100</dd>
+                            </div>
+                            <div class="fact"><dt>Question types</dt>
+                                <dd>MCQ · MSQ · SA</dd>
+                            </div>
+                        </dl>
+                    </header>
+
+                    <h2 class="sec">Contents</h2>
+                    <p class="lede">Ordered by predicted weight. Your score per topic appears here once you start answering.</p>
+                    <div class="menu" id="menu"></div>
+
+                    <h2 class="sec">What the paper will look like</h2>
+                    <p class="lede">Every paper in your file follows the same skeleton. Recent ones (Dec 2025, May 2026) moved to fewer questions worth more marks each, and lean much harder on reading code and computing a number by hand.</p>
+                    <div class="panel">
+                        <p style="margin:0 0 14px;font-size:.93rem"><b>Three things decide your score.</b> Roughly 60% of marks come from reading a <code style="font-family:'IBM Plex Mono',monospace;background:var(--code-bg);padding:1px 4px">sklearn</code> snippet and predicting its output or shape.
+                            Another 25% is hand-computing a metric — precision, recall, F1, R², Gini, a scaled value. The rest is conceptual true/false about an algorithm's behaviour. Speed on the first two is where 95% lives.</p>
+                        <div id="weightage"></div>
+                    </div>
+
+                    <footer>
+                        <p>Predictions are patterns from ten past papers, not a leak. Topics and weights shift a little each term — treat anything below 5% as revision, not a skip.</p>
+                    </footer>
+                </section>
+
+                <!-- ============ FORMULA SHEET ============ -->
+                <section class="view" id="v-formulas">
+                    <div class="topic-intro">
+                        <span class="cnt">15 formulas · reference</span>
+                        <h2>Formula sheet</h2>
+                        <p>These cover essentially every hand-computed question in the past papers. Learn to apply each in under 60 seconds.</p>
+                    </div>
+
+                    <div class="fgrid">
+                        <div class="fcard">
+                            <h3>Standardisation — StandardScaler</h3>
+                            <span class="fml"><span class="v">z</span> <span class="op">=</span> <span class="frac"><span class="n"><span class="v">x</span> <span class="op">−</span> <span class="v">μ</span></span><span class="d"><span class="v">σ</span></span>
+                            </span>
+                            </span>
+                            <p>σ uses <b>n</b> in the denominator, not n−1. NumPy's default <code>std()</code> matches it; pandas' does not.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Min–Max and MaxAbs scaling</h3>
+                            <span class="fml sm"><span class="v">x</span><span class="op">′</span> <span class="op">=</span> <span class="frac"><span class="n"><span class="v">x</span> <span class="op">−</span> <span class="v">x</span><sub>min</sub></span>
+                            <span
+                                class="d"><span class="v">x</span><sub>max</sub> <span class="op">−</span> <span class="v">x</span><sub>min</sub></span>
+                                </span>
+                                </span>
+                                <span class="fml sm"><span class="v">x</span><span class="op">′</span> <span class="op">=</span> <span class="frac"><span class="n"><span class="v">x</span></span><span class="d">|<span class="v">x</span>|<sub>max</sub></span>
+                                </span>
+                                </span>
+                                <p>Min–Max lands in [0, 1]. MaxAbs lands in [−1, 1] and leaves zeros at zero, so it is the sparse-data choice.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Regression errors</h3>
+                            <span class="fml sm">MSE <span class="op">=</span> <span class="frac"><span class="n">1</span><span class="d"><span class="v">n</span></span>
+                            </span> <span class="sig"><span class="top"><span class="v">n</span></span><span class="gly">∑</span><span class="bot"><span class="v">i</span>=1</span>
+                            </span> (<span class="v">y</span><sub>i</sub> <span class="op">−</span> <span class="v">ŷ</span><sub>i</sub>)<sup>2</sup></span>
+                            <span class="fml sm">MAE <span class="op">=</span> <span class="frac"><span class="n">1</span><span class="d"><span class="v">n</span></span>
+                            </span> <span class="sig"><span class="top"><span class="v">n</span></span><span class="gly">∑</span><span class="bot"><span class="v">i</span>=1</span>
+                            </span> |<span class="v">y</span><sub>i</sub> <span class="op">−</span> <span class="v">ŷ</span><sub>i</sub>|</span>
+                            <p>RMSE is √MSE. sklearn reports these as <i>negative</i> values in <code>cross_val_score</code>, because it always maximises.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Coefficient of determination</h3>
+                            <span class="fml"><span class="v">R</span><sup>2</sup> <span class="op">=</span> 1 <span class="op">−</span> <span class="frac"><span class="n">SS<sub>res</sub></span><span class="d">SS<sub>tot</sub></span></span> <span class="op">=</span>                            1 <span class="op">−</span> <span class="frac"><span class="n">∑(<span class="v">y</span><sub>i</sub> <span class="op">−</span> <span class="v">ŷ</span><sub>i</sub>)<sup>2</sup></span><span class="d">∑(<span class="v">y</span><sub>i</sub>                            <span class="op">−</span> <span class="v">ȳ</span>)<sup>2</sup></span>
+                            </span>
+                            </span>
+                            <p>Range is <span class="hl">−∞ to 1</span>, never bounded below by 0. Negative means worse than predicting the mean. Asked repeatedly.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Regularised linear models</h3>
+                            <span class="fml sm">Ridge: ‖<span class="v">Xw</span> <span class="op">−</span> <span class="v">y</span>‖<sup>2</sup> <span class="op">+</span> <span class="v">α</span>‖<span class="v">w</span>‖<sub>2</sub><sup>2</sup></span>
+                            <span class="fml sm">Lasso: <span class="frac"><span class="n">1</span><span class="d">2<span class="v">n</span></span>
+                            </span>‖<span class="v">Xw</span> <span class="op">−</span> <span class="v">y</span>‖<sup>2</sup> <span class="op">+</span> <span class="v">α</span>‖<span class="v">w</span>‖<sub>1</sub></span>
+                            <p>Higher α → smaller coefficients and more underfitting. Only Lasso (L1) drives coefficients exactly to zero.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Normal equation</h3>
+                            <span class="fml"><span class="v">w</span> <span class="op">=</span> (<span class="v">X</span><sup>T</sup><span class="v">X</span>)<sup>−1</sup> <span class="v">X</span><sup>T</sup><span class="v">y</span></span>
+                            <p>What <code>LinearRegression</code> solves in closed form. Cost grows with the cube of feature count, so <code>SGDRegressor</code> takes over on wide data.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Confusion matrix counts</h3>
+                            <span class="fml sm">Precision <span class="op">=</span> <span class="frac"><span class="n">TP</span><span class="d">TP <span class="op">+</span> FP</span>
+                            </span> <span style="padding:0 .5em"></span> Recall <span class="op">=</span> <span class="frac"><span class="n">TP</span><span class="d">TP <span class="op">+</span> FN</span>
+                            </span>
+                            </span>
+                            <span class="fml sm">Accuracy <span class="op">=</span> <span class="frac"><span class="n">TP <span class="op">+</span> TN</span><span class="d">TP <span class="op">+</span> TN <span class="op">+</span> FP <span class="op">+</span>                            FN</span>
+                            </span>
+                            </span>
+                            <p>sklearn prints the matrix with <b>true labels down the rows</b> and predicted across the columns, in sorted label order.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>F1 and F-beta</h3>
+                            <span class="fml"><span class="v">F</span><sub>1</sub> <span class="op">=</span> <span class="frac"><span class="n">2 <span class="op">·</span> P <span class="op">·</span> R</span><span class="d">P <span class="op">+</span>                            R</span>
+                            </span>
+                            </span>
+                            <span class="fml sm"><span class="v">F</span><sub><span class="v">β</span></sub> <span class="op">=</span> (1 <span class="op">+</span> <span class="v">β</span><sup>2</sup>) <span class="frac"><span class="n">P <span class="op">·</span>                            R</span><span class="d"><span class="v">β</span><sup>2</sup>P <span class="op">+</span> R</span>
+                            </span>
+                            </span>
+                            <p>β &gt; 1 weights recall more. F1 is the harmonic mean, so it collapses toward whichever of P or R is worse.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Impurity for decision trees</h3>
+                            <span class="fml sm">Gini <span class="op">=</span> 1 <span class="op">−</span> <span class="sig"><span class="top"><span class="v">k</span></span><span class="gly">∑</span><span class="bot"><span class="v">i</span>=1</span>
+                            </span>
+                            <span class="v">p</span><sub>i</sub><sup>2</sup></span>
+                            <span class="fml sm">Entropy <span class="op">=</span> <span class="op">−</span><span class="sig"><span class="top"><span class="v">k</span></span><span class="gly">∑</span><span class="bot"><span class="v">i</span>=1</span>
+                            </span>
+                            <span class="v">p</span><sub>i</sub> log<sub>2</sub> <span class="v">p</span><sub>i</sub></span>
+                            <p>Both peak on a 50/50 split — Gini at 0.5, entropy at 1.0 — and hit 0 on a pure node. Gini is the default because it skips the log.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Information gain</h3>
+                            <span class="fml sm">IG <span class="op">=</span> <span class="v">I</span>(parent) <span class="op">−</span> <span class="sig"><span class="gly">∑</span><span class="bot"><span class="v">j</span></span>
+                            </span> <span class="frac"><span class="n"><span class="v">n</span><sub>j</sub></span><span class="d"><span class="v">n</span></span>
+                            </span> <span class="v">I</span>(child<sub>j</sub>)</span>
+                            <p>Weight each child by its share of samples. The tree picks the split with the largest gain.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Logistic and softmax</h3>
+                            <span class="fml sm"><span class="v">σ</span>(<span class="v">z</span>) <span class="op">=</span> <span class="frac"><span class="n">1</span><span class="d">1 <span class="op">+</span> <span class="v">e</span><sup>−<span class="v">z</span></sup></span>
+                            </span>
+                            </span>
+                            <span class="fml sm"><span class="v">p</span><sub>k</sub> <span class="op">=</span> <span class="frac"><span class="n"><span class="v">e</span><sup><span class="v">z</span><sub>k</sub></sup></span><span class="d">∑<sub>j</sub> <span class="v">e</span><sup><span class="v">z</span><sub>j</sub></sup></span>
+                            </span>
+                            </span>
+                            <p>Log loss for one sample: −[y log p + (1−y) log(1−p)]. Softmax needs <code>lbfgs</code>, <code>sag</code>, <code>saga</code> or <code>newton-cg</code> — never <code>liblinear</code>.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>Distance and similarity</h3>
+                            <span class="fml sm"><span class="v">d</span><sub>euc</sub> <span class="op">=</span> <span class="sqrt">√<span class="rad">∑(<span class="v">a</span><sub>i</sub> <span class="op">−</span> <span class="v">b</span><sub>i</sub>)<sup>2</sup></span>
+                            </span>
+                            </span>
+                            <span class="fml sm">cos <span class="op">=</span> <span class="frac"><span class="n"><span class="v">a</span> <span class="op">·</span> <span class="v">b</span></span><span class="d">‖<span class="v">a</span>‖ ‖<span class="v">b</span>‖</span>
+                            </span>
+                            </span>
+                            <p>Manhattan is ∑|aᵢ − bᵢ|. Cosine ignores magnitude entirely, which is why it is the default for text vectors.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>K-Means objective and silhouette</h3>
+                            <span class="fml sm">Inertia <span class="op">=</span> <span class="sig"><span class="gly">∑</span><span class="bot"><span class="v">i</span></span>
+                            </span> ‖<span class="v">x</span><sub>i</sub> <span class="op">−</span> <span class="v">μ</span><sub><span class="v">c</span>(<span class="v">i</span>)</sub>‖<sup>2</sup></span>
+                            <span class="fml sm"><span class="v">s</span> <span class="op">=</span> <span class="frac"><span class="n"><span class="v">b</span> <span class="op">−</span> <span class="v">a</span></span><span class="d">max(<span class="v">a</span>,
+                            <span class="v">b</span>)</span>
+                            </span>
+                            </span>
+                            <p>Inertia always falls as k rises, so it can't pick k alone — that's the elbow method. Silhouette runs −1 to 1.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>AdaBoost weights</h3>
+                            <span class="fml"><span class="v">α</span><sub>t</sub> <span class="op">=</span> <span class="frac"><span class="n">1</span><span class="d">2</span></span> ln <span class="frac"><span class="n">1 <span class="op">−</span>
+                            <span
+                                class="v">ε</span><sub>t</sub></span><span class="d"><span class="v">ε</span><sub>t</sub></span>
+                                </span>
+                                </span>
+                                <p>ε is the weighted error of stump t. Misclassified samples get their weight multiplied by e<sup>α</sup> before the next round.</p>
+                        </div>
+                        <div class="fcard">
+                            <h3>TF-IDF as sklearn computes it</h3>
+                            <span class="fml sm">idf(<span class="v">t</span>) <span class="op">=</span> ln <span class="frac"><span class="n">1 <span class="op">+</span> <span class="v">n</span></span><span class="d">1 <span class="op">+</span> df(
+                            <span
+                                class="v">t</span>)</span>
+                                </span> <span class="op">+</span> 1</span>
+                                <p>That is the <code>smooth_idf=True</code> default. The trailing +1 means a term in every document gets idf = 1, <span class="hl">not zero</span>. Rows are L2-normalised afterwards.</p>
+                        </div>
+                    </div>
+
+                    <div class="pager" id="pager-formulas"></div>
+                </section>
+
+                <div id="topic-views"></div>
+
+            </div>
+
+            <div class="dock">
+                <div class="dockrow">
+                    <span class="now" id="pct">0%</span>
+                    <div class="track"><span class="fill" id="fill"></span><span class="goal"></span></div>
+                    <span class="meta" id="meta">0 attempted</span>
+                    <button class="btn ghost" id="reset" type="button">Start over</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const TOPICS = [{
+            id: 'met',
+            name: 'Classification metrics',
+            w: 14,
+            note: 'The single biggest block, and almost all of it is hand-computation. Get a confusion matrix down on paper first, every time — TP, FP, FN, TN — then read the metric off it.'
+        }, {
+            id: 'pre',
+            name: 'Preprocessing and feature transforms',
+            w: 12,
+            note: 'Scalers, encoders, imputers. Questions give you four or five numbers and ask for the transformed value, so the arithmetic must be automatic.'
+        }, {
+            id: 'reg',
+            name: 'Regression and regularisation',
+            w: 9,
+            note: 'R squared behaviour and the alpha knob in Ridge vs Lasso come up in nearly every paper.'
+        }, {
+            id: 'tre',
+            name: 'Decision trees',
+            w: 9,
+            note: 'Gini and entropy by hand, plus the exact semantics of min_samples_split and min_samples_leaf.'
+        }, {
+            id: 'ens',
+            name: 'Ensembles',
+            w: 8,
+            note: 'Bagging reduces variance, boosting reduces bias. Half the marks here come from knowing which way round that goes.'
+        }, {
+            id: 'cv',
+            name: 'Cross-validation and tuning',
+            w: 7,
+            note: 'Counting fits and combinations is free marks. Know what n_iter, cv and refit each multiply.'
+        }, {
+            id: 'pip',
+            name: 'Pipelines and ColumnTransformer',
+            w: 7,
+            note: 'Output shape questions dominate. Count columns per transformer, then add.'
+        }, {
+            id: 'clu',
+            name: 'Clustering',
+            w: 7,
+            note: 'K-Means parameters and the difference between n_init and max_iter, plus how HAC actually builds up.'
+        }, {
+            id: 'log',
+            name: 'Logistic, softmax and SGD',
+            w: 5,
+            note: 'Solver compatibility is asked almost verbatim each term. Memorise which solver cannot do multinomial.'
+        }, {
+            id: 'dat',
+            name: 'pandas, NumPy and datasets',
+            w: 5,
+            note: 'Newer papers added these. Reading a chained pandas expression and spotting a bug in a script are both recurring formats.'
+        }, {
+            id: 'knn',
+            name: 'KNN and distance',
+            w: 4,
+            note: 'Compute distances to a test point, take the k smallest, vote. Slow and careful beats fast and wrong.'
+        }, {
+            id: 'svm',
+            name: 'Support vector machines',
+            w: 4,
+            note: 'Mostly conceptual: what support_ returns, and what C and gamma trade off.'
+        }, {
+            id: 'nba',
+            name: 'Naive Bayes',
+            w: 3,
+            note: 'Pick the right variant for the data type, and apply Bayes rule once.'
+        }, {
+            id: 'nnw',
+            name: 'Neural networks',
+            w: 3,
+            note: 'hidden_layer_sizes semantics and counting trainable parameters.'
+        }, {
+            id: 'txt',
+            name: 'Text features',
+            w: 3,
+            note: 'CountVectorizer n-grams and how sklearn actually defines IDF.'
+        }];
+
+        const QUESTIONS = [
+
+            /* ============ METRICS ============ */
+            {
+                t: 'met',
+                ty: 'sa',
+                m: 4,
+                q: 'What is the recall score computed by the following code? (2 decimals)',
+                code: `from sklearn.metrics import recall_score
+
+y_true = [1, 0, 1, 1, 0, 1, 1, 0]
+y_pred = [1, 0, 0, 1, 1, 1, 0, 0]
+
+print(recall_score(y_true, y_pred))`,
+                ans: 0.6,
+                tol: 0.01,
+                sol: 'Positives in <b>y_true</b> sit at indices 0, 2, 3, 5, 6 — five of them. Of those, the model got 0, 3 and 5 right, so TP = 3 and FN = 2. Recall = 3 / (3 + 2) = <b>0.60</b>. Note recall never looks at index 4, where the model predicted 1 on a true 0 — that is a false positive and belongs to precision.'
+            },
+
+            {
+                t: 'met',
+                ty: 'sa',
+                m: 4,
+                q: 'Compute the F1 score for class 1. (2 decimals)',
+                code: `y_true = [1, 1, 0, 1, 0, 1, 0, 0]
+y_pred = [1, 0, 0, 1, 1, 1, 0, 1]`,
+                ans: 0.67,
+                tol: 0.01,
+                sol: 'TP at indices 0, 3, 5 → 3. FP where predicted 1 on true 0: indices 4 and 7 → 2. FN where predicted 0 on true 1: index 1 → 1.<br>Precision = 3/5 = 0.60, Recall = 3/4 = 0.75.<br><span class="fml">F<sub>1</sub> = <span class="frac"><span class="n">2 · 0.60 · 0.75</span><span class="d">0.60 + 0.75</span></span> = <span class="frac"><span class="n">0.90</span><span class="d">1.35</span></span> = 0.67</span>'
+            },
+
+            {
+                t: 'met',
+                ty: 'mcq',
+                m: 3,
+                q: 'Which statement about the R squared score is correct?',
+                opts: ['It is always positive and can grow without bound', 'It is always positive and lies strictly between 0 and 1', 'It can be negative, which happens when the model is worse than simply predicting the mean', 'It can be negative, which happens when the mean is a worse predictor than the model'],
+                ans: [2],
+                sol: 'R squared = 1 − SS<sub>res</sub>/SS<sub>tot</sub>. If your residual sum of squares exceeds the total sum of squares around the mean, the fraction goes above 1 and the score goes negative. So the range is <b>−∞ to 1</b>. This exact option wording has appeared in more than one paper.'
+            },
+
+            {
+                t: 'met',
+                ty: 'sa',
+                m: 4,
+                q: 'What is the R squared score for these predictions? (3 decimals)',
+                code: `y_true = [3, 5, 7,  9, 11]
+y_pred = [4, 5, 6, 10, 11]`,
+                ans: 0.925,
+                tol: 0.005,
+                sol: 'Residuals: −1, 0, 1, −1, 0 → SS<sub>res</sub> = 1 + 0 + 1 + 1 + 0 = 3.<br>Mean of y_true is 7, so deviations are −4, −2, 0, 2, 4 → SS<sub>tot</sub> = 16 + 4 + 0 + 4 + 16 = 40.<br>R squared = 1 − 3/40 = <b>0.925</b>.'
+            },
+
+            {
+                t: 'met',
+                ty: 'mcq',
+                m: 4,
+                q: 'What does this code print?',
+                code: `from sklearn.metrics import confusion_matrix
+
+y_true = ["cat", "dog", "dog", "cat", "dog", "cat"]
+y_pred = ["dog", "dog", "cat", "cat", "dog", "dog"]
+
+print(confusion_matrix(y_true, y_pred, labels=["cat", "dog"]))`,
+                opts: ['[[1, 2], [1, 2]]', '[[2, 1], [2, 1]]', '[[1, 1], [2, 2]]', '[[2, 2], [1, 1]]'],
+                ans: [0],
+                sol: 'Rows are the <b>true</b> label, columns the <b>predicted</b> label, in the order given by <code>labels</code>.<br>True cat at indices 0, 3, 5 → predicted dog, cat, dog → row is [1 cat, 2 dog].<br>True dog at indices 1, 2, 4 → predicted dog, cat, dog → row is [1 cat, 2 dog].<br>Result: [[1, 2], [1, 2]].'
+            },
+
+            {
+                t: 'met',
+                ty: 'mcq',
+                m: 4,
+                q: 'What quantity does <code>metric</code> compute?',
+                code: `import numpy as np
+
+def metric(y_pred, y_true):
+    m = (y_pred == 1) & (y_true == 1)
+    n = (y_pred == 1) & (y_true == 0)
+    a, b = m.sum(), n.sum()
+    return a / (a + b) if (a + b) != 0 else 0.0`,
+                opts: ['Accuracy', 'Precision', 'Recall', 'F1 score'],
+                ans: [1],
+                sol: '<code>a</code> counts true positives and <code>b</code> counts false positives, so the return value is TP / (TP + FP) — <b>precision</b>. The tell is that the denominator conditions on <i>predicted</i> being 1. Had <code>n</code> been <code>(y_pred == 0) &amp; (y_true == 1)</code>, the denominator would condition on the true label and it would be recall.'
+            },
+
+            {
+                t: 'met',
+                ty: 'sa',
+                m: 5,
+                q: 'For this three-class problem, what is the precision score for class 1? (2 decimals)',
+                code: `y_true = [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]
+y_pred = [0, 1, 0, 1, 1, 2, 1, 2, 1, 2]`,
+                ans: 0.6,
+                tol: 0.01,
+                sol: 'Precision for a class only looks at the positions where <b>class 1 was predicted</b>: indices 1, 3, 4, 6 and 8 — five predictions.<br>Of those, the true label is actually 1 at indices 3, 4 and 6 → TP = 3. Index 1 was really class 0 and index 8 was really class 2 → FP = 2.<br>Precision = 3/5 = <b>0.60</b>.'
+            },
+
+            {
+                t: 'met',
+                ty: 'msq',
+                m: 4,
+                q: 'Select all statements that are TRUE.',
+                opts: ['Raising the decision threshold usually increases precision and decreases recall', 'A classifier that guesses at random has an ROC-AUC of about 0.5', 'Accuracy can look excellent on a heavily imbalanced dataset even when the minority class is never detected', 'F1 is the arithmetic mean of precision and recall'],
+                ans: [0, 1, 2],
+                sol: 'A higher threshold means fewer positive predictions, so the ones you do make are surer (precision up) and you miss more real positives (recall down). Random guessing traces the diagonal of the ROC curve, area 0.5. On a 99:1 split, always predicting the majority gives 99% accuracy and zero recall on what matters. F1 is the <b>harmonic</b> mean, which is why it drops sharply when either term is small.'
+            },
+
+            {
+                t: 'met',
+                ty: 'mcq',
+                m: 3,
+                q: 'In <code>classification_report</code>, how does the macro average differ from the weighted average?',
+                opts: ['Macro averages the per-class scores equally; weighted averages them by class support', 'Macro averages only the majority classes; weighted averages all classes', 'Macro is computed on the training set and weighted on the test set', 'They are identical unless the dataset has more than three classes'],
+                ans: [0],
+                sol: 'Macro treats every class as equally important, so a rare class you handle badly drags the number down hard. Weighted multiplies each class score by its number of true samples, so the majority class dominates. On imbalanced data these two can differ enormously — that gap is usually the point of the question.'
+            },
+
+            /* ============ PREPROCESSING ============ */
+            {
+                t: 'pre',
+                ty: 'sa',
+                m: 3,
+                q: 'What value is printed? (2 decimals)',
+                code: `import numpy as np
+from sklearn.preprocessing import StandardScaler
+
+X = np.array([[2], [4], [4], [4], [5], [5], [7], [9]])
+scaler = StandardScaler().fit(X)
+
+print(scaler.transform(np.array([[9]])))`,
+                ans: 2.0,
+                tol: 0.01,
+                sol: 'Mean = (2+4+4+4+5+5+7+9)/8 = 40/8 = <b>5</b>.<br>Squared deviations: 9, 1, 1, 1, 0, 0, 4, 16 → sum 32. Variance = 32/<b>8</b> = 4, so σ = 2.<br>Note the divisor is n, not n−1 — StandardScaler uses the population standard deviation.<br>z = (9 − 5)/2 = <b>2.0</b>.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'mcq',
+                m: 2,
+                q: 'What does <code>scaled</code> contain?',
+                code: `import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+
+arr = np.array([[10], [20], [30], [40], [50]])
+scaled = MinMaxScaler().fit_transform(arr)`,
+                opts: ['[[0.0], [0.25], [0.5], [0.75], [1.0]]', '[[0.1], [0.2], [0.3], [0.4], [0.5]]', '[[0.0], [0.15], [0.5], [0.75], [1.0]]', '[[1], [2], [3], [4], [5]]'],
+                ans: [0],
+                sol: 'min = 10, max = 50, so the range is 40. Each value becomes (x − 10)/40, giving 0, 0.25, 0.5, 0.75, 1. Min–Max always maps the smallest value to exactly 0 and the largest to exactly 1.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'msq',
+                m: 3,
+                q: 'Which of these are essentially unaffected by feature scaling?',
+                opts: ['DecisionTreeClassifier', 'RandomForestClassifier', 'KNeighborsClassifier', 'SVC(kernel="rbf")'],
+                ans: [0, 1],
+                sol: 'Trees split on one feature at a time using threshold comparisons, and a monotonic rescaling does not change the ordering, so the tree structure is unchanged. Random Forest inherits this. Anything that measures distance (KNN, K-Means, RBF-kernel SVM) or applies a shared penalty across coefficients (Ridge, Lasso, SGD) is very much affected.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'sa',
+                m: 2,
+                q: 'What value replaces the missing entry in the second column? (2 decimals)',
+                code: `import numpy as np
+from sklearn.impute import SimpleImputer
+
+X = np.array([[1.0,  8.0],
+              [3.0,  np.nan],
+              [5.0, 10.0],
+              [7.0, 14.0]])
+
+imp = SimpleImputer(strategy="mean")
+X_new = imp.fit_transform(X)`,
+                ans: 10.67,
+                tol: 0.02,
+                sol: 'The mean is taken <b>column-wise</b>, ignoring NaN. For column 2 that is (8 + 10 + 14)/3 = 32/3 = <b>10.67</b>. A common slip is dividing by 4 instead of 3 — the missing entry is excluded from both numerator and count.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'mcq',
+                m: 2,
+                q: 'A categorical column has 4 distinct values. How many columns does <code>OneHotEncoder(drop="first")</code> produce for it?',
+                opts: ['1', '3', '4', '5'],
+                ans: [1],
+                sol: 'One column per category, minus the dropped reference category: 4 − 1 = <b>3</b>. Dropping the first avoids the dummy-variable trap, where the columns sum to a constant and make the design matrix singular for linear models.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'sa',
+                m: 2,
+                q: 'How many zeros appear in the encoded label vector?',
+                code: `import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+words = np.array(['apple', 'banana', 'cherry', 'banana', 'cherry',
+                  'banana', 'cherry', 'apple', 'apple', 'banana'])
+
+labels = LabelEncoder().fit_transform(words)`,
+                ans: 3,
+                tol: 0,
+                sol: 'LabelEncoder assigns integers in <b>sorted alphabetical order</b> of the categories: apple → 0, banana → 1, cherry → 2. So the zeros are wherever apple appears — indices 0, 7 and 8. That is <b>3</b> zeros.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'mcq',
+                m: 3,
+                q: 'A dataset has 3 features. How many columns does <code>PolynomialFeatures(degree=2)</code> produce with default settings?',
+                opts: ['6', '9', '10', '12'],
+                ans: [2],
+                sol: 'With <code>include_bias=True</code> you get the bias term, the 3 originals, the 3 squares, and the 3 pairwise products: 1 + 3 + 3 + 3 = <b>10</b>. In general the count is C(n + d, d) — here C(5, 2) = 10.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'msq',
+                m: 4,
+                q: 'Which statements about applying a scaler are TRUE?',
+                opts: ['The scaler must be fitted on the training set only', 'Calling fit_transform on the test set computes new statistics and breaks consistency with training', 'transform on the test set uses the mean and scale learned from training', 'Fitting on the full dataset before splitting leaks test information into training'],
+                ans: [0, 1, 2, 3],
+                sol: 'All four are true, and the third line of a bugged script in these papers is almost always <code>scaler.fit_transform(X_test)</code>. The rule is fit once on training, then transform everything. Fitting before the split is the classic leakage error.'
+            },
+
+            {
+                t: 'pre',
+                ty: 'sa',
+                m: 4,
+                q: 'What is the sum of all scaled values? (2 decimals)',
+                code: `import numpy as np
+from sklearn.preprocessing import MaxAbsScaler
+
+X = np.array([[-20], [11], [-45], [6], [16], [-7]])
+X_new = MaxAbsScaler().fit_transform(X)
+
+print(X_new.sum())`,
+                ans: -0.87,
+                tol: 0.02,
+                sol: 'MaxAbsScaler divides every value by the largest absolute value in the column, which is |−45| = 45. Since the divisor is a constant, the sum of the scaled values is just the sum of the originals divided by 45.<br>Sum = −20 + 11 − 45 + 6 + 16 − 7 = −39, so the answer is −39/45 = <b>−0.87</b>.'
+            },
+
+            /* ============ REGRESSION ============ */
+            {
+                t: 'reg',
+                ty: 'sa',
+                m: 3,
+                q: 'What MSE is printed? (2 decimals)',
+                code: `import numpy as np
+from sklearn.dummy import DummyRegressor
+from sklearn.metrics import mean_squared_error
+
+X_train = np.array([[1], [2], [3], [4], [5]])
+y_train = np.array([10, 15, 20, 25, 30])
+X_test  = np.array([[6], [7]])
+y_test  = np.array([35, 40])
+
+d = DummyRegressor(strategy="mean").fit(X_train, y_train)
+print(mean_squared_error(y_test, d.predict(X_test)))`,
+                ans: 312.5,
+                tol: 0.5,
+                sol: 'DummyRegressor with <code>strategy="mean"</code> ignores X completely and predicts the training mean for everything: (10+15+20+25+30)/5 = <b>20</b>.<br>Errors on the test set: 35 − 20 = 15 and 40 − 20 = 20.<br>MSE = (225 + 400)/2 = <b>312.5</b>.'
+            },
+
+            {
+                t: 'reg',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does <code>alpha=1.0</code> do here?',
+                code: `from sklearn.linear_model import Ridge
+
+model = Ridge(alpha=1.0).fit(X_train, y_train)`,
+                opts: ['Applies L1 regularisation and drives some coefficients to exactly zero', 'Removes regularisation, making it identical to LinearRegression', 'Adds L2 regularisation that penalises large coefficients', 'Makes the model drop the intercept term'],
+                ans: [2],
+                sol: 'Ridge minimises ‖Xw − y‖² + α‖w‖²₂. Larger α shrinks coefficients toward zero but, unlike L1, never sets them exactly to zero. <code>alpha=0</code> would reduce it to ordinary least squares; the intercept is never penalised.'
+            },
+
+            {
+                t: 'reg',
+                ty: 'msq',
+                m: 5,
+                q: 'Two Lasso models are trained on identical data. Which statements are correct?',
+                code: `lasso1 = Lasso(alpha=0.01).fit(X, y)
+lasso2 = Lasso(alpha=1.00).fit(X, y)`,
+                opts: ['The coefficients of lasso2 are likely smaller in magnitude than those of lasso1', 'lasso1 is likely to have fewer zero coefficients than lasso2', 'The training predictions of lasso1 will exactly match y', 'Increasing alpha always improves accuracy on unseen data'],
+                ans: [0, 1],
+                sol: 'A hundred-fold larger α means a much stronger L1 penalty, so lasso2 shrinks harder and zeroes out more coefficients. Neither model interpolates the training data exactly — that is not what least squares with a penalty does. And α is a bias–variance dial: past the sweet spot it underfits and test accuracy falls, so "always improves" is false.'
+            },
+
+            {
+                t: 'reg',
+                ty: 'mcq',
+                m: 3,
+                q: 'Which estimator supports the <code>partial_fit</code> method?',
+                opts: ['DecisionTreeClassifier', 'RandomForestRegressor', 'LinearRegression', 'SGDRegressor'],
+                ans: [3],
+                sol: '<code>partial_fit</code> exists only for estimators that learn incrementally — the SGD family, Perceptron, the Naive Bayes variants, MiniBatchKMeans. Trees and forests must see the whole dataset to choose splits, and LinearRegression solves a closed-form equation in one shot.'
+            },
+
+            {
+                t: 'reg',
+                ty: 'sa',
+                m: 4,
+                q: 'After fitting, what does the model predict for x = 6? (1 decimal)',
+                code: `import numpy as np
+from sklearn.linear_model import LinearRegression
+
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([3, 4, 6, 7, 10])
+
+model = LinearRegression().fit(X, y)
+print(model.predict([[6]]))`,
+                ans: 11.1,
+                tol: 0.1,
+                sol: 'Mean of x is 3, mean of y is 6.<br>S<sub>xy</sub> = (−2)(−3) + (−1)(−2) + 0 + (1)(1) + (2)(4) = 6 + 2 + 0 + 1 + 8 = 17.<br>S<sub>xx</sub> = 4 + 1 + 0 + 1 + 4 = 10.<br>Slope = 17/10 = 1.7, intercept = 6 − 1.7 × 3 = 0.9.<br>Prediction = 0.9 + 1.7 × 6 = <b>11.1</b>.'
+            },
+
+            {
+                t: 'reg',
+                ty: 'mcq',
+                m: 3,
+                q: 'A learning curve shows training error and validation error both high and close together. What does this indicate?',
+                opts: ['High variance — the model is overfitting', 'High bias — the model is underfitting', 'The data leaked between train and test', 'The learning rate is too small'],
+                ans: [1],
+                sol: 'Overfitting looks like a large <i>gap</i>: low training error, high validation error. When both are high and converged, the model is too simple to capture the pattern at all — high bias. Adding data will not help; adding capacity or features will.'
+            },
+
+            {
+                t: 'reg',
+                ty: 'mcq',
+                m: 3,
+                q: 'Why is <code>SGDRegressor</code> preferred over the normal equation on very wide datasets?',
+                opts: ['It always achieves lower training error', 'The normal equation cost grows roughly with the cube of the feature count', 'SGD does not require feature scaling', 'The normal equation cannot handle more than two features'],
+                ans: [1],
+                sol: 'Solving w = (XᵀX)⁻¹Xᵀy means inverting an n × n matrix where n is the number of features, which is roughly O(n³). SGD scales linearly and streams through samples, so it stays feasible when n is large. SGD in fact needs scaling <i>more</i> than the closed form does.'
+            },
+
+            /* ============ TREES ============ */
+            {
+                t: 'tre',
+                ty: 'sa',
+                m: 3,
+                q: 'A node holds 40 samples: 24 of class A and 16 of class B. What is its Gini impurity? (2 decimals)',
+                ans: 0.48,
+                tol: 0.01,
+                sol: 'p<sub>A</sub> = 24/40 = 0.6 and p<sub>B</sub> = 16/40 = 0.4.<br><span class="fml">Gini = 1 − (0.6² + 0.4²) = 1 − (0.36 + 0.16) = <b>0.48</b></span>A perfectly balanced binary node gives 0.5, the maximum; a pure node gives 0.'
+            },
+
+            {
+                t: 'tre',
+                ty: 'sa',
+                m: 4,
+                q: 'A node holds 8 samples: 6 positive and 2 negative. What is its entropy in bits? (2 decimals)',
+                ans: 0.81,
+                tol: 0.02,
+                sol: 'p = 0.75 and 0.25.<br>log₂(0.75) = −0.415, log₂(0.25) = −2.<br>Entropy = −(0.75 × −0.415 + 0.25 × −2) = 0.311 + 0.5 = <b>0.81</b> bits.<br>Worth memorising: a 75/25 split is 0.81 and a 50/50 split is exactly 1.'
+            },
+
+            {
+                t: 'tre',
+                ty: 'msq',
+                m: 5,
+                q: 'With this classifier, at which nodes is the split ALLOWED?',
+                code: `clf = DecisionTreeClassifier(min_samples_split=6,
+                            min_samples_leaf=4,
+                            random_state=5)`,
+                opts: ['Node has 15 samples; children get 9 and 6', 'Node has 6 samples; children get 4 and 2', 'Node has 12 samples; children get 3 and 9', 'Node has 8 samples; children get 4 and 4'],
+                ans: [0, 3],
+                sol: 'Two conditions must both hold. The node needs at least <code>min_samples_split</code> = 6 samples, and <b>every</b> resulting child needs at least <code>min_samples_leaf</code> = 4.<br>15 → 9 and 6: node passes, both children pass. Allowed.<br>6 → 4 and 2: the child with 2 fails.<br>12 → 3 and 9: the child with 3 fails.<br>8 → 4 and 4: both conditions satisfied. Allowed.'
+            },
+
+            {
+                t: 'tre',
+                ty: 'mcq',
+                m: 2,
+                q: 'What does <code>max_depth=None</code> mean for a DecisionTreeClassifier?',
+                opts: ['The tree is limited to a depth of 1', 'Nodes expand until all leaves are pure or hold fewer than min_samples_split samples', 'The tree depth is chosen automatically by cross-validation', 'It raises an error, since a depth must be supplied'],
+                ans: [1],
+                sol: 'None removes the depth cap entirely, so growth stops only when a stopping rule bites — purity, min_samples_split, min_samples_leaf, or min_impurity_decrease. This is the default and it is the main reason a lone decision tree overfits.'
+            },
+
+            {
+                t: 'tre',
+                ty: 'sa',
+                m: 5,
+                q: 'A parent node has 10 samples, 5 positive and 5 negative. A split sends 6 samples left (5 positive, 1 negative) and 4 right (0 positive, 4 negative). What is the information gain in bits? (2 decimals)',
+                ans: 0.61,
+                tol: 0.02,
+                sol: 'Parent entropy for a 50/50 split = <b>1.0</b>.<br>Left child, 5/6 and 1/6: −(0.833 × −0.263 + 0.167 × −2.585) = 0.219 + 0.431 = 0.650.<br>Right child is pure, so entropy = 0.<br>Weighted child entropy = (6/10)(0.650) + (4/10)(0) = 0.390.<br>IG = 1.0 − 0.390 = <b>0.61</b>. The weights are sample shares, not a plain average — that is the step people skip.'
+            },
+
+            {
+                t: 'tre',
+                ty: 'mcq',
+                m: 2,
+                q: 'Which criterion does sklearn use by default for DecisionTreeClassifier, and why?',
+                opts: ['Entropy, because it is information-theoretically optimal', 'Gini, because it avoids computing logarithms and is cheaper', 'Log loss, because it matches the model output', 'Mean squared error, because it works for both tasks'],
+                ans: [1],
+                sol: 'The default is <code>criterion="gini"</code>. In practice Gini and entropy select nearly the same splits, so sklearn takes the one without the log call. For DecisionTree<i>Regressor</i> the default is <code>squared_error</code> instead.'
+            },
+
+            /* ============ ENSEMBLES ============ */
+            {
+                t: 'ens',
+                ty: 'msq',
+                m: 5,
+                q: 'Select all statements that are FALSE.',
+                opts: ['Random Forest uses sampling without replacement for bagging', 'Boosting reduces bias by training models sequentially', 'Bagging reduces bias by averaging models trained on different subsets', 'Boosting trains all base models independently in parallel'],
+                ans: [0, 2, 3],
+                sol: 'Bagging is <b>bootstrap</b> aggregating — sampling <i>with</i> replacement — so the first is false. Bagging reduces <b>variance</b>, not bias, so the third is false. Boosting is inherently sequential because each learner is fitted to the previous one is mistakes, so the fourth is false. Only the second is true.'
+            },
+
+            {
+                t: 'ens',
+                ty: 'sa',
+                m: 3,
+                q: 'An AdaBoost stump has weighted error ε = 0.25. What is its weight α? (2 decimals)',
+                ans: 0.55,
+                tol: 0.02,
+                sol: '<span class="fml">α = <span class="frac"><span class="n">1</span><span class="d">2</span></span> ln <span class="frac"><span class="n">1 − 0.25</span><span class="d">0.25</span></span> = <span class="frac"><span class="n">1</span><span class="d">2</span></span> ln 3 = 0.5 × 1.0986 = <b>0.55</b></span>Note the shape: ε = 0.5 gives α = 0, meaning a coin-flip learner contributes nothing, and ε below 0.5 gives positive weight.'
+            },
+
+            {
+                t: 'ens',
+                ty: 'mcq',
+                m: 2,
+                q: 'With <code>voting="soft"</code>, how is the final prediction formed?',
+                code: `model = VotingClassifier(
+    estimators=[('lr', LogisticRegression()),
+                ('rf', RandomForestClassifier()),
+                ('svc', SVC(probability=True))],
+    voting='soft')`,
+                opts: ['By taking the most commonly predicted class label', 'By averaging the predicted class probabilities and taking the argmax', 'By summing the predicted class labels', 'By deferring to whichever classifier is most accurate'],
+                ans: [1],
+                sol: 'Soft voting averages <code>predict_proba</code> across the estimators, then picks the highest-probability class. That is also why <code>SVC</code> needs <code>probability=True</code> here — without it, it has no proba to contribute. Hard voting is the plain majority-label version.'
+            },
+
+            {
+                t: 'ens',
+                ty: 'msq',
+                m: 4,
+                q: 'Select the correctly described RandomForestClassifier parameters.',
+                opts: ['n_estimators — the number of trees in the forest', 'max_depth — the maximum depth allowed for each tree', 'min_samples_leaf — the maximum number of trees created', 'bootstrap — the number of features used at each split'],
+                ans: [0, 1],
+                sol: '<code>min_samples_leaf</code> is the minimum samples a leaf must hold, nothing to do with tree count. <code>bootstrap</code> is a boolean controlling whether samples are drawn with replacement; the feature-count knob is <code>max_features</code>. Distractors in these papers usually swap two real parameter names like this.'
+            },
+
+            {
+                t: 'ens',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does the out-of-bag score estimate?',
+                opts: ['Training accuracy on the bootstrap samples', 'Validation accuracy using, for each sample, only the trees that did not see it', 'The fraction of features left unused', 'The number of trees required for convergence'],
+                ans: [1],
+                sol: 'A bootstrap sample leaves out about 37% of the data for each tree. Each sample is scored by exactly the trees that excluded it, giving a free validation estimate with no separate holdout. Requires <code>bootstrap=True</code> and <code>oob_score=True</code>.'
+            },
+
+            {
+                t: 'ens',
+                ty: 'msq',
+                m: 5,
+                q: 'Two AdaBoost models differ only in base estimator depth. Which statements are MOST accurate?',
+                code: `base1 = DecisionTreeClassifier(max_depth=1)
+base2 = DecisionTreeClassifier(max_depth=3)
+
+adb1 = AdaBoostClassifier(base1, n_estimators=50, learning_rate=1.0)
+adb2 = AdaBoostClassifier(base2, n_estimators=50, learning_rate=1.0)`,
+                opts: ['adb1 is less likely to overfit because its base trees are shallower', 'Increasing n_estimators always improves test accuracy for AdaBoost', 'A smaller learning rate always reduces training accuracy', 'adb2 has lower bias but higher variance than adb1'],
+                ans: [0, 3],
+                sol: 'Depth-1 stumps are deliberately weak, which is exactly what boosting wants — capacity is added by adding rounds, not by deepening each learner. Depth-3 trees fit more per round, lowering bias and raising variance. More rounds eventually overfits, and a smaller learning rate simply needs more rounds to reach the same training fit, so neither "always" claim holds.'
+            },
+
+            /* ============ CV & TUNING ============ */
+            {
+                t: 'cv',
+                ty: 'sa',
+                m: 3,
+                q: 'How many unique hyperparameter combinations will GridSearchCV evaluate?',
+                code: `param_grid = {
+    "n_estimators":      [50, 100, 150, 200],
+    "max_depth":         [None, 5, 10, 15, 20],
+    "min_samples_split": [2, 3, 4, 5, 6, 8, 10]
+}`,
+                ans: 140,
+                tol: 0,
+                sol: 'Grid search takes the full Cartesian product: 4 × 5 × 7 = <b>140</b> combinations. If the question had asked for the number of <i>model fits</i> with <code>cv=5</code>, it would be 140 × 5 = 700, plus one final refit on the whole training set. Read which of the two is being asked.'
+            },
+
+            {
+                t: 'cv',
+                ty: 'mcq',
+                m: 3,
+                q: 'With this setup, what is true?',
+                code: `random_search = RandomizedSearchCV(
+    estimator=rf,
+    param_distributions=param_dist,   # 3 x 3 x 3 grid
+    n_iter=4, scoring='accuracy', cv=3,
+    random_state=42)`,
+                opts: ['It tries all possible combinations in param_dist', 'Exactly 4 randomly chosen combinations are evaluated', 'Changing random_state has no effect on which combinations are picked', 'Raising cv to 8 would be computationally cheaper'],
+                ans: [1],
+                sol: '<code>n_iter</code> caps the number of sampled combinations at 4, regardless of the 27 available. The sampling is seeded, so <code>random_state</code> absolutely changes which four you get. Raising <code>cv</code> multiplies the number of fits, making it more expensive, not less.'
+            },
+
+            {
+                t: 'cv',
+                ty: 'mcq',
+                m: 3,
+                q: 'How many times is the model trained here?',
+                code: `import numpy as np
+from sklearn.model_selection import LeaveOneOut, cross_val_score
+
+X = np.arange(10).reshape((5, 2))
+y = np.array([0, 1, 0, 1, 0])
+
+scores = cross_val_score(LogisticRegression(), X, y,
+                         cv=LeaveOneOut(), scoring='accuracy')`,
+                opts: ['5 times', '1 time', '10 times', '2 times'],
+                ans: [0],
+                sol: '<code>X</code> reshapes to 5 rows of 2 features. Leave-One-Out creates one fold per sample, so the model is fitted <b>5</b> times, each on 4 samples and tested on the held-out one. <code>scores</code> therefore has length 5.'
+            },
+
+            {
+                t: 'cv',
+                ty: 'mcq',
+                m: 3,
+                q: 'Compare these three splits of the same dataset.',
+                code: `# Case 1
+train_test_split(X, y, test_size=0.2, random_state=42)
+# Case 2
+train_test_split(X, y, test_size=0.2, random_state=0)
+# Case 3
+train_test_split(X, y, train_size=0.8, random_state=42)`,
+                opts: ['X_train is identical across all three cases', 'X_train differs across all three cases', 'X_train differs between case 1 and case 2', 'X_train differs between case 1 and case 3'],
+                ans: [2],
+                sol: 'The seed alone determines the shuffle. Cases 1 and 3 share <code>random_state=42</code>, and <code>test_size=0.2</code> and <code>train_size=0.8</code> describe the same split, so they produce identical sets. Case 2 uses a different seed and therefore a different partition.'
+            },
+
+            {
+                t: 'cv',
+                ty: 'msq',
+                m: 4,
+                q: 'Which statements about StratifiedKFold are TRUE?',
+                opts: ['It preserves the class proportions of the full dataset in every fold', 'It is the default cv strategy for classifiers in cross_val_score', 'It is particularly important on imbalanced datasets', 'It shuffles the data by default'],
+                ans: [0, 1, 2],
+                sol: 'Stratification keeps each fold representative, which matters most when a class is rare and plain KFold could hand you a fold with none of it. It is what <code>cross_val_score</code> and <code>GridSearchCV</code> use automatically when the estimator is a classifier. But <code>shuffle=False</code> is the default — you have to ask for shuffling.'
+            },
+
+            {
+                t: 'cv',
+                ty: 'sa',
+                m: 4,
+                q: 'A GridSearchCV has 6 parameter combinations, cv=5, and refit=True. How many times in total is the estimator fitted?',
+                ans: 31,
+                tol: 0,
+                sol: '6 combinations × 5 folds = 30 fits during the search. Then <code>refit=True</code> trains one final model with the best parameters on the entire training set: 30 + 1 = <b>31</b>. Forgetting the refit is the usual off-by-one here.'
+            },
+
+            /* ============ PIPELINES ============ */
+            {
+                t: 'pip',
+                ty: 'mcq',
+                m: 4,
+                q: 'What shape is printed?',
+                code: `import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+
+data = pd.DataFrame({
+    'Height': [150, 160, 170, 180],
+    'City':   ['A', 'B', 'A', 'C'],
+    'Weight': [50, 60, 70, 80]})
+
+ct = ColumnTransformer([
+    ('num', StandardScaler(), ['Height', 'Weight']),
+    ('cat', OneHotEncoder(drop='first'), ['City'])])
+
+print(ct.fit_transform(data).shape)`,
+                opts: ['(3, 2)', '(4, 4)', '(4, 3)', '(4, 5)'],
+                ans: [1],
+                sol: 'Rows are untouched, so 4.<br>StandardScaler on two columns → 2 columns out.<br>City has three distinct values (A, B, C); <code>drop="first"</code> leaves 3 − 1 = 2 columns.<br>Total 2 + 2 = 4, so the shape is <b>(4, 4)</b>. The default <code>remainder="drop"</code> discards nothing extra here since all columns are listed.'
+            },
+
+            {
+                t: 'pip',
+                ty: 'mcq',
+                m: 3,
+                q: 'Which API only supports chaining transformers and an estimator in series, one after another?',
+                opts: ['Pipeline', 'ColumnTransformer', 'FeatureUnion', 'All of these'],
+                ans: [0],
+                sol: 'Pipeline is strictly sequential — the output of one step becomes the input of the next. ColumnTransformer and FeatureUnion both work in <b>parallel</b>: they apply different transformers to the data and concatenate the results side by side.'
+            },
+
+            {
+                t: 'pip',
+                ty: 'mcq',
+                m: 3,
+                q: 'What must be true of the steps in a Pipeline?',
+                opts: ['Every step must implement fit and predict', 'All steps except the last must be transformers, i.e. implement fit and transform', 'All steps must be estimators of the same family', 'No step may require hyperparameters'],
+                ans: [1],
+                sol: 'Intermediate steps have their output passed onward, so they need <code>transform</code>. Only the final step is called with <code>predict</code> (or <code>transform</code>, if the whole pipeline is used as a transformer). Passing a classifier as a middle step raises a TypeError.'
+            },
+
+            {
+                t: 'pip',
+                ty: 'msq',
+                m: 4,
+                q: 'When <code>pipe.fit(X, y)</code> is called, what happens?',
+                opts: ['fit_transform is called on each intermediate step in order', 'fit is called on the final estimator with the transformed data', 'Each step sees the raw X, independent of the others', 'Hyperparameters of inner steps can later be tuned using the step__param syntax'],
+                ans: [0, 1, 3],
+                sol: 'Data flows through: each transformer is fitted and immediately applied, and the last step is fitted on whatever comes out. The double-underscore syntax — for example <code>{"scaler__with_mean": [True, False]}</code> — is how GridSearchCV reaches inside a pipeline.'
+            },
+
+            {
+                t: 'pip',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does <code>remainder="passthrough"</code> do in a ColumnTransformer?',
+                opts: ['Discards any column not named in a transformer', 'Appends unlisted columns unchanged to the output', 'Applies the first transformer to unlisted columns', 'Raises an error if any column is unlisted'],
+                ans: [1],
+                sol: 'The default is <code>remainder="drop"</code>, which silently discards unlisted columns — a frequent source of silently missing features. <code>"passthrough"</code> carries them through untransformed, appended after the transformed blocks.'
+            },
+
+            /* ============ CLUSTERING ============ */
+            {
+                t: 'clu',
+                ty: 'msq',
+                m: 5,
+                q: 'Which statements about this K-Means setup are TRUE?',
+                code: `kmeans = KMeans(n_clusters=3, init='k-means++',
+                n_init=10, max_iter=300)`,
+                opts: ['n_init=10 means the algorithm runs 10 times from different seeds and keeps the best result', 'n_clusters is a hyperparameter that can be chosen using silhouette score or the elbow method', 'k-means++ chooses the initial centroids uniformly at random', 'max_iter is the number of independent runs performed'],
+                ans: [0, 1],
+                sol: '<code>n_init</code> is the number of restarts and the run with lowest inertia wins; <code>max_iter</code> is the iteration cap <i>within</i> a single run. k-means++ is specifically <b>not</b> uniform: it picks the first centre at random then favours points far from those already chosen, which is why it converges better than random init.'
+            },
+
+            {
+                t: 'clu',
+                ty: 'mcq',
+                m: 2,
+                q: 'After fitting, what does <code>kmeans.labels_</code> hold?',
+                opts: ['The input feature values used for clustering', 'The cluster index assigned to each data point', 'The total number of clusters formed', 'The coordinates of the cluster centroids'],
+                ans: [1],
+                sol: '<code>labels_</code> is a 1-D array with one integer per training sample, giving its cluster. Centroid coordinates live in <code>cluster_centers_</code> and the final objective value in <code>inertia_</code>.'
+            },
+
+            {
+                t: 'clu',
+                ty: 'mcq',
+                m: 3,
+                q: 'Which statement about Hierarchical Agglomerative Clustering is TRUE?',
+                opts: ['It starts with all points in one cluster and recursively splits them', 'It requires the number of clusters to be fixed before training begins', 'It repeatedly merges the two closest clusters until a stopping condition is met', 'It updates cluster centroids after every merge'],
+                ans: [2],
+                sol: 'Agglomerative means bottom-up: every point starts as its own cluster and the closest pair merges each step, building a dendrogram. Top-down splitting is <i>divisive</i> clustering. You can cut the dendrogram at any height afterwards, so k need not be fixed in advance — though sklearn asks for either <code>n_clusters</code> or a <code>distance_threshold</code>.'
+            },
+
+            {
+                t: 'clu',
+                ty: 'sa',
+                m: 3,
+                q: 'One-dimensional points [1, 2, 8, 9] are clustered with k=2, converging to the obvious grouping. What is the final inertia? (2 decimals)',
+                ans: 1.0,
+                tol: 0.05,
+                sol: 'Clusters are {1, 2} with centroid 1.5 and {8, 9} with centroid 8.5.<br>Squared distances: 0.25, 0.25, 0.25, 0.25.<br>Inertia = the sum of these = <b>1.0</b>. Inertia is squared distance, so do not forget to square the 0.5s.'
+            },
+
+            {
+                t: 'clu',
+                ty: 'sa',
+                m: 2,
+                q: 'A point has mean intra-cluster distance a = 1.5 and mean distance to the nearest other cluster b = 4.5. What is its silhouette coefficient? (2 decimals)',
+                ans: 0.67,
+                tol: 0.02,
+                sol: '<span class="fml">s = <span class="frac"><span class="n">b − a</span><span class="d">max(a, b)</span></span> = <span class="frac"><span class="n">4.5 − 1.5</span><span class="d">4.5</span></span> = <b>0.67</b></span>Values near 1 mean the point sits comfortably in its own cluster; near 0 means it is on a boundary; negative means it probably belongs elsewhere.'
+            },
+
+            /* ============ LOGISTIC / SGD ============ */
+            {
+                t: 'log',
+                ty: 'mcq',
+                m: 3,
+                q: 'Which LogisticRegression configuration CANNOT handle a multinomial multiclass problem?',
+                opts: ["LogisticRegression(solver='liblinear')", "LogisticRegression(solver='lbfgs')", "LogisticRegression(solver='sag')", "LogisticRegression(solver='saga')"],
+                ans: [0],
+                sol: '<code>liblinear</code> only ever solves binary problems; for multiclass it falls back to one-vs-rest, which is not a true multinomial fit. <code>lbfgs</code>, <code>sag</code>, <code>saga</code> and <code>newton-cg</code> all optimise the multinomial (softmax) objective directly. This question appears almost verbatim across papers.'
+            },
+
+            {
+                t: 'log',
+                ty: 'mcq',
+                m: 3,
+                q: 'What fills the blank so this pipeline performs softmax regression?',
+                code: `pipe = Pipeline([
+    ('scaler', StandardScaler()),
+    ('softmax', ______ )
+])`,
+                opts: ["LogisticRegression(solver='liblinear')", "LogisticRegression(multi_class='ovr')", "LogisticRegression(penalty=None)", "LogisticRegression(multi_class='multinomial')"],
+                ans: [3],
+                sol: 'Softmax regression <i>is</i> multinomial logistic regression: one shared model producing a probability distribution over all classes at once. <code>multi_class="ovr"</code> would instead train one independent binary classifier per class.'
+            },
+
+            {
+                t: 'log',
+                ty: 'mcq',
+                m: 3,
+                q: 'Each call to <code>fit()</code> retrains from scratch and discards what was learned before. What change makes training continue from the previous parameters?',
+                code: `clf = Perceptron(max_iter=100, random_state=1729)`,
+                opts: ['Set warm_start=True', 'Merge all the training data into one dataset', 'Set retain_parameters=True', 'This behaviour cannot be changed for Perceptron'],
+                ans: [0],
+                sol: '<code>warm_start=True</code> makes the next <code>fit()</code> use the existing coefficients as the starting point. The alternative for true incremental learning is <code>partial_fit()</code>, which Perceptron also supports. <code>retain_parameters</code> is not a real parameter.'
+            },
+
+            {
+                t: 'log',
+                ty: 'sa',
+                m: 3,
+                q: 'A logistic model has weights w = [0.5, −0.25] and bias b = 0.5. For x = [2, 4], what probability does it output? (2 decimals)',
+                ans: 0.62,
+                tol: 0.02,
+                sol: 'z = 0.5 × 2 + (−0.25) × 4 + 0.5 = 1 − 1 + 0.5 = <b>0.5</b>.<br><span class="fml">σ(0.5) = <span class="frac"><span class="n">1</span><span class="d">1 + e<sup>−0.5</sup></span></span> = <span class="frac"><span class="n">1</span><span class="d">1 + 0.6065</span></span> = <b>0.62</b></span>Sanity check: z &gt; 0 must give a probability above 0.5.'
+            },
+
+            {
+                t: 'log',
+                ty: 'msq',
+                m: 4,
+                q: 'Match the SGDClassifier loss to the model it reproduces. Select the correct pairings.',
+                opts: ["loss='hinge' gives a linear SVM", "loss='log_loss' gives logistic regression", "loss='perceptron' gives the perceptron algorithm", "loss='squared_error' gives a decision tree"],
+                ans: [0, 1, 2],
+                sol: 'SGDClassifier is a single optimiser wrapped around a choice of loss function, which is why one class can impersonate several models. <code>hinge</code> is the default. Nothing about a decision tree is expressible as a linear loss, so the last pairing is nonsense.'
+            },
+
+            /* ============ pandas / DATA ============ */
+            {
+                t: 'dat',
+                ty: 'mcq',
+                m: 2,
+                q: 'What are the data types of d1 and d2?',
+                code: `d1 = load_iris()
+d2 = pd.read_csv('file2.csv')`,
+                opts: ['Bunch, Bunch', 'Bunch, DataFrame', 'DataFrame, Bunch', 'Series, DataFrame'],
+                ans: [1],
+                sol: 'sklearn loaders return a <code>Bunch</code>, a dictionary that also allows attribute access — hence <code>d1.data</code> and <code>d1.target</code>. Passing <code>as_frame=True</code> or <code>return_X_y=True</code> changes what you get back. <code>read_csv</code> always yields a DataFrame.'
+            },
+
+            {
+                t: 'dat',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does this produce?',
+                code: `df = pd.DataFrame({
+    "Name":  ["A", "B", "C", "D", "E"],
+    "Marks": [40, 85, 67, 92, 58],
+    "Age":   [18, 19, 17, 18, 20]})
+
+result = (df[df["Marks"] > 60]
+            .sort_values("Age")
+            .reset_index(drop=True))`,
+                opts: ['All rows where Age < 18, sorted by Marks, index unchanged', 'Only rows where Marks > 60, sorted by Age, with the index reset', 'All rows sorted first by Marks then by Age', 'The Age column dropped and the rest sorted'],
+                ans: [1],
+                sol: 'Read the chain left to right. The boolean mask keeps B, C and D. Sorting by Age orders them C (17), D (18), B (19). <code>reset_index(drop=True)</code> renumbers 0, 1, 2 and throws away the old index rather than adding it as a column.'
+            },
+
+            {
+                t: 'dat',
+                ty: 'msq',
+                m: 5,
+                q: 'Which snippets correctly return only employees from departments whose average salary exceeds 65000?',
+                code: `df = pd.DataFrame({
+    'Employee':   ['John','Sara','Mike','Anna','Tom','Lucy','Nina'],
+    'Dept':       ['HR','IT','IT','Finance','HR','IT','Finance'],
+    'Salary':     [50000,60000,70000,80000,75000,62000,90000],
+    'Experience': [3,10,5,15,12,2,18]})`,
+                opts: ["df.groupby('Dept').filter(lambda x: x['Salary'].mean() > 65000)", "df.groupby('Dept').apply(lambda x: x[x['Salary'] > 65000])", "df[df['Salary'] > df.groupby('Dept')['Salary'].mean()]", "df[df.groupby('Dept')['Salary'].transform('mean') > 65000]"],
+                ans: [0, 3],
+                sol: '<code>groupby().filter()</code> keeps or drops whole groups based on a group-level predicate — exactly the requirement. <code>transform("mean")</code> broadcasts the group mean back to every row, giving a mask the same length as the frame. The <code>apply</code> version filters <i>individuals</i> above 65000, and the third compares a 7-row Series against a 3-row grouped Series, which misaligns.'
+            },
+
+            {
+                t: 'dat',
+                ty: 'msq',
+                m: 5,
+                q: 'Which commented lines contain errors?',
+                code: `data = fetch_california_housing(as_frame=True)
+X = data.data
+y = data.label                                       # Line 1
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42)            # Line 2
+
+scaler = StandardScaler()
+X_train_s = scaler.fit_transform(X_train)
+X_test_s  = scaler.fit_transform(X_test)             # Line 3
+
+lr = LinearRegression().fit(X_train_s, y_train)
+y_pred = lr.predict(X_test_s)
+mse = mean_squared_error(X_test_s, y_test)           # Line 4`,
+                opts: ['Line 1', 'Line 2', 'Line 3', 'Line 4'],
+                ans: [0, 2, 3],
+                sol: 'Line 1: the attribute is <code>data.target</code>, not <code>.label</code>.<br>Line 3: the test set must use <code>transform</code>, not <code>fit_transform</code> — refitting computes new statistics and desynchronises the two sets.<br>Line 4: the metric must compare <code>y_pred</code> with <code>y_test</code>; passing the feature matrix is both a shape error and conceptually wrong.<br>Line 2 is fine.'
+            },
+
+            /* ============ KNN ============ */
+            {
+                t: 'knn',
+                ty: 'sa',
+                m: 4,
+                q: 'What class is predicted for the test point?',
+                code: `import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+
+X_train = np.array([[1, 2], [2, 3], [3, 3],
+                    [6, 2], [6, 1], [0, 0]])
+y_train = np.array([0, 0, 1, 1, 1, 2])
+
+knn = KNeighborsClassifier(n_neighbors=3).fit(X_train, y_train)
+print(knn.predict(np.array([[3, 2]])))`,
+                ans: 0,
+                tol: 0,
+                sol: 'Euclidean distances from (3, 2):<br>(1,2) → 2.00 · (2,3) → 1.41 · (3,3) → 1.00 · (6,2) → 3.00 · (6,1) → 3.16 · (0,0) → 3.61<br>The three nearest are (3,3) with label 1, (2,3) with label 0, and (1,2) with label 0.<br>Majority vote: two votes for class <b>0</b>, one for class 1. Answer: <b>0</b>.'
+            },
+
+            {
+                t: 'knn',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does this print?',
+                code: `neigh = NearestNeighbors(n_neighbors=1).fit(X_train)
+print(neigh.kneighbors(X_test[1:2, :]))`,
+                opts: ['The nearest neighbour points themselves', 'The indices of and distances to the neighbouring training points', 'The indices, distances and the neighbouring point coordinates', 'It raises an error'],
+                ans: [1],
+                sol: '<code>kneighbors</code> returns a tuple of two arrays — distances first, then indices into the training set. To get the actual points you index back into <code>X_train</code> yourself. It never returns the coordinates directly.'
+            },
+
+            {
+                t: 'knn',
+                ty: 'sa',
+                m: 3,
+                q: 'Compute the cosine similarity of A = (1, 2, 3) and B = (1, 0, 0). (2 decimals)',
+                ans: 0.27,
+                tol: 0.02,
+                sol: 'Dot product = 1×1 + 2×0 + 3×0 = 1.<br>‖A‖ = √(1 + 4 + 9) = √14 = 3.742, ‖B‖ = 1.<br><span class="fml">cos = <span class="frac"><span class="n">1</span><span class="d">3.742 × 1</span></span> = <b>0.27</b></span>'
+            },
+
+            {
+                t: 'knn',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does <code>weights="distance"</code> change in KNeighborsClassifier?',
+                opts: ['Nearer neighbours get a larger vote, weighted by 1/distance', 'It rescales the features before computing distances', 'It switches the metric from Euclidean to Manhattan', 'It reduces k automatically when neighbours are far away'],
+                ans: [0],
+                sol: 'The default <code>"uniform"</code> gives all k neighbours an equal vote. With <code>"distance"</code> each vote is weighted by the reciprocal of its distance, so a neighbour sitting almost on top of the query point dominates. The metric itself is set separately by <code>metric</code> / <code>p</code>.'
+            },
+
+            /* ============ SVM ============ */
+            {
+                t: 'svm',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does <code>clf.support_</code> return?',
+                code: `clf = SVC(C=1).fit(X_train, y_train)
+print(clf.support_)`,
+                opts: ['The number of support vectors', 'An array of the support vectors themselves', 'Probabilities representing distance from the decision boundary', 'The indices of the support vectors within the training set'],
+                ans: [3],
+                sol: 'Three related attributes are easy to confuse: <code>support_</code> gives <b>indices</b>, <code>support_vectors_</code> gives the actual rows, and <code>n_support_</code> gives the count per class.'
+            },
+
+            {
+                t: 'svm',
+                ty: 'mcq',
+                m: 3,
+                q: 'How does a small value of <code>C</code> affect an SVM?',
+                opts: ['A wider margin that tolerates more misclassified training points', 'A narrower margin that fits the training data more tightly', 'It changes the kernel to linear', 'It has no effect unless the kernel is rbf'],
+                ans: [0],
+                sol: 'C is the inverse of regularisation strength. Small C penalises margin violations lightly, so the optimiser prefers a wide, smooth margin and accepts errors — more bias, less variance. Large C forces the boundary to bend around individual points and risks overfitting.'
+            },
+
+            {
+                t: 'svm',
+                ty: 'msq',
+                m: 4,
+                q: 'Which statements about <code>gamma</code> in an RBF-kernel SVM are TRUE?',
+                opts: ['Large gamma makes each training point influence only a small region', 'Large gamma increases the risk of overfitting', 'gamma="scale" sets gamma from the number of features and the variance of X', 'gamma controls the number of support vectors directly'],
+                ans: [0, 1, 2],
+                sol: 'The RBF kernel is exp(−γ‖x − x′‖²), so large γ makes the similarity decay fast and the decision boundary becomes wiggly and local. <code>"scale"</code>, the default, computes 1 / (n_features × X.var()). Support vector count is a consequence of the fit, not a knob γ sets.'
+            },
+
+            {
+                t: 'svm',
+                ty: 'mcq',
+                m: 2,
+                q: 'Which is NOT a valid value for the <code>kernel</code> parameter of SVC?',
+                opts: ["'linear'", "'poly'", "'rbf'", "'lasso'"],
+                ans: [3],
+                sol: 'The valid built-in kernels are <code>linear</code>, <code>poly</code>, <code>rbf</code>, <code>sigmoid</code> and <code>precomputed</code>, with <code>rbf</code> as the default. Lasso is a regularised linear regression, not a kernel — these papers like slipping a term from another topic into the option list.'
+            },
+
+            /* ============ NAIVE BAYES ============ */
+            {
+                t: 'nba',
+                ty: 'mcq',
+                m: 4,
+                q: 'Which Naive Bayes variant best suits predicting Gender from this dataset?',
+                code: `df = pd.DataFrame({
+    'Height_cm': [150, 160, 170, 180, 175, 165, 155, 185],
+    'Weight_kg': [50, 60, 65, 80, 75, 62, 55, 85],
+    'Age':       [25, 30, 28, 35, 32, 29, 27, 36],
+    'Gender':    ['F','F','M','M','M','F','F','M']})`,
+                opts: ['CategoricalNB', 'BernoulliNB', 'MultinomialNB', 'GaussianNB'],
+                ans: [3],
+                sol: 'All three features are continuous measurements, so the likelihood of each feature given a class is modelled as a normal distribution — that is <b>GaussianNB</b>. MultinomialNB expects counts, BernoulliNB expects binary indicators, and CategoricalNB expects discrete categories.'
+            },
+
+            {
+                t: 'nba',
+                ty: 'mcq',
+                m: 3,
+                q: 'Which variant is the standard choice for document classification using word counts?',
+                opts: ['GaussianNB', 'MultinomialNB', 'BernoulliNB', 'ComplementNB only'],
+                ans: [1],
+                sol: 'MultinomialNB models term frequencies directly and pairs naturally with CountVectorizer or TfidfVectorizer output. BernoulliNB would use only presence/absence, discarding counts. ComplementNB is a genuine variant but it is the imbalanced-data refinement, not the default.'
+            },
+
+            {
+                t: 'nba',
+                ty: 'sa',
+                m: 4,
+                q: 'P(spam) = 0.4. The word "free" appears in 50% of spam and 10% of non-spam. Given a message containing "free", what is P(spam)? (2 decimals)',
+                ans: 0.77,
+                tol: 0.02,
+                sol: '<span class="fml sm">P(spam | free) = <span class="frac"><span class="n">0.4 × 0.5</span><span class="d">0.4 × 0.5 + 0.6 × 0.1</span></span> = <span class="frac"><span class="n">0.20</span><span class="d">0.20 + 0.06</span></span> = <span class="frac"><span class="n">0.20</span><span class="d">0.26</span></span> = <b>0.77</b></span>The denominator is the total probability of seeing "free" at all — both routes to it must be summed.'
+            },
+
+            /* ============ NEURAL NETS ============ */
+            {
+                t: 'nnw',
+                ty: 'mcq',
+                m: 3,
+                q: 'What does <code>hidden_layer_sizes=(50, 30)</code> mean?',
+                opts: ['50 input features and 30 output units', 'Two hidden layers, with 50 and 30 neurons respectively', '50 epochs run in 30 batches', '50 samples per batch over 30 iterations'],
+                ans: [1],
+                sol: 'The tuple has one entry per hidden layer, and each entry is that layer is width. Input and output sizes are inferred from the data, so they never appear here. <code>(100,)</code> — one layer of 100 — is the default.'
+            },
+
+            {
+                t: 'nnw',
+                ty: 'sa',
+                m: 5,
+                q: 'An MLPClassifier with <code>hidden_layer_sizes=(4,)</code> is trained on 3 input features and 3 output classes. How many trainable parameters does it have?',
+                ans: 31,
+                tol: 0,
+                sol: 'Weights from input to hidden: 3 × 4 = 12. Weights from hidden to output: 4 × 3 = 12.<br>Biases: 4 on the hidden layer plus 3 on the output layer = 7.<br>Total = 12 + 12 + 7 = <b>31</b>. Forgetting the bias terms is the usual error.'
+            },
+
+            {
+                t: 'nnw',
+                ty: 'msq',
+                m: 4,
+                q: 'Two MLP classifiers are trained on the same data. Which statements are correct?',
+                code: `mlp1 = MLPClassifier(hidden_layer_sizes=(5,),
+                     activation='relu', solver='adam',
+                     max_iter=500, random_state=42)
+
+mlp2 = MLPClassifier(hidden_layer_sizes=(10, 5),
+                     activation='tanh', solver='sgd',
+                     learning_rate_init=0.01,
+                     max_iter=500, random_state=42)`,
+                opts: ['mlp2 has more trainable parameters than mlp1', 'Changing random_state can change predictions even on identical data', 'The sgd solver always achieves higher accuracy than adam', 'tanh activation guarantees better performance than relu'],
+                ans: [0, 1],
+                sol: 'mlp2 has two hidden layers and more units, hence more weights. <code>random_state</code> seeds the weight initialisation, and since the loss surface is non-convex, different starts land in different minima. No solver or activation is universally best — any option containing "always" or "guarantees" is a distractor.'
+            },
+
+            /* ============ TEXT ============ */
+            {
+                t: 'txt',
+                ty: 'sa',
+                m: 4,
+                q: 'What integer is printed?',
+                code: `from sklearn.feature_extraction.text import CountVectorizer
+
+docs = ["machine learning practice course",
+        "practice course machine learning"]
+
+vec = CountVectorizer(ngram_range=(2, 2))
+X = vec.fit_transform(docs)
+print(X.toarray().sum())`,
+                ans: 6,
+                tol: 0,
+                sol: '<code>ngram_range=(2,2)</code> takes bigrams only. A 4-word document yields 3 bigrams.<br>Doc 1: machine learning, learning practice, practice course.<br>Doc 2: practice course, course machine, machine learning.<br>Summing the whole matrix just totals every count: 3 + 3 = <b>6</b>. The vocabulary is smaller (4 distinct bigrams) but that is not what was asked.'
+            },
+
+            {
+                t: 'txt',
+                ty: 'msq',
+                m: 4,
+                q: 'Which statements about TfidfVectorizer are TRUE?',
+                opts: ['max_features=1000 keeps only the 1000 most frequent terms in the vocabulary', 'min_df=2 ignores terms that appear in only one document', 'With smooth_idf=True, a term appearing in every document gets an IDF of exactly zero', 'lowercase=True adds a lowercase copy of each token alongside the original'],
+                ans: [0, 1],
+                sol: 'sklearn is IDF is ln((1 + n)/(1 + df)) <b>+ 1</b>, so a term in every document gets IDF = 1, not 0 — the +1 exists precisely to stop such terms vanishing. <code>lowercase=True</code> lowercases during preprocessing; it does not duplicate anything.'
+            },
+
+            {
+                t: 'txt',
+                ty: 'mcq',
+                m: 3,
+                q: 'What is the default <code>norm</code> for TfidfVectorizer, and what does it do?',
+                opts: ["'l1' — each row sums to 1", "'l2' — each row is scaled to unit Euclidean length", "None — no normalisation is applied", "'max' — each row is divided by its largest value"],
+                ans: [1],
+                sol: 'Default <code>norm="l2"</code> scales each document vector to length 1. This is what makes cosine similarity between two rows reduce to a plain dot product, and it stops long documents dominating purely because they contain more words.'
+            }
+
+        ];
+    </script>
+
+    <script>
+        (function() {
+            var state = {}; // qid -> {ok, marks, topic}
+            var PAGES = []; // ordered list of view ids
+            var titles = {}; // viewId -> {title, sub}
+
+            /* ---------- weightage bars ---------- */
+            var wt = document.getElementById('weightage');
+            var maxw = Math.max.apply(null, TOPICS.map(function(t) {
+                return t.w;
+            }));
+            TOPICS.forEach(function(t) {
+                var row = document.createElement('div');
+                row.innerHTML =
+                    '<div class="wtrow"><span class="wtname">' + t.name + '</span>' +
+                    '<span class="wtval">' + t.w + '%</span></div>' +
+                    '<div class="wtbar"><i class="' + (t.w >= 9 ? 'hot' : '') +
+                    '" style="width:' + Math.round(t.w / maxw * 100) + '%"></i></div>';
+                wt.appendChild(row);
+            });
+
+            /* ---------- build topic views ---------- */
+            var host = document.getElementById('topic-views');
+            var qn = 0,
+                totalMarks = 0,
+                totalQ = QUESTIONS.length;
+            var topicMeta = {}; // topic id -> {qs, marks, n}
+
+            PAGES.push('v-home');
+            titles['v-home'] = {
+                t: 'Contents',
+                s: totalQ + ' questions across ' + TOPICS.length + ' topics'
+            };
+            PAGES.push('v-formulas');
+            titles['v-formulas'] = {
+                t: 'Formula sheet',
+                s: '15 formulas · reference'
+            };
+
+            TOPICS.forEach(function(t, ti) {
+                var qs = QUESTIONS.filter(function(q) {
+                    return q.t === t.id;
+                });
+                if (!qs.length) return;
+                var marks = qs.reduce(function(a, b) {
+                    return a + b.m;
+                }, 0);
+                topicMeta[t.id] = {
+                    n: qs.length,
+                    marks: marks,
+                    idx: ti + 1
+                };
+
+                var view = document.createElement('section');
+                view.className = 'view';
+                view.id = 'v-' + t.id;
+                PAGES.push(view.id);
+                titles[view.id] = {
+                    t: t.name,
+                    s: 'Topic ' + (ti + 1) + ' of ' + TOPICS.length + ' · ' + t.w + '% of the paper'
+                };
+
+                var html = '<div class="topic-intro">' +
+                    '<span class="cnt">' + qs.length + ' questions · ' + marks + ' marks · predicted weight ' + t.w + '%</span>' +
+                    '<h2>' + t.name + '</h2><p>' + t.note + '</p></div>';
+
+                qs.forEach(function(q) {
+                    qn++;
+                    totalMarks += q.m;
+                    var id = 'q' + qn;
+                    var label = {
+                        mcq: 'Multiple choice — one answer',
+                        msq: 'Multiple select — one or more',
+                        sa: 'Short answer — numeric'
+                    }[q.ty];
+                    html += '<article class="q" id="' + id + '" data-topic="' + t.id + '" data-qi="' + (QUESTIONS.indexOf(q)) + '">' +
+                        '<div class="gutter">' + qn + '<span class="mk">' + q.m + 'm</span></div><div class="qbody">' +
+                        '<div class="qtype">' + label + '</div><p class="qtext">' + q.q + '</p>';
+                    if (q.code) html += '<pre class="code">' + q.code.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</pre>';
+                    if (q.ty === 'sa') {
+                        html += '<div class="sa"><input type="text" inputmode="decimal" placeholder="your answer" aria-label="Answer for question ' + qn + '">' +
+                            '<button class="btn" type="button" data-act="check">Check</button><span class="verdict"></span></div>';
+                    } else {
+                        html += '<ul class="opts">';
+                        q.opts.forEach(function(o, i) {
+                            html += '<li class="opt ' + (q.ty === 'mcq' ? 'radio' : '') + '" tabindex="0" role="button" data-i="' + i + '">' +
+                                '<span class="box"></span><span>' + o + '</span></li>';
+                        });
+                        html += '</ul><div class="sa">' +
+                            (q.ty === 'msq' ? '<button class="btn" type="button" data-act="check">Check</button>' : '') +
+                            '<span class="verdict"></span></div>';
+                    }
+                    html += '<button class="solbtn" type="button" data-act="sol">Show working</button>' +
+                        '<div class="sol">' + q.sol + '</div></div></article>';
+                });
+
+                html += '<div class="pager"></div>';
+                view.innerHTML = html;
+                host.appendChild(view);
+            });
+
+            /* ---------- contents menu ---------- */
+            var menu = document.getElementById('menu');
+            TOPICS.forEach(function(t, i) {
+                var m = topicMeta[t.id];
+                if (!m) return;
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'mitem';
+                b.dataset.go = 'v-' + t.id;
+                b.innerHTML = '<span class="mnum">' + (i + 1) + '</span><span>' +
+                    '<span class="mname">' + t.name + '</span>' +
+                    '<span class="mmeta">' + m.n + ' q · ' + m.marks + ' marks · ' + t.w + '%</span>' +
+                    '<span class="mprog"><i data-prog="' + t.id + '"></i></span>' +
+                    '<span class="mscore" data-score="' + t.id + '">not started</span></span>';
+                menu.appendChild(b);
+            });
+            var fb = document.createElement('button');
+            fb.type = 'button';
+            fb.className = 'mitem';
+            fb.dataset.go = 'v-formulas';
+            fb.innerHTML = '<span class="mnum">§</span><span><span class="mname">Formula sheet</span>' +
+                '<span class="mmeta">15 formulas · reference</span>' +
+                '<span class="mscore">Everything you compute by hand</span></span>';
+            menu.appendChild(fb);
+
+            /* ---------- sidebar ---------- */
+            var sidenav = document.getElementById('sidenav');
+
+            function snavItem(go, num, name, meta, key) {
+                return '<button class="snav" type="button" data-go="' + go + '">' +
+                    '<span class="sn-num">' + num + '</span>' +
+                    '<span><span class="sn-name">' + name + '</span>' +
+                    (meta ? '<span class="sn-meta">' + meta + '</span>' : '') + '</span>' +
+                    '<span class="sn-score"' + (key ? ' data-sn="' + key + '"' : '') + '></span></button>';
+            }
+            var snHtml = snavItem('v-home', '◧', 'Contents', 'overview and weights', '') +
+                snavItem('v-formulas', '§', 'Formula sheet', '15 formulas', '') +
+                '<div class="side-rule"></div><div class="side-group">Topics by weight</div>';
+            TOPICS.forEach(function(t, i) {
+                var m = topicMeta[t.id];
+                if (!m) return;
+                snHtml += snavItem('v-' + t.id, i + 1, t.name, m.n + ' q · ' + t.w + '%', t.id);
+            });
+            sidenav.innerHTML = snHtml;
+
+            var side = document.getElementById('side'),
+                backdrop = document.getElementById('backdrop');
+
+            function closeDrawer() {
+                side.classList.remove('open');
+                backdrop.classList.remove('on');
+            }
+            document.getElementById('btn-menu').addEventListener('click', function() {
+                var open = side.classList.toggle('open');
+                backdrop.classList.toggle('on', open);
+            });
+            backdrop.addEventListener('click', closeDrawer);
+
+            /* ---------- routing ---------- */
+            var cur = 0;
+            var crumb = document.getElementById('crumb');
+            var bPrev = document.getElementById('btn-prev'),
+                bNext = document.getElementById('btn-next');
+
+            function show(i, keepScroll) {
+                cur = Math.max(0, Math.min(PAGES.length - 1, i));
+                var id = PAGES[cur];
+                document.querySelectorAll('.view').forEach(function(v) {
+                    v.classList.toggle('on', v.id === id);
+                });
+                crumb.innerHTML = titles[id].t + '<small>' + titles[id].s + '</small>';
+                bPrev.disabled = cur === 0;
+                bNext.disabled = cur === PAGES.length - 1;
+                document.querySelectorAll('.snav').forEach(function(s) {
+                    s.classList.toggle('active', s.dataset.go === id);
+                });
+                closeDrawer();
+                if (!keepScroll) window.scrollTo(0, 0);
+                if (id === 'v-home') refreshMenu();
+            }
+
+            function goto(id) {
+                var i = PAGES.indexOf(id);
+                if (i > -1) show(i);
+            }
+
+            document.getElementById('btn-home').addEventListener('click', function() {
+                show(0);
+            });
+            bPrev.addEventListener('click', function() {
+                show(cur - 1);
+            });
+            bNext.addEventListener('click', function() {
+                show(cur + 1);
+            });
+            document.addEventListener('click', function(e) {
+                var b = e.target.closest('[data-go]');
+                if (b) goto(b.dataset.go);
+            });
+
+            /* pagers at the bottom of each view */
+            function buildPagers() {
+                PAGES.forEach(function(id, i) {
+                    if (id === 'v-home') return;
+                    var p = document.querySelector('#' + id + ' .pager');
+                    if (!p) return;
+                    var prevT = i > 0 ? titles[PAGES[i - 1]].t : null;
+                    var nextT = i < PAGES.length - 1 ? titles[PAGES[i + 1]].t : null;
+                    p.innerHTML =
+                        (prevT ? '<button class="nav-btn" type="button" data-step="-1">← ' + prevT + '</button>' : '<span></span>') +
+                        '<span class="mid">' + i + ' / ' + (PAGES.length - 1) + '</span>' +
+                        (nextT ? '<button class="nav-btn solid" type="button" data-step="1">' + nextT + ' →</button>' :
+                            '<button class="nav-btn" type="button" data-step="home">Back to contents</button>');
+                });
+            }
+            buildPagers();
+            document.addEventListener('click', function(e) {
+                var s = e.target.closest('[data-step]');
+                if (!s) return;
+                if (s.dataset.step === 'home') show(0);
+                else show(cur + (+s.dataset.step));
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.target.tagName === 'INPUT' || e.metaKey || e.ctrlKey || e.altKey) return;
+                if (e.key === 'ArrowRight' && !bNext.disabled) {
+                    show(cur + 1);
+                }
+                if (e.key === 'ArrowLeft' && !bPrev.disabled) {
+                    show(cur - 1);
+                }
+            });
+
+            /* ---------- grading ---------- */
+            function qOf(el) {
+                return QUESTIONS[+el.dataset.qi];
+            }
+
+            function mark(el, ok) {
+                var q = qOf(el),
+                    v = el.querySelector('.verdict');
+                state[el.id] = {
+                    ok: ok,
+                    marks: q.m,
+                    topic: el.dataset.topic
+                };
+                v.textContent = ok ? 'Correct · +' + q.m : 'Not quite';
+                v.className = 'verdict ' + (ok ? 'ok' : 'no');
+                if (q.ty !== 'sa') {
+                    el.querySelectorAll('.opt').forEach(function(o) {
+                        var i = +o.dataset.i,
+                            isAns = q.ans.indexOf(i) > -1;
+                        o.classList.remove('picked');
+                        if (isAns) o.classList.add('right');
+                        else if (o.dataset.picked === '1') o.classList.add('wrong');
+                        o.querySelector('.box').textContent = isAns ? '✓' : (o.dataset.picked === '1' ? '✕' : '');
+                    });
+                }
+                if (!ok) el.querySelector('.sol').classList.add('open');
+                tally();
+            }
+
+            host.addEventListener('click', function(e) {
+                var el = e.target.closest('.q');
+                if (!el) return;
+                var q = qOf(el),
+                    locked = !!state[el.id];
+
+                var opt = e.target.closest('.opt');
+                if (opt && !locked) {
+                    if (q.ty === 'mcq') {
+                        opt.dataset.picked = '1';
+                        mark(el, q.ans.indexOf(+opt.dataset.i) > -1);
+                    } else {
+                        var on = opt.dataset.picked === '1';
+                        opt.dataset.picked = on ? '0' : '1';
+                        opt.classList.toggle('picked', !on);
+                        opt.querySelector('.box').textContent = !on ? '✓' : '';
+                    }
+                    return;
+                }
+
+                var act = e.target.dataset.act;
+                if (act === 'sol') {
+                    var s = el.querySelector('.sol');
+                    s.classList.toggle('open');
+                    e.target.textContent = s.classList.contains('open') ? 'Hide working' : 'Show working';
+                    return;
+                }
+                if (act === 'check' && !locked) {
+                    if (q.ty === 'sa') {
+                        var raw = el.querySelector('input').value.trim().replace(/[^0-9eE.+-]/g, '');
+                        if (raw === '') return;
+                        var val = parseFloat(raw);
+                        mark(el, isFinite(val) && Math.abs(val - q.ans) <= (q.tol || 0) + 1e-9);
+                    } else {
+                        var picked = [];
+                        el.querySelectorAll('.opt').forEach(function(o) {
+                            if (o.dataset.picked === '1') picked.push(+o.dataset.i);
+                        });
+                        if (!picked.length) return;
+                        mark(el, picked.length === q.ans.length && picked.every(function(i) {
+                            return q.ans.indexOf(i) > -1;
+                        }));
+                    }
+                }
+            });
+
+            host.addEventListener('keydown', function(e) {
+                if (e.key !== 'Enter' && e.key !== ' ') return;
+                var opt = e.target.closest('.opt');
+                if (opt) {
+                    e.preventDefault();
+                    opt.click();
+                }
+            });
+            host.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && e.target.tagName === 'INPUT') {
+                    e.preventDefault();
+                    e.target.closest('.sa').querySelector('[data-act="check"]').click();
+                }
+            });
+
+            /* ---------- scoring ---------- */
+            var pct = document.getElementById('pct'),
+                fill = document.getElementById('fill'),
+                meta = document.getElementById('meta');
+
+            function refreshMenu() {
+                TOPICS.forEach(function(t) {
+                    var m = topicMeta[t.id];
+                    if (!m) return;
+                    var got = 0,
+                        att = 0,
+                        cnt = 0;
+                    Object.keys(state).forEach(function(k) {
+                        if (state[k].topic !== t.id) return;
+                        cnt++;
+                        att += state[k].marks;
+                        if (state[k].ok) got += state[k].marks;
+                    });
+                    var sn = document.querySelector('[data-sn="' + t.id + '"]');
+                    if (sn) {
+                        if (!cnt) {
+                            sn.textContent = '';
+                            sn.className = 'sn-score';
+                        } else {
+                            var sp = Math.round(got / att * 100);
+                            sn.textContent = sp + '%';
+                            sn.className = 'sn-score ' + (sp >= 95 ? 'ok' : 'no');
+                        }
+                    }
+                    var bar = document.querySelector('[data-prog="' + t.id + '"]');
+                    var lab = document.querySelector('[data-score="' + t.id + '"]');
+                    if (!bar) return;
+                    if (!cnt) {
+                        bar.style.width = '0';
+                        lab.textContent = 'not started';
+                        bar.classList.remove('miss');
+                        return;
+                    }
+                    var p = Math.round(got / att * 100);
+                    bar.style.width = Math.round(cnt / m.n * 100) + '%';
+                    bar.classList.toggle('miss', p < 95);
+                    lab.textContent = p + '% · ' + cnt + '/' + m.n + ' done';
+                });
+            }
+
+            function tally() {
+                var got = 0,
+                    att = 0,
+                    cnt = 0;
+                Object.keys(state).forEach(function(k) {
+                    cnt++;
+                    att += state[k].marks;
+                    if (state[k].ok) got += state[k].marks;
+                });
+                var p = att ? Math.round(got / att * 100) : 0;
+                pct.textContent = p + '%';
+                fill.style.width = p + '%';
+                fill.classList.toggle('good', p >= 95 && cnt > 0);
+                meta.textContent = cnt + '/' + totalQ + ' done · ' + got + '/' + att + ' marks';
+                refreshMenu();
+            }
+
+            document.getElementById('reset').addEventListener('click', function() {
+                state = {};
+                document.querySelectorAll('.q').forEach(function(el) {
+                    var q = qOf(el);
+                    el.querySelectorAll('.opt').forEach(function(o) {
+                        o.className = 'opt' + (q.ty === 'mcq' ? ' radio' : '');
+                        o.dataset.picked = '0';
+                        o.querySelector('.box').textContent = '';
+                    });
+                    var i = el.querySelector('input');
+                    if (i) i.value = '';
+                    var v = el.querySelector('.verdict');
+                    v.textContent = '';
+                    v.className = 'verdict';
+                    el.querySelector('.sol').classList.remove('open');
+                    el.querySelector('.solbtn').textContent = 'Show working';
+                });
+                tally();
+                show(0);
+            });
+
+            show(0);
+            tally();
+        })();
+    </script>
+
+</body>
+
+</html>

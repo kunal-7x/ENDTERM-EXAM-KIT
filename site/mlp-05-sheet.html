@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP Cheatsheet Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">MLP / MLP Cheatsheet</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#preprocessing">Preprocessing</a></li><li><a href="#metrics">Metrics</a></li><li><a href="#counts">Counts</a></li><li><a href="#models">Models</a></li></ul></nav>
+<article class="doc"><h1 id="mlp-05-cheatsheet-last-pass-page">📋 MLP-05 — CHEATSHEET (last-pass page)</h1>
+<h2 id="preprocessing">Preprocessing</h2>
+<ul>
+<li>Standard z=(x−μ)/σ(pop) · MinMax (x−min)/(max−min) · MaxAbs x/max|x|</li>
+<li>Impute BEFORE scale · transform keeps index, apply breaks it</li>
+<li>OHE drop-first = k−1 · MultiLabelBinarizer alphabetical · LabelEncoder sorted</li>
+<li>Pipeline = series · <code>step__param</code> · memory = cache(time/CV/tune)</li>
+</ul>
+<h2 id="metrics">Metrics</h2>
+<ul>
+<li>Prec=TP/(TP+FP) · Rec=TP/(TP+FN) · F1=2PR/(P+R) · R²∈(−∞,1]</li>
+<li>Dummy-mean → MSE · Dummy-frequent → rec 1.0 · Report has P/R/F1</li>
+</ul>
+<h2 id="counts">Counts</h2>
+<ul>
+<li>Fits = combos × cv (×trees if RF inside) · LOO = n · LPO = C(n,p)</li>
+<li>Randomized n_iter = EXACTLY that many</li>
+</ul>
+<h2 id="models">Models</h2>
+<ul>
+<li>Trees: low-ccp/deep = overfit · split needs min_split + min_leaf both</li>
+<li>RF decorrelate via max_features · AdaBoost: ↓lr fixes overfit</li>
+<li>KNN: small-k complex · scale matters · bottleneck = predict</li>
+<li>SVM: C↑ complex · gamma↑ tight · support_ = indices</li>
+<li>SGD: shuffle/max_iter/loss names · warm_start resumes · partial_fit ∈ {SGD,GNB,MNB}</li>
+<li>NB: indep + Gauss-cont + Multi-text · LogReg: coef_, C&gt;0 regs, saga=elastic, liblinear≠multi</li>
+<li>KMeans: inertia=SSE · k-means++ · elbow=inertia · silhouette label-free</li>
+<li>MLP: (a,b)=layers · alpha=reg · seed matters · typo-param → None</li>
+<li>Pandas: loc≡iloc-slice · no-axis apply → −1 · query/transform keep shape</li>
+<li>Text: vocab dict · bigrams count · min_df/max_features only</li>
+<li>TS: low-p ADF = stationary · d = differencing · multiplicative = ×</li>
+<li>Reco: content = metadata · SVD = dim-reduce · cosine = (a@b)/(|a||b|)</li>
+</ul></article>
+<nav class="prevnext"><a class="pn prev" href="mlp-04-sa.html">â† MLP Solved SA</a> <a class="pn next" href="mlp-predicted-paper.html">MLP Predicted Paper â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

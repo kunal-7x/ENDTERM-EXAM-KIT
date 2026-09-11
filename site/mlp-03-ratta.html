@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP Ratta Q&A Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">MLP / MLP Ratta Q&A</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#high-repeat-across-3-papers-memorize-cold">⭐ HIGH (repeat across 3+ papers — memorize cold)</a></li><li><a href="#medium-2-papers-variants-read-twice">🟡 MEDIUM (2 papers / variants — read twice)</a></li><li><a href="#low-once-skim">🟢 LOW (once — skim)</a></li></ul></nav>
+<article class="doc"><h1 id="mlp-03-ratta-concept-mcqmsq-answers">🎯 MLP-03 — RATTA (concept MCQ/MSQ + answers)</h1>
+<h2 id="high-repeat-across-3-papers-memorize-cold">⭐ HIGH (repeat across 3+ papers — memorize cold)</h2>
+<ul>
+<li><code>make_blobs/clusters</code> generator → <strong>make_blobs()</strong> (NOT make_clusters/make_normal_clusters)</li>
+<li>R² → <strong>can be negative when worse than mean-model</strong></li>
+<li>Hyperparameter → <strong>L1-ratio / pruning / lr / ALL</strong> · NOT-hyperparameter → <strong>Bias</strong> · IS-hyperparameter → <strong>degree / n_neighbors / max_depth</strong> (NOT intercept_)</li>
+<li>partial_fit → <strong>SGDRegressor</strong> (+GaussianNB/MultinomialNB; NOT trees/RF/Logistic)</li>
+<li>Softmax pipeline blank → <strong>LogisticRegression(multi_class='multinomial')</strong></li>
+<li>SVC <code>support_</code> → <strong>indices</strong> · <code>predict_proba</code> → <strong>posteriors</strong></li>
+<li>KNN-smooth-boundary model pair (k=2 vs 5) → <strong>model2 smoother</strong></li>
+<li>gamma (SVM) → <strong>high gamma = close-points-same-class</strong></li>
+<li>Overfit-tree → <strong>ccp_alpha=0 / max_depth=None,min_split=2,leaf=1 / tree_1</strong></li>
+<li>max_depth ↑ on TRAIN score → <strong>increase</strong></li>
+<li><code>clf1(3,2) vs clf2(6,4)</code> depth → <strong>depth1 ≥ depth2</strong></li>
+<li>Pipeline-series-only API → <strong>Pipeline</strong></li>
+<li>GridSearch naming → <strong><code>step__param</code></strong> (bc__/poly__/estimator__)</li>
+<li><code>n_iter=4</code> → <strong>only 4 tested</strong></li>
+<li><code>memory=</code> → <strong>time + CV + tuning</strong> (NOT parallel/generalization)</li>
+<li>Scaling-hit MSQ → <strong>LR + SVM</strong> (+KNN/KMeans) · Safe MSQ → <strong>DecisionTree</strong></li>
+<li>Regularization MSQ → <strong>↑bias + elastic=L1+L2</strong> (NOT anti-underfit, NOT row-select)</li>
+<li>Overfit-fix MSQ → <strong>more-reg + more-data</strong></li>
+<li>SGD-iter MSQ → <strong>more-time + tol-caps + fluctuates</strong></li>
+<li>KNN-boundary MSQ → <strong>low-k complex + scale matters</strong> (+small-k noisy)</li>
+<li>Elbow → <strong>inertia bend</strong> · Silhouette → <strong>no labels needed</strong></li>
+<li>Data-snooping MSQ → <strong>biased-test + false-pos + better-train</strong></li>
+<li>type_of_target 4-print → <strong>binary / multiclass-multioutput / multilabel-indicator / multilabel-indicator</strong></li>
+<li>Photo multi-animal → <strong>multi-label + multiclass</strong> · temp+humidity forecast → <strong>None of these</strong></li>
+<li><code>fit</code> learns params ✓ / <code>transform</code>-after-classifier ✗ → <strong>S1-True-S2-False</strong></li>
+<li><code>train_test_split</code> rs-cases → <strong>same for 1&amp;3</strong> (test.2/rs42 == train.8/rs42)</li>
+<li>Bagging max_samples → <strong>draws-per-estimator</strong> · max_samples=0.5 → <strong>50%</strong></li>
+<li>Voting soft → <strong>avg proba</strong> · hard → <strong>majority</strong></li>
+<li>DummyRegressor → <strong>mean/median per strategy</strong></li>
+<li><code>C</code> in SVC doc → <strong>NOT in [-1,1]</strong> · degree ↔ <strong>poly only</strong> · big-C → <strong>overfit</strong></li>
+<li>LogReg balanced → <strong>equal importance + still regularized</strong></li>
+<li><code>penalty</code> → <strong>reg type</strong> · <code>max_iter</code> → <strong>cap</strong></li>
+<li>liblinear → <strong>L1-small + NO multinomial</strong> · elastic-net → <strong>saga</strong></li>
+<li><code>coef_</code> → <strong>coefficients</strong> · C=0.5 → <strong>regularized</strong></li>
+<li>Perceptron resume → <strong>warm_start=True</strong> · big-CSV → <strong>chunksize</strong></li>
+<li>Dicts-data → <strong>DictVectorizer</strong> · ordinal → <strong>satisfaction rating</strong></li>
+<li><code>learning_rate='constant'</code> → <strong>fixed initial value</strong></li>
+<li>CV-purpose → <strong>multi-subset evaluation</strong> · LOOCV-n → <strong>n models</strong></li>
+<li>LOO-strategy-5-samples → <strong>trains 5 times</strong></li>
+<li>Agglomerative → <strong>bottom-up merge</strong> · init → <strong>k-means++</strong> · inertia → <strong>SSE</strong></li>
+<li>Segmentation → <strong>K-means</strong> · unlabeled images → <strong>Unsupervised</strong> · labels_ → <strong>cluster index</strong></li>
+<li>blobs(8,2) → <strong>two unequal clusters</strong> · KMeans-eval → <strong>Silhouette + Inertia</strong></li>
+<li>Ridge → <strong>L2, alpha desensitizes</strong> · Ridge-SGD → <strong>SGDRegressor(l2)+sgd__alpha</strong></li>
+<li>W1-constrained → <strong>0.331 / 0.294</strong> (3dp)</li>
+<li>s1-vs-s2 intercept → <strong>s1 &gt; s2</strong></li>
+<li><code>include_bias=False</code> → <strong>no bias column</strong></li>
+<li>Poly-missing-part → <strong><code>model.fit(X_train, y_train)</code></strong></li>
+<li>Union-poly+pca → <strong>49 / 36</strong></li>
+<li>Impute→scale order; reversed <strong>WRONG</strong></li>
+<li><code>df.loc[a:b]</code> ≡ <strong>iloc[[..]] ≡ iloc[slice]</strong> (tick both)</li>
+<li><code>df.apply(no-axis)</code> → <strong>−1 (column-wise error)</strong></li>
+<li>TF-IDF MSQ → <strong>max_features + min_df</strong></li>
+<li>ADF low-p → <strong>stationary</strong> · ARIMA-d → <strong>differencing</strong> · fit→summary</li>
+<li>Multiplicative TS → <strong>trend × seasonal × error</strong></li>
+<li>Cold-start+metadata → <strong>content-based</strong> · SVD → <strong>dim-reduce</strong> · user-CF needs → <strong>interaction matrix</strong></li>
+<li>NB trio → <strong>independence + Gaussian-continuous + Multinomial-text</strong> ("always beats logreg" FALSE)</li>
+<li>Cancer→Recall logic applies to imbalanced-MLP too; rare-disease → <strong>precision+recall+F1</strong></li>
+</ul>
+<h2 id="medium-2-papers-variants-read-twice">🟡 MEDIUM (2 papers / variants — read twice)</h2>
+<ul>
+<li><code>SVC(kernel=__)</code> → <strong>linear/rbf</strong> · <code>RidgeClassifier(__=0)</code> → <strong>alpha</strong> · Lasso-0.1-scaled → <strong>alpha=0.1</strong></li>
+<li>Lasso α↑ → <strong>smaller coefs + more zeros</strong> (1&amp;2)</li>
+<li>LogReg-doc statements → <strong>kernel-linear/sigmoid ✓ + degree-poly ✓</strong></li>
+<li>DT-doc statements → <strong>depth≤max + tree_.max_depth ✓</strong></li>
+<li>RF-diversity → <strong>high-n + max_samples&lt;sub</strong> · RF-split-5 → <strong>5/split</strong></li>
+<li>AdaBoost-params → <strong>n_est + lr</strong> · KMeans-params → <strong>k + init + max_iter</strong> (NOT lr)</li>
+<li>k-select → <strong>elbow + silhouette</strong> (NOT k-fold)</li>
+<li>Silhouette full-set → <strong>per-sample + higher-better + any-clusterer</strong></li>
+<li>metrics-module → <strong>confusion + R2 + AUC</strong></li>
+<li>MLP-construction → <strong>full-correct-call option</strong> · hidden-trial → <strong>trial-and-error</strong></li>
+<li>MLP-seed → <strong>matters</strong> · mlp2-bigger → <strong>more params</strong></li>
+<li>alpha-MLP → <strong>stronger reg</strong> (even in the "underfit" trap stem)</li>
+<li>MNIST-MLP → <strong>scaling</strong> · nonlinearity → <strong>activation</strong> · (50,30) → <strong>2 layers</strong></li>
+<li>71-params → <strong>(10,)</strong> · regression-out → <strong>identity</strong></li>
+<li>assert-96%-imbalanced → <strong>both-true-no-explain</strong> · precision/recall-assert → <strong>both-false</strong></li>
+<li>R2-computed-range → <strong>−inf..1</strong></li>
+<li>KMeans-9-statements → <strong>silhouette/elbow-valid</strong></li>
+<li>PIL-flat → <strong>(40000,)</strong> · PIL-false → <strong>256 + channels + flip</strong></li>
+<li>Cal-housing bugs → <strong>Line1 + Line3 + Line4</strong></li>
+<li>RF/Boost-false → <strong>no-replacement + bagging-bias + parallel-boost</strong></li>
+<li>LogReg-multi → <strong>liblinear CANNOT</strong></li>
+<li>GBM-loss → <strong>squared_error + huber</strong> · GBM-scorer → <strong>r2 + neg_MAE</strong> · GBM-fits → <strong>72</strong></li>
+<li>Dept-salary filter → <strong>groupby.filter</strong></li>
+<li>Groupby-impute → <strong>transform (NOT apply)</strong></li>
+<li>2025-split-cases → <strong>different-1&amp;2</strong> (rs42 vs rs0)</li>
+<li>Confusion-from-lists → <strong>recount; options misprinted before</strong></li>
+<li>KFold-41-options → <strong>tick the 41s + wrong sizes</strong></li>
+<li>Groupby-salary-median Q → <strong>option 1 (closest; question imperfect)</strong></li>
+<li>Linkage-geo → <strong>Single</strong> · Agglo-outliers → <strong>nearest</strong></li>
+<li><code>hidden_layer_size</code> TYPO versions → <strong>None of the options</strong></li>
+</ul>
+<h2 id="low-once-skim">🟢 LOW (once — skim)</h2>
+<ul>
+<li><code>HashingVectorizer</code> for dicts (alt accepts) · <code>fetch_california</code> shape games</li>
+<li><code>Pipeline merger</code>... covered · <code>learning-curve</code> → <strong>train + proba + log_loss</strong></li>
+<li><code>max leaves depth3</code> → <strong>8</strong> · <code>criterion</code> → <strong>split quality</strong></li>
+<li><code>class_weight</code> → <strong>inverse-freq</strong> · <code>max_features</code> low → <strong>option 1</strong></li>
+<li><code>SVC digits score</code> → <strong>1.0</strong> · <code>len(classes_)</code> → <strong>2 (3-point) / 3 (n&gt;k)</strong></li>
+<li><code>GNB prior</code> → <strong>0.667</strong> · <code>out_activation_</code> → <strong>identity</strong></li>
+<li><code>effective_metric_</code> → <strong>manhattan</strong> · <code>p=1</code> ↔ manhattan</li>
+<li>Employee-filter → <strong>Sara, Mike, Anna, Tom</strong> · row-select-XI → <strong>df[] + query</strong></li>
+<li><code>sort-for-max</code> → <strong>highest row</strong> · <code>groupby-mean</code> → <strong>per-category</strong></li>
+<li><code>mean_[3,4]</code> · <code>data_max_[5,6]</code> · <code>var_[2,200]</code> · OHE-6-cols</li>
+<li>MSE-2.56 · <code>StandardScaler-mean</code> variants</li>
+</ul></article>
+<nav class="prevnext"><a class="pn prev" href="mlp-02-models.html">â† MLP Engine: Models</a> <a class="pn next" href="mlp-04-sa.html">MLP Solved SA â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

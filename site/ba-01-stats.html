@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BA Engine: Stats Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">BA / BA Engine: Stats</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#engine-s1-chi-square-test-of-independence-rows-cols-table">ENGINE S1 — Chi-square Test of INDEPENDENCE (rows × cols table)</a></li><li><a href="#engine-s2-chi-square-goodness-of-fit-one-row-of-data-vs-a-distribution">ENGINE S2 — Chi-square GOODNESS-OF-FIT (one row of data vs a distribut</a></li><li><a href="#engine-s3-distributions-1-mark-theory-always-repeats">ENGINE S3 — Distributions (1-mark theory, always repeats)</a></li><li><a href="#engine-s4-total-probability-bayes-the-bulbfactory-template">ENGINE S4 — Total Probability + Bayes (the bulb/factory template)</a></li><li><a href="#engine-s5-discrete-vs-continuous-1-mark-gifts">ENGINE S5 — Discrete vs Continuous (1-mark gifts)</a></li></ul></nav>
+<article class="doc"><h1 id="ba-01-engine-stats-chi-square-distributions-probabilitybayes">📐 BA-01 — ENGINE: Stats (Chi-Square, Distributions, Probability/Bayes)</h1>
+<h2 id="engine-s1-chi-square-test-of-independence-rows-cols-table">ENGINE S1 — Chi-square Test of INDEPENDENCE (rows × cols table)</h2>
+<p><strong>TRIGGER:</strong> "independent", "expected frequency", table with row labels + column labels (jeans store, brand×city, gender×rating).</p>
+<p><strong>STEPS:</strong>
+1. Row totals, column totals, grand total G (add everything).
+2. Expected for cell = row_total × col_total ÷ G. ← THE question, 90% of the time.
+3. df = (rows − 1) × (cols − 1). ← the follow-up question, always.
+4. Decision: computed χ² &gt; tabulated → Reject H₀ (NOT independent). Computed &lt; tabulated → Do NOT reject (independent).
+5. "Do not reject" ≠ "accept". Never tick "Accept the null".</p>
+<p><strong>VAULT (exact PYQs):</strong>
+- Jeans 3 styles × 4 stores, E(Style-B, Store-3) = 324×315÷835 = <strong>122.23</strong> (key: 121–123)
+- Same table, df = (3−1)(4−1) = <strong>6</strong>
+- Computed 2.7 &lt; tabulated 5.78 → <strong>Do not reject; sales ARE independent</strong>
+- Gender×difficulty rating: E(male, rating 3) = row×col÷200. df = <strong>2</strong> (key)
+- Day×Street independence: df = <strong>14</strong> (key)</p>
+<h2 id="engine-s2-chi-square-goodness-of-fit-one-row-of-data-vs-a-distribution">ENGINE S2 — Chi-square GOODNESS-OF-FIT (one row of data vs a distribution)</h2>
+<p><strong>TRIGGER:</strong> "goodness of fit", "follows uniform/normal", "bins".</p>
+<p><strong>STEPS:</strong>
+1. Expected per bin = total_observations ÷ number_of_bins. (Uniform = equal everywhere.)
+2. χ² = Σ (Observed − Expected)² ÷ Expected. Compute per bin, add.
+3. df = bins − 1 (− extra if parameters estimated from data; uniform = bins−1).
+4. Compare with table value → reject / do-not-reject (same as S1).</p>
+<p><strong>VAULT:</strong>
+- Ice-cream street-A, 4 bins: E per bin = <strong>3.5</strong> (portal key — memorize for this exact scenario; engine gives n/k)
+- Uniform ice-cream-parlour 14 days, 7 bins: computed χ² = <strong>4</strong>, df = <strong>6</strong>, E per bin ≈ <strong>2.0</strong>
+- Lenses Normal check: bins given, σ = 1.00 from sample → standardize, use normal table.
+- Null for GoF is ALWAYS "data FOLLOWS the distribution" (tick: "uniformly distributed", NOT the "NOT" version).</p>
+<h2 id="engine-s3-distributions-1-mark-theory-always-repeats">ENGINE S3 — Distributions (1-mark theory, always repeats)</h2>
+<ul>
+<li><strong>Mean ≈ Median ≈ Mode + zero skew</strong> → symmetric (Gaussian). <strong>Mean &gt; Median</strong> → right skew. <strong>Mean &lt; Mode</strong> → left skew.</li>
+<li>Moments: 1st = mean, 2nd relates variance, 3rd relates skewness.</li>
+<li><strong>Poisson</strong>: counts, skew &gt; 0, mean ≈ variance. <strong>Uniform</strong>: all equal. <strong>Exponential</strong>: waiting time, right-skew.</li>
+<li><strong>Empirical distribution</strong> needs: the actual sample data (nothing else).</li>
+<li>P-P plot vs Q-Q plot: right-tail data → points DON'T fall on the 45° line in EITHER plot (both options with "will not entirely fall" are correct; "will fall" options are wrong).</li>
+<li>p-value = P(observing this sample | H₀ is TRUE). p (0.054) &gt; α (0.05) → <strong>Fail to reject H₀</strong>. Never "accept H₀".</li>
+</ul>
+<h2 id="engine-s4-total-probability-bayes-the-bulbfactory-template">ENGINE S4 — Total Probability + Bayes (the bulb/factory template)</h2>
+<p><strong>TRIGGER:</strong> "Type-A/B/C with %", "factory A/B", "accident prone", "given that it is defective, probability it came from X".</p>
+<p><strong>STEPS:</strong>
+1. P(event) = Σ P(typeᵢ) × P(event|typeᵢ). ← first question, always.
+2. P(typeₖ|event) = P(typeₖ)×P(event|typeₖ) ÷ answer-from-step-1. ← second question, always.
+3. Cost/warranty: Σ P(typeᵢ)×P(bad|typeᵢ)×N×costᵢ.</p>
+<p><strong>VAULT (DMS bulbs — memorize the triple):</strong>
+- P(life &gt; 100h) = 0.2×0.7 + 0.3×0.4 + 0.5×0.3 = <strong>0.41</strong>
+- P(Type-B | &gt;100h) = 0.12 ÷ 0.41 = <strong>0.29</strong>
+- Warranty cost 10,000 bulbs = 1200 + 3150 + 10500 = <strong>14850</strong>
+- Insurance: P(accident) = 0.3×0.4 + 0.7×0.2 = <strong>0.26</strong>; P(prone|accident) = 0.12÷0.26 = <strong>0.46</strong>
+- ⚠️ Radios (0.05/0.1 factories): engine gives P(2nd def|1st def) = 0.00625÷0.075 = <strong>0.08</strong>; portal key says <strong>0.04–0.05</strong>. Exact-repeat → write key. New numbers → engine.</p>
+<h2 id="engine-s5-discrete-vs-continuous-1-mark-gifts">ENGINE S5 — Discrete vs Continuous (1-mark gifts)</h2>
+<ul>
+<li>Discrete: counts (number of courses, batch size). Continuous: measurements (average weight, average age, height).</li>
+<li>VIF &lt; 1 → <strong>calculation error</strong> (VIF ≥ 1 always). VIF = 1/(1−r²); VIF &gt; 5–10 → multicollinearity problem.</li>
+</ul></article>
+<nav class="prevnext"><a class="pn prev" href="ba-00-index.html">â† BA 80/20 Index</a> <a class="pn next" href="ba-02-regression.html">BA Engine: Regression â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP Solved SA Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">MLP / MLP Solved SA</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#preprocessing-outputs">Preprocessing outputs</a></li><li><a href="#metrics-verified">Metrics (verified)</a></li><li><a href="#model-outputs-verified">Model outputs (verified)</a></li><li><a href="#counts">Counts</a></li><li><a href="#pandas-sas">Pandas SAs</a></li></ul></nav>
+<article class="doc"><h1 id="mlp-04-sa-solved-every-numeric-answer-computed-verified-in-sklearn">🧮 MLP-04 — SA SOLVED (every numeric answer, computed + verified in sklearn)</h1>
+<p><strong>Format note:</strong> MLP SAs usually say "correct to 2 decimals / truncate". Copy exactly.</p>
+<h2 id="preprocessing-outputs">Preprocessing outputs</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaxAbsScaler [[-3],[0],[-2],[2],[-1],[-4]] → min</td>
+<td><strong>−1.0</strong></td>
+</tr>
+<tr>
+<td>MaxAbsScaler [[-3.5],…] → max</td>
+<td><strong>0.5</strong></td>
+</tr>
+<tr>
+<td>SimpleImputer mean [1,2,3,nan,4,nan,5] → statistics_</td>
+<td><strong>[3.0]</strong></td>
+</tr>
+<tr>
+<td>SimpleImputer F3 mean [9,7,?,5]</td>
+<td><strong>7.0</strong></td>
+</tr>
+<tr>
+<td>KNNImputer(k=2) C-row F3</td>
+<td><strong>6.0</strong></td>
+</tr>
+<tr>
+<td>StandardScaler [2,6,10,14] → transform([[8]])</td>
+<td><strong>0.0</strong></td>
+</tr>
+<tr>
+<td>MinMaxScaler same → 8</td>
+<td><strong>0.5</strong></td>
+</tr>
+<tr>
+<td>StandardScaler var_ [[1,10]…]</td>
+<td><strong>[2, 200]</strong></td>
+</tr>
+<tr>
+<td>ColumnTransformer sum first col (MaxAbs+OHE)</td>
+<td><strong>−0.45</strong></td>
+</tr>
+<tr>
+<td>Same, X_transformed[2,1]</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>Poly interaction_only d3 [[1,3],[2,4]]</td>
+<td><strong>[[1,1,3,3],[1,2,4,8]]</strong></td>
+</tr>
+<tr>
+<td>Poly d2 [[1],[2],[3]]</td>
+<td><strong>[[1,1,1],[1,2,4],[1,3,9]]</strong></td>
+</tr>
+<tr>
+<td>Bigram count sum (2 docs)</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>Tfidf vocab len (apple/banana/orange/fruit)</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>Tfidf zeros ((1,2)-grams, 2 docs)</td>
+<td><strong>10</strong></td>
+</tr>
+<tr>
+<td>LabelEncoder zeros (11 fruits)</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>OHE sparsity 5×5</td>
+<td><strong>80%</strong></td>
+</tr>
+<tr>
+<td>VarianceThreshold(0.1) kept cols</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>CT shapes</td>
+<td><strong>(20640,49)</strong> · <strong>36</strong> (iris) · <strong>(4,4)</strong> · <strong>(3,3)</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="metrics-verified">Metrics (verified)</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>confusion_matrix rain/sunny</td>
+<td><strong>[[1,2],[1,2]]</strong></td>
+</tr>
+<tr>
+<td>f1 [1,1,0,1,0,0,1,0,1]/[0,1,0,1,0,1,1,1,1]</td>
+<td><strong>0.7273 → tick 0.72</strong></td>
+</tr>
+<tr>
+<td>f1 class-1 (8-list)</td>
+<td><strong>0.7273 → write 0.73</strong></td>
+</tr>
+<tr>
+<td>recall [1,0,1,1,0,1]/[1,0,0,1,0,1]</td>
+<td><strong>0.75</strong></td>
+</tr>
+<tr>
+<td>precision class-1 (3×3, col=8)</td>
+<td><strong>0.25</strong></td>
+</tr>
+<tr>
+<td>recall class-1 (10/5/4-matrix)</td>
+<td><strong>0.1</strong></td>
+</tr>
+<tr>
+<td>MSE dummy mean ([35,40] vs 20)</td>
+<td><strong>312.5</strong></td>
+</tr>
+<tr>
+<td>MSE [2,0,3,5]/[2.5,0,2,8]</td>
+<td><strong>2.56</strong></td>
+</tr>
+<tr>
+<td>r2 all-10 preds</td>
+<td><strong>−12.5</strong></td>
+</tr>
+<tr>
+<td>LogReg iris[70:80] score</td>
+<td><strong>0.8</strong></td>
+</tr>
+<tr>
+<td>DummyClassifier recall / precision (650/1000)</td>
+<td><strong>1.0 / 0.65</strong></td>
+</tr>
+<tr>
+<td>classification f1 (report)</td>
+<td><strong>0.98</strong> · class-1 n = <strong>105</strong></td>
+</tr>
+<tr>
+<td>GNB prior Yes</td>
+<td><strong>0.667</strong></td>
+</tr>
+<tr>
+<td>Cosine (1,2,3)·(1,0,0) / ·(2,0,1)</td>
+<td><strong>0.27 / 0.60</strong></td>
+</tr>
+<tr>
+<td>Collab X / Y / Robin-C pred</td>
+<td><strong>0.92 / 0.82 / 4.289</strong></td>
+</tr>
+<tr>
+<td>LR accidents (25, blue)</td>
+<td><strong>73.87</strong></td>
+</tr>
+<tr>
+<td>W1 (5/7-rule) / (3/4-rule)</td>
+<td><strong>0.331 / 0.294</strong></td>
+</tr>
+<tr>
+<td>PCA ratio_[0] (3-pt)</td>
+<td><strong>1.0</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="model-outputs-verified">Model outputs (verified)</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KNN [8,9]/[2,200]/[4,4]/[6,6]/[3,2]/[2.5,66]</td>
+<td><strong>1 / 1 / 0 / 0 / 0 / 1</strong></td>
+</tr>
+<tr>
+<td>Perceptron AND [1,1] / [2,2] / 0215</td>
+<td><strong>1 / 1 / 1</strong></td>
+</tr>
+<tr>
+<td>Perceptron max-acc (5-pt)</td>
+<td><strong>0.8</strong></td>
+</tr>
+<tr>
+<td>KNN n=4 fit on 3 pts → classes</td>
+<td><strong>3</strong> (fit fine; predict would fail)</td>
+</tr>
+<tr>
+<td>DT max_depth=2 predict [4,120]</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>KNN p=1 → classes + metric</td>
+<td><strong>2, manhattan</strong></td>
+</tr>
+<tr>
+<td>type_of_target ×4</td>
+<td><strong>binary / multiclass-multioutput / multilabel-indicator / multilabel-indicator</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="counts">Counts</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LeavePOut(2,10) / RepeatedKFold(3,2)</td>
+<td><strong>45 / 6</strong></td>
+</tr>
+<tr>
+<td>GridSearch [{5},{3}] cv10</td>
+<td><strong>80 fits</strong></td>
+</tr>
+<tr>
+<td>GridSearch combos [{25},{5},{30}]</td>
+<td><strong>60</strong></td>
+</tr>
+<tr>
+<td>RF(10 trees)+GS×cv5</td>
+<td><strong>500 models</strong></td>
+</tr>
+<tr>
+<td>GBM GS cv4</td>
+<td><strong>72 fits</strong></td>
+</tr>
+<tr>
+<td>{4,5,7} grid</td>
+<td><strong>140</strong> · RF-grid {15+6} → <strong>21</strong></td>
+</tr>
+<tr>
+<td>LOOCV 1024 / 1000 / 5</td>
+<td><strong>1024 / 1000 / 5</strong> · KFold10 → <strong>10</strong></td>
+</tr>
+<tr>
+<td>71-param MLP layer</td>
+<td><strong>(10,)</strong></td>
+</tr>
+<tr>
+<td>Balanced depth-3 leaves</td>
+<td><strong>8</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="pandas-sas">Pandas SAs</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shape-rows+cols−na (5×5,1 na)</td>
+<td><strong>9</strong></td>
+</tr>
+<tr>
+<td>Insulin zeros</td>
+<td><strong>3</strong> · Age mean</td>
+</tr>
+<tr>
+<td>loc+iloc sums</td>
+<td><strong>120 / 98</strong> · type-nunique</td>
+</tr>
+<tr>
+<td>df shape (150,4)→poly36</td>
+<td><strong>36</strong></td>
+</tr>
+</tbody>
+</table></div></article>
+<nav class="prevnext"><a class="pn prev" href="mlp-03-ratta.html">â† MLP Ratta Q&A</a> <a class="pn next" href="mlp-05-sheet.html">MLP Cheatsheet â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

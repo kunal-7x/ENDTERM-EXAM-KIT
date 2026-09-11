@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP Engine: Models Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">MLP / MLP Engine: Models</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#trees">TREES</a></li><li><a href="#ensembles">ENSEMBLES</a></li><li><a href="#knn-svm-sgd-nb-logreg">KNN / SVM / SGD / NB / LOGREG</a></li><li><a href="#clustering">CLUSTERING</a></li><li><a href="#neural-nets">NEURAL NETS</a></li><li><a href="#pandas-output-prediction-trace-row-by-row">PANDAS (output prediction — trace row by row)</a></li><li><a href="#nlp-text">NLP / TEXT</a></li><li><a href="#time-series-recommenders-new-2025-26-memorize">TIME SERIES + RECOMMENDERS (new 2025-26 — memorize)</a></li></ul></nav>
+<article class="doc"><h1 id="mlp-02-engine-models-every-family-rules-vault">🤖 MLP-02 — ENGINE MODELS (every family: rules + vault)</h1>
+<h2 id="trees">TREES</h2>
+<ul>
+<li>Overfit-king = <strong>lowest ccp_alpha / deepest / min_split=2,leaf=1</strong> (dtc1, tree_1).</li>
+<li>ccp_alpha ↑ → shallower: <strong>d1 ≥ d2 ≥ d3 ≥ d4</strong> (0.0 &gt; 0.03 &gt; 0.06 &gt; 0.1).</li>
+<li>Depth rule: smaller min_split+leaf → DEEPER: <strong>depth(clf1) ≥ depth(clf2)</strong> for (3,2) vs (6,4); <strong>tree_.max_depth ≥</strong> variant same.</li>
+<li>Split BLOCKED if: node &lt; min_split, or any child &lt; min_leaf. (N=15→9+6 ✓ split with (6,4)? 9≥4,6≥4,15≥6 ✓ ALLOWED. N=5→4+2? 5&lt;6 BLOCKED. N=7→4+3? 4≥4,3&lt;4 BLOCKED. N=12→3+9? 3&lt;4 BLOCKED.)</li>
+<li>Balanced depth-3 → max <strong>8</strong> leaves. max_depth purpose → <strong>limit depth</strong>. criterion → <strong>split quality</strong>.</li>
+<li>DecisionTree statements → tick <strong>"depth ≤ max_depth + tree_.max_depth gives actual"</strong>.</li>
+<li>class_weight='balanced' → <strong>auto inverse-frequency weights</strong> (+C still regularizes).</li>
+<li>DT predict [4,120] (depth2) → <strong>1</strong>.</li>
+</ul>
+<h2 id="ensembles">ENSEMBLES</h2>
+<ul>
+<li>Bagging-KNN(bootstrap=False) → <strong>None of these</strong> (no bootstrap, no OOB, distance-weights DO matter, 30 estimators).</li>
+<li>Bagging max_samples=0.5 → <strong>50% per estimator</strong>. max_samples param → <strong>draws per estimator</strong>.</li>
+<li>RF diversity → <strong>high n_est + max_samples&lt;sub</strong> (bootstrap=False+max_samples = INVALID → wrong option).</li>
+<li>RF max_features=5 → <strong>5 features per split</strong>. max_features low → <strong>less variance (option 1)</strong>.</li>
+<li>RF/Boost false-set → tick <strong>without-replacement + bagging-reduces-bias + boosting-parallel</strong> (all three FALSE; boosting DOES cut bias, sequentially).</li>
+<li>AdaBoost overfit → <strong>lower learning_rate</strong>. depth1-vs-3 → <strong>adb1 safer + adb2 low-bias-high-variance</strong>.</li>
+<li>Voting soft [0.4,0.6],[0.25,0.75],[0.9,0.1] → mean [0.52,0.48] → <strong>class 0</strong>. Soft = <strong>average proba</strong>. Hard = majority vote.</li>
+<li>GBM tuning → <strong>CV per combo + best_params_</strong>; fits counted in MLP-01.</li>
+</ul>
+<h2 id="knn-svm-sgd-nb-logreg">KNN / SVM / SGD / NB / LOGREG</h2>
+<ul>
+<li>KNN outputs (verified): [8,9]→<strong>1</strong>, [2,200]k7→<strong>1</strong>, [4,4]→<strong>0</strong>, [6,6]→<strong>0</strong>, [3,2]→<strong>0</strong>, [2.5,66]→<strong>1</strong>.</li>
+<li>KNN rules: low-k = complex + noisy ✓; high-k = smooth ✓; scale matters ✓; bottleneck = <strong>prediction search</strong>; kneighbors → <strong>(distances, indices)</strong>; k &gt; n → <strong>fit OK (classes_=3), predict ERRORS</strong>.</li>
+<li>Perceptron AND → <strong>1</strong>; max-acc on 5-pt set → <strong>0.8</strong>; continue-training → <strong>warm_start=True</strong>.</li>
+<li>SVC(kernel=__) → <strong>'linear'/'rbf'</strong> (NOT lasso/scale). support_ → <strong>indices</strong>. gamma↑ → tight neighborhoods. C↑ → complex + overfit.</li>
+<li>SGD: hinge→SVM ✓, log_loss→logistic ✓, percept→perceptron ✓. shuffle=True ✓, max_iter=1000 ✓, loss='huber' ✓. Ridge-via-SGD → <strong>SGDRegressor(penalty='l2') + sgd__alpha</strong>. adaptive → <strong>÷5 on plateau + stop &lt;1e-6</strong>. warm_start+max_iter=1 loop → <strong>per-iteration train error</strong>. partial_fit → <strong>SGD/GaussianNB/MultinomialNB</strong> (NOT trees/logistic).</li>
+<li>NB: independence ✓; GaussianNB↔continuous ✓ (gender Height/Weight/Age → <strong>GaussianNB</strong>); predict_proba = <strong>posteriors</strong>; prior Yes = <strong>8/12 = 0.667</strong>.</li>
+<li>LogReg: coef_ ✓; C&gt;0 always regularizes ✓; balanced = <strong>equal importance</strong>; penalty = <strong>reg type</strong>; max_iter = <strong>cap not exact</strong>; liblinear↔L1-small ✓ + <strong>CANNOT do multinomial</strong>; elastic-net → <strong>saga</strong>; "for income prediction" → <strong>FALSE</strong> (classification!); L1-reg + small data → <strong>liblinear</strong>.</li>
+<li>LinearRegression s1(with intercept) vs s2 → <strong>s1 &gt; s2</strong>. W1 (5/7-constraint) → <strong>0.331</strong>; (3/4) → <strong>0.294</strong>.</li>
+<li>Scaling-impacted (MSQ) → <strong>LinearRegression + SVM</strong> (+KNN/KMeans). NOT-impacted → <strong>DecisionTree</strong> (only).</li>
+</ul>
+<h2 id="clustering">CLUSTERING</h2>
+<ul>
+<li>KMeans(n=20,random,10) → <strong>"20 centroids × 10 inits"</strong>. 100 samples zero-inertia → <strong>True, sometimes</strong> (K=n). 8 clusters on 7 pts → <strong>runs fine</strong>.</li>
+<li>inertia_ = <strong>within-cluster SSE</strong>. Tune: <strong>n_clusters + init + max_iter</strong> (NOT lr). k-choice: <strong>elbow + silhouette</strong> (NOT k-fold).</li>
+<li>Elbow code → <strong>append(inertia_), range(1,11), show()</strong>. Elbow statements: bend ✓ + diminishing ✓ + may-blur ✓.</li>
+<li>Silhouette: per-sample ✓ + higher-better ✓ + any-clusterer ✓ (NOT needs-labels).</li>
+<li>Agglomerative = <strong>bottom-up merges</strong>; outliers → <strong>nearest cluster</strong>; geo-distances → <strong>Single linkage</strong>; init-best → <strong>k-means++</strong>.</li>
+<li>Segmentation (spent+items) → <strong>K-means</strong> (×3). Image colors unlabeled → <strong>Unsupervised</strong>. labels_ = <strong>cluster per point</strong>.</li>
+<li>make_blobs(8,2) → <strong>two unequal clusters</strong>. KMeans-eval MCQ/MSQ → <strong>Silhouette + Inertia</strong> (NOT MAE/F1/R²).</li>
+<li>Hierarchical metrics MSQ → <strong>Euclidean + Manhattan + Jaccard + Cosine (all)</strong>.</li>
+</ul>
+<h2 id="neural-nets">NEURAL NETS</h2>
+<ul>
+<li>hidden_layer_sizes=(a,b) = <strong>2 layers, a then b neurons</strong>. (3,5) → 3-first/5-second. (50,30) → <strong>50+30</strong>.</li>
+<li>71 params, 5 feats: <strong>(10,)</strong> single layer. out_activation_ (regression) = <strong>identity</strong>.</li>
+<li>alpha ↑ → <strong>stronger regularization</strong> (helps OVERfit; worsens UNDERfit — trap!).</li>
+<li>MLP purchase-Q → <strong>trial-and-error</strong>. MNIST-MLP essential → <strong>scaling</strong>. Non-linearity → <strong>activation</strong>.</li>
+<li>mlp1-vs-mlp2 → <strong>mlp2 more params + seed matters</strong>. Correct-construction MCQ → <strong>full (128,64)+relu+adam+fit option</strong>.</li>
+<li>⚠️ <code>MLPRegressor(hidden_layer_size=(5,3))</code> (SINGULAR typo, 2 papers) → code ERRORS → tick <strong>"None of the given options"</strong>.</li>
+</ul>
+<h2 id="pandas-output-prediction-trace-row-by-row">PANDAS (output prediction — trace row by row)</h2>
+<ul>
+<li><code>df['Age'].mean()</code> for average ✓. HR-count → <strong>len(mask) + value_counts</strong> (NOT shape[1], NOT bare mask).</li>
+<li>Salary filter → <strong>df[] + .loc[] + query()</strong> (NOT bare boolean).</li>
+<li><code>sort_values(asc=False).iloc[0]</code> → <strong>highest row</strong>.</li>
+<li>Class-XI &amp; Physics&gt;85 → <strong>df[] + query()</strong> (NOT <code>and</code>, NOT unparenthesized &amp;).</li>
+<li>Drop both-missing → <strong>dropna(subset,how='all') + isnull().all mask</strong>.</li>
+<li>Row-mean col → <strong>mean(skipna) + assign()</strong> (NOT sum/2).</li>
+<li><code>df.loc[23:25,[...]]</code> (idx 21-24) → <strong>== iloc[[2,3],[1,2]] == iloc[2:4,1:3]</strong> (tick both).</li>
+<li>Value+value: <strong>120</strong> (Dec25) / <strong>98</strong> (Apr24). <code>.apply(type).nunique()</code> on mixed col → <strong>3</strong>.</li>
+<li>⚠️ <code>df.apply(getPassing)</code> (NO axis) → <strong>applies per-COLUMN → KeyError → enter −1</strong>. (axis=1 would give 3.)</li>
+<li><code>df.dropna()</code> → <strong>rows decrease</strong>. df.shape→rows+cols−na: <strong>9</strong>. value_counts()[0] on Insulin → <strong>3</strong>. Age-mean skipna → <strong>34</strong>. query-chain → <strong>64</strong>. float64 cols → <strong>2</strong>.</li>
+<li>groupby-avg-per-category → <strong>groupby(...).mean()</strong>.</li>
+</ul>
+<h2 id="nlp-text">NLP / TEXT</h2>
+<ul>
+<li>CountVectorizer(bias/variance corpus) → <strong>(2,15)</strong>. <code>.vocabulary_</code> → <strong>dict</strong> (NOT sorted list).</li>
+<li>Bigrams (lowercase=False, 2 docs) → <strong>sum = 6</strong>. Tfidf len → <strong>4</strong>. Tfidf-zeros (1,2)-grams → <strong>10</strong>.</li>
+<li>Tfidf MSQ → <strong>max_features + min_df</strong> (NOT smooth-zero, NOT lowercase-copy).</li>
+</ul>
+<h2 id="time-series-recommenders-new-2025-26-memorize">TIME SERIES + RECOMMENDERS (new 2025-26 — memorize)</h2>
+<ul>
+<li>adfuller/low-p → <strong>stationary</strong> (H₀ = NON-stationary). p=0.03 @5% → <strong>stationary</strong>.</li>
+<li>ARIMA d=1 → <strong>differencing count</strong>. Fit-then-summary order: <strong>fit() → summary()</strong>.</li>
+<li>Multiplicative decomposition → <strong>trend × seasonal × error</strong>.</li>
+<li>Cosine (1,2,3)·(1,0,0) → <strong>0.27</strong>; ·(2,0,1) → <strong>0.60</strong>. Correct numpy form → <strong>(a@b)/(norm·norm)</strong>.</li>
+<li>No-ratings+metadata → <strong>content-based</strong>. SVD on user-item → <strong>reduce dimensionality</strong>. User-based CF needs → <strong>user-item matrix</strong>.</li>
+<li>Collab X (Alfred-Gordon) → <strong>0.92</strong>; Y (Bruce-Robin) → <strong>0.82</strong>; predict Robin-C → <strong>4.289</strong> (truncate).</li>
+<li>PIL (200,200)→gray→flat → <strong>(40000,)</strong>. PIL false-set → tick <strong>256-max + resize-channels + flip</strong>.</li>
+<li>Ridge(alpha=1.0) → <strong>L2 penalty</strong> (NOT L1, NOT no-reg).</li>
+</ul></article>
+<nav class="prevnext"><a class="pn prev" href="mlp-01-core.html">â† MLP Engine: Core</a> <a class="pn next" href="mlp-03-ratta.html">MLP Ratta Q&A â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

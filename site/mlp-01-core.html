@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP Engine: Core Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">MLP / MLP Engine: Core</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#engine-p1-scalers-write-the-formula-plug-numbers">ENGINE P1 — Scalers (write the formula, plug numbers)</a></li><li><a href="#engine-p2-imputers-encoders">ENGINE P2 — Imputers / encoders</a></li><li><a href="#engine-p3-pipelines-order-naming">ENGINE P3 — Pipelines (order + naming)</a></li><li><a href="#engine-p4-metrics-confusion-first-always">ENGINE P4 — Metrics (confusion first, always)</a></li><li><a href="#engine-p5-cv-tuning-counts-mechanical">ENGINE P5 — CV + tuning COUNTS (mechanical)</a></li></ul></nav>
+<article class="doc"><h1 id="mlp-01-engine-core-preprocessing-pipelines-metrics-cv-tuning-counts">🔧 MLP-01 — ENGINE CORE (preprocessing, pipelines, metrics, CV, tuning counts)</h1>
+<h2 id="engine-p1-scalers-write-the-formula-plug-numbers">ENGINE P1 — Scalers (write the formula, plug numbers)</h2>
+<ul>
+<li><strong>StandardScaler</strong>: z = (x−μ)/σ (population σ, ddof=0). <code>var_</code> = population variance. mean_ of [[1,10]…[5,50]] = <strong>[2, 200]</strong>... wait: col1 mean=3 var=2 ✓, col2 mean=30 var=200 ✓ → var_ = [2,200].</li>
+<li><strong>MinMaxScaler</strong>: (x−min)/(max−min), default range [0,1]. [[2],[6],[10],[14]] → 8 maps to <strong>0.5</strong>.</li>
+<li><strong>MaxAbsScaler</strong>: x/max|x|. [[-3],[0],[-2],[2],[-1],[-4]] → maxabs 4 → min = <strong>−1.0</strong>. [[-3.5],…] → max = 0.5/… = <strong>0.5</strong>.</li>
+<li><strong>StandardScaler().fit(X) then transform([[8]])</strong> on [2,6,10,14]: μ=8 → <strong>0.0</strong>.</li>
+<li>Scaler for KNN/SVM: <strong>"distances need equal feature contribution"</strong>.</li>
+<li>ColumnTransformer numeric+OHE first rows: MinMax(2.0 in [1..5]) = <strong>0.25</strong> + OHE(apple)=[1,0,0] → <strong>[0.25,1,0,0]</strong>. Avocado variant (+StandardScaler col, 4 cats): <strong>[0.4,1,0,0,0,0]</strong>.</li>
+<li>ColumnTransformer shapes: Height/Weight+City(3 cats,drop-first) → <strong>(4,4)</strong>. Age/Income+Gender(drop-first) → <strong>(3,3)</strong>.</li>
+<li>FeatureUnion poly(deg2,8 feats,no bias)=44 + PCA(5) → <strong>(20640,49)</strong>. Iris poly(deg3,no bias)=34 + PCA(2) → <strong>36 features</strong>.</li>
+<li>PCA <code>explained_variance_ratio_[0]</code> on the 3-point set → <strong>1.0</strong>.</li>
+</ul>
+<h2 id="engine-p2-imputers-encoders">ENGINE P2 — Imputers / encoders</h2>
+<ul>
+<li><strong>SimpleImputer(mean)</strong>: mean IGNORING nan. [1,2,3,nan,4,nan,5] → <strong>[3.0]</strong>. F3 [9,7,?,5] → <strong>7.0</strong>.</li>
+<li><strong>KNNImputer(k=2)</strong> on C-row: 2 nearest by other cols (B,D) → (7+5)/2 = <strong>6.0</strong>.</li>
+<li><strong>OneHotEncoder(drop='first')</strong>: k cats → k−1 cols. ColumnTransformer [2,1] cell → <strong>1</strong> (Green kept). Sparsity 5×5 identity → <strong>80%</strong>.</li>
+<li><strong>MultiLabelBinarizer(classes=[cold,hot,large,small])</strong> coffee → <strong>[[1 0 1 0],[1 0 0 1],[0 1 0 1],[0 1 1 0]]</strong>.</li>
+<li><strong>LabelEncoder</strong>: sorted mapping (bird0 cat1 dog2 fish3). <code>transform(['elephant'])</code> → <strong>ERROR</strong>. <code>inverse_transform([2])</code> → <strong>'dog'</strong>. Zeros in apple/banana/cherry vector → <strong>3</strong>.</li>
+<li>Groupby-impute: <code>df.groupby('Dept')['Age'].transform(lambda x: x.fillna(x.mean()))</code> ✓ (transform keeps index; apply BREAKS it).</li>
+<li><code>dropna(thresh=45)</code> of 50 cols → drops rows with &gt;5 missing ✓. <code>dropna(subset,how='all')</code> → only both-missing rows ✓.</li>
+<li>Big CSV loop → <strong><code>chunksize</code></strong> + <code>partial_fit</code>.</li>
+</ul>
+<h2 id="engine-p3-pipelines-order-naming">ENGINE P3 — Pipelines (order + naming)</h2>
+<ul>
+<li>Order: <strong>impute → scale → model</strong>. Reversed (scale→impute) = WRONG. <code>make_pipeline(SimpleImputer(most_frequent), MinMaxScaler())</code> ✓.</li>
+<li>GridSearch param for pipeline step: <strong><code>stepname__param</code></strong> (double underscore): <code>bc__n_estimators</code> ✓, <code>poly__degree</code> ✓, <code>estimator__max_depth</code> (AdaBoost param NAME is <code>estimator</code>) ✓.</li>
+<li><code>memory=</code> = caching: saves time ✓ + speeds CV ✓ + speeds tuning ✓ (NOT parallel, NOT better generalization).</li>
+<li><code>Pipeline</code> = SERIES only (ColumnTransformer/FeatureUnion = parallel).</li>
+<li>Missing-part poly-degree4 question → <strong><code>model.fit(X_train, y_train)</code></strong> (NOT fit_transform, NOT pre-transformed fit).</li>
+<li><code>model.fit_transform(X, y)</code> on a Pipeline → <strong>WRONG</strong> (use .fit); <code>include_bias</code> stays False fine; <code>y</code> unused by transformers.</li>
+</ul>
+<h2 id="engine-p4-metrics-confusion-first-always">ENGINE P4 — Metrics (confusion first, always)</h2>
+<ul>
+<li>Binary vectors → count TP/FP/FN/TN by hand. y_true(7 ones)/y_pred(5 ones) example → TP=3,FP=2,FN=4,TN=6.</li>
+<li>Precision = TP/(TP+FP). Recall = TP/(TP+FN). F1 = 2PR/(P+R).</li>
+<li><strong>VAULT</strong>: f1([1,1,0,1,0,0,1,0,1],[0,1,0,1,0,1,1,1,1]) = <strong>0.7273 → option 0.72</strong>. f1 class-1 (8-list) = <strong>0.7273 → 0.73</strong>. recall [1,0,1,1,0,1] vs [1,0,0,1,0,1] = <strong>0.75</strong>. 3×3 precision-c1 = <strong>0.25</strong>, recall-c1 = <strong>0.1</strong>.</li>
+<li>Confusion-matrix MCQ from two lists → <strong>recount in exam; options have been misprinted before — trust your count</strong>.</li>
+<li>R² HIGHER = better (NOT RMSE/MAE/MSE). R² range = <strong>−∞ to 1</strong>. R² &lt; 0 ⟺ worse than mean-model.</li>
+<li>r2_score all-10s vs [3..7] → <strong>−12.5</strong>.</li>
+<li>DummyRegressor(mean): MSE([35,40],[20,20]) = <strong>312.5</strong>. DummyClassifier(most_frequent, 650/1000): recall = <strong>1.0</strong>, precision = <strong>0.65</strong>.</li>
+<li><code>classification_report</code> → HAS precision/recall/F1 (NOT MSE/cross-entropy). Class-1 support <strong>105</strong>. f1(y_test,y_pred) = <strong>0.98</strong>.</li>
+<li>Imbalanced + 96% accuracy assertion → <strong>both true, reason NOT the explanation</strong>.</li>
+<li>Rare disease → precision + recall + F1 (NOT accuracy).</li>
+<li>MSE([2,0,3,5],[2.5,0,2,8]) = <strong>2.56</strong>.</li>
+</ul>
+<h2 id="engine-p5-cv-tuning-counts-mechanical">ENGINE P5 — CV + tuning COUNTS (mechanical)</h2>
+<ul>
+<li><strong>Fits = param_combos × cv.</strong> Grid sums DICTS, multiplies INSIDE dicts.</li>
+<li>VAULT: [{5 depths},{3 splits}] cv10 → (5+3)×10 = <strong>80</strong>. [{25},{5},{30}] cv3 → 60 <strong>combos</strong>. RF(n_est=10)+10 depths cv5 → 10×5×10 = <strong>500 trees</strong>. GBM 3×2×3 cv4 → <strong>72 fits</strong>. {4×5×7} → <strong>140 combos</strong>. RF-grid 15+6 → <strong>21 combos</strong>.</li>
+<li><strong>RandomizedSearchCV n_iter=4 → exactly 4 combos</strong> (NOT all; random_state matters).</li>
+<li>LOOCV on n samples → <strong>n models</strong> (1024 → 1024; 1000 → 1000; 5 → 5). KFold-10 → <strong>10</strong>.</li>
+<li>LeavePOut(p=2, n=10) → C(10,2) = <strong>45</strong>. RepeatedKFold(3,2) → <strong>6</strong>.</li>
+<li>KFold([47,31,18,95,85,77],3) trains = 4-element sets; options with <strong>41</strong> or wrong sizes = impossible.</li>
+<li>OOB needs bootstrap=True (max_samples WITHOUT bootstrap → invalid combo).</li>
+<li>Scorers for regressor-GBM: <strong>r2 / neg_mean_absolute_error</strong> (NOT entropy/weighted_f1). GBM loss: <strong>squared_error/huber</strong> (NOT gini/log_loss).</li>
+</ul></article>
+<nav class="prevnext"><a class="pn prev" href="mlp-00-index.html">â† MLP 80/20 Index</a> <a class="pn next" href="mlp-02-models.html">MLP Engine: Models â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

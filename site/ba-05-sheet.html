@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BA Formula Sheet Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">BA / BA Formula Sheet</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#dea">DEA</a></li><li><a href="#lp-dual">LP / Dual</a></li><li><a href="#demand-d-a-bp">Demand D = a − bP</a></li><li><a href="#regression">Regression</a></li><li><a href="#confusion-tpfpfntn-from-table">Confusion (TP/FP/FN/TN from table)</a></li><li><a href="#chi-square">Chi-square</a></li><li><a href="#bayes">Bayes</a></li><li><a href="#conjoint">Conjoint</a></li><li><a href="#decisions">Decisions</a></li></ul></nav>
+<article class="doc"><h1 id="ba-05-formula-sheet-read-before-sleep-before-exam">📋 BA-05 — FORMULA SHEET (read before sleep + before exam)</h1>
+<h2 id="dea">DEA</h2>
+<ul>
+<li>Efficiency = Σy·O ÷ Σx·I · Efficient ⟺ = 1 · Reference units = λ≠0 units</li>
+<li><strong>HCU = Σ(λᵢ·refᵢ) ÷ efficiency</strong> · "eff 1 with k's weights" → WILL BE efficient</li>
+</ul>
+<h2 id="lp-dual">LP / Dual</h2>
+<ul>
+<li>№dual_vars = #primal_constraints · #dual_constraints = #primal_vars</li>
+<li>Max→Min · ≤→≥ · RHS↔obj-coeffs swap · Non-zero dual = binding primal</li>
+</ul>
+<h2 id="demand-d-a-bp">Demand D = a − bP</h2>
+<ul>
+<li>Market = a · Satiating = a/b · Rev-max P = a/2b · Profit-max P = (a/b+c)/2 · Elasticity = bP/D</li>
+</ul>
+<h2 id="regression">Regression</h2>
+<ul>
+<li>R² = r² (1 x) · adjR² = 1−(1−R²)(n−1)/(n−k−1) · %var = R²×100</li>
+<li>F = (R²/k)/((1−R²)/(n−k−1)) · VIF = 1/(1−r²) · SE↑% = (1/√(1−r²)−1)×100</li>
+<li>Total effect = direct + Σ(indirect legs multiplied)</li>
+</ul>
+<h2 id="confusion-tpfpfntn-from-table">Confusion (TP/FP/FN/TN from table)</h2>
+<ul>
+<li>Acc = (TP+TN)/N · Prec = TP/(TP+FP) · Rec = TP/(TP+FN)</li>
+<li>Threshold: prob ≥ t → 1 · Cancer→Recall · Spam→Precision</li>
+</ul>
+<h2 id="chi-square">Chi-square</h2>
+<ul>
+<li>Independence: E = row×col/G · df = (r−1)(c−1) · computed&gt;tab → Reject</li>
+<li>GoF: E = n/k · χ² = Σ(O−E)²/E · df = k−1 · H₀: "follows distribution"</li>
+</ul>
+<h2 id="bayes">Bayes</h2>
+<ul>
+<li>P(E) = ΣP(Tᵢ)P(E|Tᵢ) · P(Tₖ|E) = P(Tₖ)P(E|Tₖ)/P(E)</li>
+</ul>
+<h2 id="conjoint">Conjoint</h2>
+<ul>
+<li>Pairs = N(N−1)/2 (4→6, 5→10) · Pairwise+continuous → Statistical/Regression</li>
+<li>Part-worth = All of these · Objective = min violations + min poorness of fit</li>
+</ul>
+<h2 id="decisions">Decisions</h2>
+<ul>
+<li>p &gt; α → fail to reject (never "accept") · p-value = P(sample|H₀)</li>
+<li>Mean&gt;Median → right skew · VIF&lt;1 / adjR²&gt;R² → calculation error</li>
+<li>Marginal=partial ⟺ x's INDEPENDENT · Correlated x's = Collinearity</li>
+</ul></article>
+<nav class="prevnext"><a class="pn prev" href="ba-04-ratta.html">â† BA Ratta Q&A</a> <a class="pn next" href="ba-06-sa-dump.html">BA Solved SA Dump â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

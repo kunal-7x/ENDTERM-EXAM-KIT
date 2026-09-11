@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP Read-and-Go (70 marks) Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">MLP / MLP Read-and-Go (70 marks)</div>
+
+<article class="doc"><div class="hero">
+<h1>📖 MLP Read-and-Go: ~70 Marks</h1>
+<p>Don't study the subject. Study <b>this page</b>. Every block below is a question family that repeats every paper — trigger, numbered steps, exact answer. All numbers verified by running sklearn.</p>
+</div>
+<div class="rulebox">🥇 <b>How to use in the hall:</b> ① match the question to a block ② follow its steps 1-2-3 ③ write the answer in the shown format. <b>SA rounding:</b> "2 decimals" = normal round · "truncate / without rounding" = cut digits · counts = plain integers.</div>
+
+<div class="sectotal">SECTION A · Predict-the-output SAs — ≈ 24 marks</div>
+
+<div class="qblock"><div class="qblock-head">A1 · MaxAbsScaler min/max <span class="marks">2 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> <code>MaxAbsScaler().fit_transform(data)</code> then <code>print(min/max)</code>.</p>
+<ol class="steps">
+<li>Find the biggest absolute value M in the data. Divide rule: <span class="formula">scaled = x ÷ M</span></li>
+<li>For <b>min</b>: take the most negative x → x ÷ M. For <b>max</b>: biggest x → x ÷ M.</li>
+<li>Example: [-3, 0, -2, 2, -1, -4] → M = 4 → min = -4 ÷ 4.</li>
+</ol><span class="ans">min = -1.0 · (sister variant max = 0.5)</span>
+<p>📌 2023 Apr + 2024 Apr papers, 2m each.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A2 · SimpleImputer mean <span class="marks">2 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> <code>SimpleImputer(strategy="mean")</code> + <code>statistics_</code>, or "compute the missing value".</p>
+<ol class="steps">
+<li>Cross out every <code>nan</code>. Average the survivors.</li>
+<li>[1, 2, 3, nan, 4, nan, 5] → (1+2+3+4+5) ÷ 5.</li>
+<li>Column F3 [9, 7, ?, 5] → (9+7+5) ÷ 3.</li>
+</ol><span class="ans">3.0 · F3 missing = 7.0</span>
+<p>📌 2023 Sep + Dec-25 papers.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A3 · KNN predict — count the 3 nearest <span class="marks">3 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> <code>KNeighborsClassifier(n_neighbors=k)</code> + <code>predict(test)</code>.</p>
+<ol class="steps">
+<li>Distance from test point to EVERY train point (ordinary straight-line distance).</li>
+<li>Circle the k smallest. Read their labels.</li>
+<li>Majority wins. Tie → smaller label wins.</li>
+<li>Example: test [8,9], k=3 → nearest are [10,11]❶ [5,6]❶ [2,3]⓿ → votes 1,1,0.</li>
+</ol><span class="ans">1</span>
+<p>📌 Same drill, many papers. Vault: [4,4]→0 · [6,6]→0 · [3,2]→0 · [2.5,66]→1 · [2,200]k=7→1.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A4 · Perceptron on AND-gate data <span class="marks">3 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> <code>Perceptron(tol=None, shuffle=False)</code> on [[0,0],[0,1],[1,0],[1,1]] labels [0,0,0,1].</p>
+<ol class="steps">
+<li>Recognize the AND gate: only [1,1] → 1. Perceptron learns it perfectly.</li>
+<li>Any test point in the 1-region ([1,1], [2,2]) → 1.</li>
+</ol><span class="ans">1</span>
+<p>📌 Asked 3+ times with different test points — answer is always 1 here.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A5 · f1_score from two lists ⚠️ trap <span class="marks">2–3 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> <code>f1_score(y_true, y_pred)</code> with written-out lists.</p>
+<ol class="steps">
+<li>TP = positions where both are 1. FP = pred-1-but-true-0. FN = true-1-but-pred-0.</li>
+<li>Precision = TP ÷ (TP+FP). Recall = TP ÷ (TP+FN).</li>
+<li>F1 = 2·P·R ÷ (P+R).</li>
+<li>Lists [1,1,0,1,0,0,1,0,1] vs [0,1,0,1,0,1,1,1,1] → TP=4, FP=2, FN=1 → P=4/6, R=4/5 → F1 = 0.7273.</li>
+</ol><span class="ans">MCQ version → tick 0.72 (nearest option!) · SA version → write 0.73</span>
+<p>📌 Repeat offender. Same drill: recall pair → 0.75.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A6 · StandardScaler / MinMax transform a new point <span class="marks">2 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> fit scaler on a column, <code>transform([[8]])</code>.</p>
+<ol class="steps">
+<li>Standard: mean μ, spread σ of the column → <span class="formula">z = (x − μ) ÷ σ</span>. [2,6,10,14]: μ = 8 → z = 0.</li>
+<li>MinMax: <span class="formula">(x − min) ÷ (max − min)</span> → (8−2) ÷ (14−2) = 0.5.</li>
+</ol><span class="ans">Standard → 0.0 · MinMax → 0.5</span>
+<p>📌 Dec-25 paper, SA 2m each.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A7 · ColumnTransformer first row <span class="marks">2–3 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> MinMaxScaler + OneHotEncoder on a small table, print row 0.</p>
+<ol class="steps">
+<li>Number part: (first value − column min) ÷ (max − min). [2.0] in [1..5] → 0.25.</li>
+<li>Word part: categories sorted A→Z; the row's word gets 1, rest 0. apple → [1,0,0].</li>
+<li>Glue: [number, one-hot…].</li>
+</ol><span class="ans">[0.25, 1, 0, 0] · (avocado variant → [0.4, 1, 0, 0, 0, 0])</span>
+<p>📌 2023 Sep + 2024 Apr + 2025 Apr — same skeleton, swapped fruits.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A8 · DummyRegressor MSE <span class="marks">3 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> <code>DummyRegressor(strategy='mean')</code> + <code>mean_squared_error</code>.</p>
+<ol class="steps">
+<li>Dummy predicts the TRAIN mean for everything: [10,15,20,25,30] → 20.</li>
+<li>MSE = average of (test − 20)²: ((35−20)² + (40−20)²) ÷ 2 = (225+400) ÷ 2.</li>
+</ol><span class="ans">312.5</span>
+<p>📌 May-26 paper. Median variant: median of [10.5,…,11.5] = 11.0.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A9 · TfidfVectorizer zeros <span class="marks">3 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> TfidfVectorizer with ngram_range=(1,2), "how many zeros".</p>
+<ol class="steps">
+<li>Vocab = single words + word-pairs across both docs: 6 + 6 = 12 features → 2×12 = 24 cells.</li>
+<li>Doc-1 uses 4 words + 3 pairs = 7 non-zeros. Doc-2 same = 7. Total non-zero = 14.</li>
+<li>Zeros = 24 − 14.</li>
+</ol><span class="ans">10</span>
+<p>📌 Aug-25 paper. Plain Tfidf vocab-len variant → 4.</p></div></div>
+
+<div class="qblock"><div class="qblock-head">A10 · LabelEncoder counting <span class="marks">2 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> LabelEncoder on fruit words, "how many zeros".</p>
+<ol class="steps">
+<li>Sort words A→Z: apple=0, banana=1, cherry=2.</li>
+<li>Zeros = count of "apple" = 3.</li>
+<li>Sister traps: transform(['elephant']) → ERROR · inverse_transform([2]) → 'dog'.</li>
+</ol><span class="ans">3</span>
+<p>📌 Dec-25 paper.</p></div></div>
+
+<div class="sectotal">SECTION B · Concept MCQs that repeat verbatim — ≈ 20 marks</div>
+
+<div class="qblock"><div class="qblock-head">B1–B10 · One-line ticks <span class="marks">2 marks each</span></div><div class="qblock-body">
+<ol class="steps">
+<li><b>R²:</b> "can be negative — happens when the model is worse than the mean model."</li>
+<li><b>partial_fit:</b> only <b>SGDRegressor</b> (never trees, forests, logistic).</li>
+<li><b>Softmax pipeline blank:</b> <b>LogisticRegression(multi_class='multinomial')</b>.</li>
+<li><b>clf.support_:</b> <b>indices</b> of support vectors.</li>
+<li><b>Gamma (SVM):</b> <b>high gamma → points must be very close to share a class</b>.</li>
+<li><b>Most-overfitting tree:</b> <b>ccp_alpha = 0.0</b> (deepest, unpruned).</li>
+<li><b>LOOCV models:</b> <b>= number of samples</b> (1024 → 1024 · 1000 → 1000).</li>
+<li><b>Keep training across fit() calls:</b> <b>warm_start=True</b> (Perceptron/SGD).</li>
+<li><b>Huge CSV that won't load:</b> <b>chunksize</b> in read_csv + partial_fit.</li>
+<li><b>"Higher value = better regression":</b> <b>R² only</b> (never RMSE/MAE/MSE).</li>
+</ol><span class="ans">10 ticks ≈ 20 marks — pure memory, zero computation</span></div></div>
+
+<div class="sectotal">SECTION C · GridSearch/CV counting — ≈ 10 marks</div>
+
+<div class="qblock"><div class="qblock-head">C1 · "How many models/fits?" <span class="marks">3–4 marks</span></div><div class="qblock-body">
+<p><b>Trigger:</b> GridSearchCV + param_grid + cv. THE formula:</p>
+<span class="formula">fits = (param combos) × cv &nbsp;·&nbsp; combos: ADD across dicts, MULTIPLY inside a dict</span>
+<ol class="steps">
+<li>[{max_depth: 5 values}, {min_samples_split: 3 values}], cv=10 → (5+3) × 10.</li>
+<li>[{25 combos}, {5}, {30}], cv=3 → asked combos only → 25+5+30.</li>
+<li>RandomForest(n_estimators=10) inside: multiply by 10 trees → 10 depths × 5 folds × 10 trees.</li>
+<li>RandomizedSearchCV(n_iter=4) → exactly 4, always.</li>
+</ol><span class="ans">80 fits · 60 combos · 500 trees · 4 combos</span>
+<p>📌 2023 Apr (×2), Dec-23, Aug-25, May-26.</p></div></div>
+
+<div class="sectotal">SECTION D · MSQ tick-sets — ≈ 10 marks</div>
+
+<div class="qblock"><div class="qblock-head">D1–D4 · Tick exactly these <span class="marks">2–3 marks each</span></div><div class="qblock-body">
+<ol class="steps">
+<li><b>Hurt by scaling:</b> tick <b>LinearRegression + SVM</b> (trees never).</li>
+<li><b>partial_fit club:</b> tick <b>SGDClassifier + GaussianNB + MultinomialNB</b>.</li>
+<li><b>Silhouette:</b> tick <b>per-sample + higher-is-better + works on any clusterer</b> (needs NO labels).</li>
+<li><b>metrics module:</b> tick <b>confusion_matrix + R2_score + Roc_Auc_Score</b> (NOT StratifiedKFold/GridSearchCV).</li>
+</ol><span class="ans">4 MSQs ≈ 10 marks — tick only the listed options</span></div></div>
+
+<div class="sectotal">SECTION E · 2025-new topics (rising fast) — ≈ 8 marks</div>
+
+<div class="qblock"><div class="qblock-head">E1–E4 · New-pattern ticks <span class="marks">1–4 marks each</span></div><div class="qblock-body">
+<ol class="steps">
+<li><b>ADF test, low p-value:</b> series is <b>stationary</b> (null = non-stationary).</li>
+<li><b>ARIMA order=(p,d,q):</b> d = <b>number of times data is differenced</b>. Code order: <b>fit() → summary()</b>.</li>
+<li><b>Cosine similarity:</b> (1,2,3)·(1,0,0) → <b>0.27</b> · (1,2,3)·(2,0,1) → <b>0.60</b>. Correct numpy form: <b>(a@b)/(norm·norm)</b>.</li>
+<li><b>No ratings + metadata:</b> <b>content-based filtering</b>. SVD on user-item matrix → <b>reduce dimensionality</b>.</li>
+</ol><span class="ans">≈ 8 marks from the newest pattern — highest ROI per minute</span>
+<p>📌 Dec-25 + May-26 papers. Examiners are shifting here.</p></div></div>
+
+<div class="rulebox">📊 <b>Total on this page ≈ 72 marks of a 100-mark paper.</b> Read top-to-bottom once, then re-read the ✅ boxes only. Walk in and execute.</div>
+</article>
+<nav class="prevnext"><a class="pn prev" href="mlp-predicted-paper.html">â† MLP Predicted Paper</a> <a class="pn next" href="last-6-hours.html">Last 6 Hours â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

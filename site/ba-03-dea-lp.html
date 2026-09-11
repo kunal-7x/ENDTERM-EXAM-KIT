@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BA Engine: DEA + LP Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">BA / BA Engine: DEA + LP</div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#engine-d1-dea-theory-10-marks-of-repeats-memorize-these-verdicts">ENGINE D1 — DEA theory (10+ marks of repeats, memorize these verdicts)</a></li><li><a href="#engine-d2-hcu-numeric-2-marks-every-recent-paper-pure-recipe">ENGINE D2 — HCU numeric (2 marks, EVERY recent paper, pure recipe) ⭐</a></li><li><a href="#engine-d3-lp-primal-dual-counting-questions-1-mark-each">ENGINE D3 — LP primal ↔ dual (counting questions, 1 mark each)</a></li><li><a href="#engine-d4-conjoint-all-ratta-zero-math">ENGINE D4 — Conjoint (all ratta, zero math)</a></li></ul></nav>
+<article class="doc"><h1 id="ba-03-engine-dea-hcu-numeric-lp-primaldual-conjoint">🏭 BA-03 — ENGINE: DEA, HCU Numeric, LP Primal/Dual, Conjoint</h1>
+<h2 id="engine-d1-dea-theory-10-marks-of-repeats-memorize-these-verdicts">ENGINE D1 — DEA theory (10+ marks of repeats, memorize these verdicts)</h2>
+<ol>
+<li><strong>DEA measures</strong>: comparing efficiency of similar service units. (NOT quality benchmarking, NOT technology feasibility.)</li>
+<li><strong>Efficiency</strong> = weighted outputs ÷ weighted inputs. <strong>Efficient ⟺ efficiency = 1.</strong> Anything &lt; 1 = inefficient.</li>
+<li><strong>"X obtained efficiency 1 with the optimal weights of BU-k"</strong> → X <strong>WILL BE efficient</strong>. (The #1 repeated MSQ — "will be", never "may be".)</li>
+<li><strong>"X obtained efficiency 0.6/0.9 (&lt; 1) with weights of BU-k"</strong> → X <strong>WILL BE inefficient</strong>; BU-k itself <strong>MAY BE inefficient</strong> (never "will be" for the solved unit — LP only proves others).</li>
+<li><strong>Reference units</strong> = the units with NON-ZERO dual variables (lambdas). If λ₃, λ₅ ≠ 0 → reference units are (3,5)/(5,3) — option order varies, match the SET.</li>
+<li><strong>LP for weights</strong>: after converting ratio → linear objective + normalizing denominator (= 1) + constraining ALL DMUs' efficiency ≤ 1. MSQ answer = all three + NOT "non-linear".</li>
+<li><strong>Economic frontier</strong> = the efficient DMUs (from the graph: the outermost points). Reference units for an inefficient DMU = its frontier neighbors.</li>
+<li><strong>Productive efficiency</strong> = "maximizing output under given constraints (without worrying about optimal allocation)". This EXACT sentence is an option in 6+ papers — tick it. The "cannot increase one output without sacrificing another" sentence = the FRONTIER definition — also ticked when paired.</li>
+<li><strong>Objective (output-oriented, DMU-k)</strong>: Max Σ y·O_k (its OWN outputs). <strong>Type/normalizing constraint</strong>: Σ x·I_k = 1 (its OWN inputs, = 1 — never ≤ or ≥).</li>
+<li><strong>"Not a constraint" questions</strong> (Sales Office LP): every constraint uses the unit's OWN row on the LEFT vs each unit's data on the right — the odd one has a mismatched row (e.g., y₁₂…≤ x…×Budget₁ instead of Budget₃'s row).</li>
+</ol>
+<h2 id="engine-d2-hcu-numeric-2-marks-every-recent-paper-pure-recipe">ENGINE D2 — HCU numeric (2 marks, EVERY recent paper, pure recipe) ⭐</h2>
+<p><strong>TRIGGER:</strong> "HCU", "dual variables … are non-zero", "efficiency is 0.8", a small table of reference units.</p>
+<p><strong>RECIPE (never fails — verified on 5 PYQ datasets):</strong></p>
+<pre><code>HCU_output = (λ₁ × ref₁_output + λ₂ × ref₂_output) ÷ efficiency
+</code></pre>
+<ol>
+<li>λ's = the dual variables given (non-zero ones only).</li>
+<li>ref outputs = the table rows for THOSE units (match λ₃ → row of unit 3).</li>
+<li>Divide by the efficiency. Round per note (usually 2dp, sometimes 4dp-every-step).</li>
+</ol>
+<p><strong>VAULT (copy if numbers match exactly):</strong>
+- λ₅=0.3, λ₃=0.5, eff 0.8, Savings(25L, 32.5L), Projects(23, 14) → Savings = (0.3×25L+0.5×32.5L)/0.8 = <strong>2968750</strong> (key 2968749–51); Projects = 13.9/0.8 = <strong>17.38</strong> (key 17.1–17.8)
+- λ₂=0.5, λ₅=0.3, eff 0.8, Out(9000/10, 6500/12) → Out1 = 6450/0.8 = <strong>8062.5</strong>; Out2 = 8.6/0.8 = <strong>10.75</strong>
+- λ₄=0.35, λ₅=0.4, eff 0.75, Sales(11000, 9000), Loyal(150, 130) → Sales = 7450/0.75 = <strong>9933.33</strong>; Loyal = 104.5/0.75 = <strong>139.33</strong>
+- λ₂=0.25, λ₄=0.35, eff 0.6, Out(9000/10, 6500/12) → Out1 = 4525/0.6 = <strong>7541.67</strong>; Out2 = 6.7/0.6 = <strong>11.17</strong>
+- λ₂=0.25, λ₄=0.35, eff 0.6, Out(9000/10, 6500/12) HCU3 variant → <strong>7541.67 / 11.17</strong> (same numbers, different paper — PROOF they recycle)
+- λ₃=0.5, λ₅=0.3, eff 0.8, Sales(12000, 10000) → <strong>11250</strong>; Loyal(100, 120) → (50+36)/0.8 = <strong>107.5</strong>
+- Market-Share variant: (0.35×55 + 0.45×60)/0.8 = <strong>57.8125</strong> (MCQ — tick it)
+- Input-side variant (minimize inputs): required input = Σ(λ × ref_input) [NO division when efficiency already applied — follow the worked pattern: (0.65×8 + 0.35×10) = <strong>8.7</strong>?? key says 19?! ⚠️ exact-repeat → key 19; else engine. Flagged.)</p>
+<h2 id="engine-d3-lp-primal-dual-counting-questions-1-mark-each">ENGINE D3 — LP primal ↔ dual (counting questions, 1 mark each)</h2>
+<p><strong>TRIGGER:</strong> "how many constraints/decision variables in the dual", "valid dual constraint", "non-zero dual variables".</p>
+<ol>
+<li>№dual_vars = #primal_constraints (excluding non-negativity). #dual_constraints = #primal_vars.</li>
+<li>Max-primal ↔ Min-dual. ≤ constraints ↔ ≥ dual constraints (for max-primal). RHS ↔ objective coefficients SWAP.</li>
+<li>Complementary slackness: solved-primal binding constraint ⟺ dual variable can be non-zero. (MSS interviews / Milo ads: "how many dual vars non-zero" = count of BINDING primal constraints at the given solution.)</li>
+<li>Feasibility check (Milo ads MCQ): test each constraint with the given numbers — ANY violation → "NOT feasible / fraud". (105000+31500+45200 = 181700 ≤ 182000 budget ✓ but media-mix % violated → NOT feasible.)</li>
+<li>"Maximize (10Y1+…)" as a DUAL objective → WRONG (dual of max is min). Tick the Min version.</li>
+</ol>
+<p><strong>VAULT:</strong> 6-var 5-constraint max-primal → dual has <strong>5</strong> decision vars, <strong>6</strong> constraints. Dual coeff for Constraint-4 (RHS 20) → <strong>20</strong>. Chef Jeff LP → <strong>4</strong> primal vars. Milo solution → <strong>0</strong> non-zero dual vars, primal obj <strong>−791400</strong> (memorize).</p>
+<h2 id="engine-d4-conjoint-all-ratta-zero-math">ENGINE D4 — Conjoint (all ratta, zero math)</h2>
+<ol>
+<li>№pairwise preferences for N products = N(N−1)/2. (4 products → <strong>6</strong>; 5 → <strong>10</strong>; 3 variants → <strong>3</strong>.) "4 products 2 attributes" → <strong>6</strong> (asked 4 times; options include 8/16/12 as traps).</li>
+<li>Pairwise data + continuous attributes → <strong>Statistical/Regression approach</strong> (MSQ: tick Regression + Statistical + "Optimization or Statistical", never "Optimization" alone... note: one paper's key = "Optimization or Statistical approach" single MCQ).</li>
+<li>Ratings + continuous → Statistical/Regression. Pairwise + categorical → LP/Optimization.</li>
+<li>Part-worth = <strong>"All of these"</strong> (level utilities + utility for that level + utility for separate parts).</li>
+<li>Pairwise objective: <strong>minimize violation of wrong preferences + minimize poorness of fit</strong> (both).</li>
+<li>Ideal-point (O1/O2/x diagram): nearer to x wins → "prefer O1 when d2&gt;d1" ✓ + "prefer O2 when d1&lt;d2" ✓ (both; garbled-option papers: tick the pair).</li>
+<li>Format needed: Ratings→Statistical; Pairwise→LP/Optimization.</li>
+</ol></article>
+<nav class="prevnext"><a class="pn prev" href="ba-02-regression.html">â† BA Engine: Regression</a> <a class="pn next" href="ba-04-ratta.html">BA Ratta Q&A â†’</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
