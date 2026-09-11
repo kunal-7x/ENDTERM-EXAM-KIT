@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAD2 — 2024 Dec22  IIT Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MAD2 — 2024 Dec22  IIT</div>
+<div class="tools"><a class="btn2" href="papers/06-2024-dec22-iit.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-6406531045091-mcq-00-marks">Q1 · 6406531045091 · MCQ · 0.0 marks</a></li><li><a href="#q2-6406531045092-mcq-30-marks">Q2 · 6406531045092 · MCQ · 3.0 marks</a></li><li><a href="#q3-6406531045093-mcq-30-marks">Q3 · 6406531045093 · MCQ · 3.0 marks</a></li><li><a href="#q4-6406531045094-mcq-30-marks">Q4 · 6406531045094 · MCQ · 3.0 marks</a></li><li><a href="#q5-6406531045101-mcq-30-marks">Q5 · 6406531045101 · MCQ · 3.0 marks</a></li><li><a href="#q6-6406531045103-mcq-30-marks">Q6 · 6406531045103 · MCQ · 3.0 marks</a></li><li><a href="#q7-6406531045105-mcq-30-marks">Q7 · 6406531045105 · MCQ · 3.0 marks</a></li><li><a href="#q8-6406531045106-mcq-30-marks">Q8 · 6406531045106 · MCQ · 3.0 marks</a></li><li><a href="#q9-6406531045107-mcq-30-marks">Q9 · 6406531045107 · MCQ · 3.0 marks</a></li><li><a href="#q10-6406531045109-mcq-30-marks">Q10 · 6406531045109 · MCQ · 3.0 marks</a></li><li><a href="#q11-6406531045110-mcq-30-marks">Q11 · 6406531045110 · MCQ · 3.0 marks</a></li><li><a href="#q12-6406531045111-mcq-30-marks">Q12 · 6406531045111 · MCQ · 3.0 marks</a></li><li><a href="#q13-6406531045112-mcq-30-marks">Q13 · 6406531045112 · MCQ · 3.0 marks</a></li><li><a href="#q14-6406531045114-mcq-30-marks">Q14 · 6406531045114 · MCQ · 3.0 marks</a></li><li><a href="#q15-6406531045117-mcq-30-marks">Q15 · 6406531045117 · MCQ · 3.0 marks</a></li><li><a href="#q16-6406531045119-mcq-30-marks">Q16 · 6406531045119 · MCQ · 3.0 marks</a></li><li><a href="#q17-6406531045095-mcq-20-marks">Q17 · 6406531045095 · MCQ · 2.0 marks</a></li><li><a href="#q18-6406531045096-mcq-20-marks">Q18 · 6406531045096 · MCQ · 2.0 marks</a></li><li><a href="#q19-6406531045098-mcq-20-marks">Q19 · 6406531045098 · MCQ · 2.0 marks</a></li><li><a href="#q20-6406531045102-mcq-20-marks">Q20 · 6406531045102 · MCQ · 2.0 marks</a></li><li><a href="#q21-6406531045104-mcq-20-marks">Q21 · 6406531045104 · MCQ · 2.0 marks</a></li><li><a href="#q22-6406531045113-mcq-20-marks">Q22 · 6406531045113 · MCQ · 2.0 marks</a></li><li><a href="#q23-6406531045115-mcq-20-marks">Q23 · 6406531045115 · MCQ · 2.0 marks</a></li><li><a href="#q24-6406531045097-mcq-45-marks">Q24 · 6406531045097 · MCQ · 4.5 marks</a></li><li><a href="#q25-6406531045099-mcq-45-marks">Q25 · 6406531045099 · MCQ · 4.5 marks</a></li><li><a href="#q26-6406531045108-mcq-45-marks">Q26 · 6406531045108 · MCQ · 4.5 marks</a></li><li><a href="#q27-6406531045116-mcq-45-marks">Q27 · 6406531045116 · MCQ · 4.5 marks</a></li><li><a href="#q28-6406531045118-mcq-45-marks">Q28 · 6406531045118 · MCQ · 4.5 marks</a></li><li><a href="#q29-6406531045121-mcq-45-marks">Q29 · 6406531045121 · MCQ · 4.5 marks</a></li><li><a href="#q30-6406531045122-mcq-45-marks">Q30 · 6406531045122 · MCQ · 4.5 marks</a></li><li><a href="#q31-6406531045120-msq-30-marks">Q31 · 6406531045120 · MSQ · 3.0 marks</a></li><li><a href="#q32-6406531045123-msq-45-marks">Q32 · 6406531045123 · MSQ · 4.5 marks</a></li><li><a href="#q33-6406531045100-msq-20-marks">Q33 · 6406531045100 · MSQ · 2.0 marks</a></li></ul></nav>
+<article class="doc"><h1 id="mad2-2024-dec22-iit">MAD2 — 2024 Dec22  IIT</h1>
+<p><em>33 questions · transcribed from official practice paper (text layer + vision-checked)</em></p>
+<p>Legend: <strong>Accepted answer</strong> = the paper's own key (SA numerics). MCQ/MSQ keys are NOT printed in papers — answers: see the kit's RATTA / MCQ-MASTER files.</p>
+<h2 id="q1-6406531045091-mcq-00-marks">Q1 · <code>6406531045091</code> · MCQ · 0.0 marks</h2>
+<p>THIS IS QUESTION PAPER FOR THE SUBJECT "DIPLOMA LEVEL: MODERN APPLICATION DEVELOPMENT 2 (COMPUTER BASED EXAM)". ARE YOU SURE YOU HAVE TO WRITE EXAM FOR THIS SUBJECT?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>
+<p>YES</p>
+</li>
+<li>
+<p>NO</p>
+</li>
+</ul>
+<p><em>Answer: YES (0-mark confirmation — click YES and move on).</em></p>
+<h2 id="q2-6406531045092-mcq-30-marks">Q2 · <code>6406531045092</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following statements is true about closures in JavaScript?</p>
+<p><strong>Options:</strong>
+- A closure can access variables from its outer function even after the outerfunction has returned.
+- A closure can be created when a function is defined inside another function.
+- Closures are useful for data encapsulation and controlling access to privatedata.
+- All of these.</p>
+<h2 id="q3-6406531045093-mcq-30-marks">Q3 · <code>6406531045093</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>console.log(&quot;Start&quot;); setTimeout(function(){ console.log(&quot;Inside Timeout&quot;); }, 0)
+Promise.resolve().then(function(){ console.log(&quot;Inside Promise&quot;); }); console.log(&quot;End&quot;);
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>StartInside Timeout Inside Promise End</li>
+<li>StartInside Promise Inside Timeout End</li>
+<li>StartEnd Inside Timeout Inside Promise</li>
+<li>StartEnd Inside Promise Inside Timeout</li>
+</ul>
+<h2 id="q4-6406531045094-mcq-30-marks">Q4 · <code>6406531045094</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- Hello, JohnTypeError: john.greet is not a function
+- Hello, JohnHello, undefined
+- TypeError: john.greet is not a functionTypeError: john.greet is not a function
+- Hello, JohnHello, John</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function Person(name){ this.name = name; }
+Person.prototype.greet = function(){ console.log(&quot;Hello, &quot; + this.name); };
+const john = new Person(&quot;John&quot;); john.greet(); delete john.greet; john.greet();
+</code></pre>
+<h2 id="q5-6406531045101-mcq-30-marks">Q5 · <code>6406531045101</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Vue({ el:'#app', data:{ user:{ name:'Abhi', age:30 } },
+watch:{ user:{ handler(newValue, oldValue){ console.log('User object changed:', newValue); }, deep:true } } })
+Execute: app.user.name = &quot;Dev&quot;
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>The watcher will not be triggered (nested property)</li>
+<li>The watcher will be triggered and log the changed user object</li>
+<li>The watcher will trigger but log only the new name value</li>
+<li>The watcher will throw an error (deep watching unsupported)</li>
+</ul>
+<h2 id="q6-6406531045103-mcq-30-marks">Q6 · <code>6406531045103</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>&lt;template&gt;&lt;div&gt;&lt;p v-if=&quot;isVisible&quot;&gt;This paragraph is visible&lt;/p&gt;&lt;p v-else&gt;This paragraph is hidden&lt;/p&gt;&lt;/div&gt;&lt;/template&gt;
+data: isVisible:true. Execute: this.isVisible = false
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>The "visible" paragraph will be displayed</li>
+<li>The "hidden" paragraph will be displayed</li>
+<li>Both paragraphs will be displayed</li>
+<li>No change will happen</li>
+</ul>
+<h2 id="q7-6406531045105-mcq-30-marks">Q7 · <code>6406531045105</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- secure=True and samesite='Strict'
+- secure=False and samesite='Strict'
+- secure=True and samesite='None'
+- secure=False and samesite='Lax'</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>response.set_cookie('session_id', 'abc123', secure=option1, samesite=option2)
+</code></pre>
+<h2 id="q8-6406531045106-mcq-30-marks">Q8 · <code>6406531045106</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function addItemToCart(item){ let cart = JSON.parse(localStorage.getItem('cart')) || []; cart.push(item); localStorage.setItem('cart', JSON.stringify(cart)); }
+function getCartItems(){ return JSON.parse(localStorage.getItem('cart')) || []; }
+addItemToCart({ id:1, name:'Laptop' }.name); console.log(getCartItems());
+(page loaded fresh, then refreshed twice = 3 runs)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>[]</li>
+<li>['Laptop', 'Laptop', 'Laptop']</li>
+<li>[{ id:1, name:'Laptop' }]</li>
+<li>[undefined]</li>
+</ul>
+<h2 id="q9-6406531045107-mcq-30-marks">Q9 · <code>6406531045107</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following is true regarding long polling?</p>
+<p><strong>Options:</strong>
+- Long polling opens multiple connections between the client and the server,and the server continuously sends updates to
+- the client in real-time.
+- Long polling involves the client repeatedly sending requests at fixed intervalsto the server to check for updates,
+- regardless of whether new data is available.
+- Long polling allows the client to make a single request to the server, where theserver holds the connection open until new
+- data is available and then sends the response.
+- Long polling uses WebSockets to maintain a persistent, bidirectionalconnection between the client and the server.</p>
+<h2 id="q10-6406531045109-mcq-30-marks">Q10 · <code>6406531045109</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>All of these</li>
+</ul>
+<p><em>Note: question body was on a missing render page; only tail option visible.</em></p>
+<h2 id="q11-6406531045110-mcq-30-marks">Q11 · <code>6406531045110</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- No authentication check
+- SQL injection vulnerability
+- Unvalidated user input</p>
+<h2 id="q12-6406531045111-mcq-30-marks">Q12 · <code>6406531045111</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Vue.component('child', { template:`&lt;div&gt;&lt;slot name=&quot;header&quot; :info=&quot;info&quot;&gt;&lt;/slot&gt;&lt;slot :info=&quot;info&quot;&gt;&lt;/slot&gt;&lt;/div&gt;`,
+data(){ return { info:{ title:'Hello', desc:'World' } } } })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li><template v-slot:header="data">{{data.title}}</template></li>
+<li><template v-slot:header="{ info }">{{info.title}}</template></li>
+<li><template v-slot:header>{{info.title}}</template></li>
+<li><template v-slot:header=info>{{info.title}}</template></li>
+</ul>
+<h2 id="q13-6406531045112-mcq-30-marks">Q13 · <code>6406531045112</code> · MCQ · 3.0 marks</h2>
+<p>What will be the output on the console?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Promise.resolve(1).then(x =&gt; x + 1).then(x =&gt; Promise.resolve(x + 1)).then(x =&gt; { throw 'error' }).catch(e =&gt; e + 4).then(x =&gt; console.log(x))
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>error4</li>
+<li>7</li>
+<li>error</li>
+<li>undefined</li>
+</ul>
+<h2 id="q14-6406531045114-mcq-30-marks">Q14 · <code>6406531045114</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- Begin, Start, 5, End, Finish
+- Begin, Finish, Start, 5, End
+- Begin, Finish, Start, End, 5
+- Begin, Start, Finish, 5, End</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>async function test(){ console.log(&quot;Start&quot;); const val = await Promise.resolve(5); console.log(val); return &quot;End&quot;; }
+console.log(&quot;Begin&quot;); test().then(data =&gt; console.log(data)); console.log(&quot;Finish&quot;);
+</code></pre>
+<h2 id="q15-6406531045117-mcq-30-marks">Q15 · <code>6406531045117</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following best describes the difference between @cache.memoize() and @cache.cached() in Flask-Caching?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>@cache.memoize() caches function results based on arguments, while @cache.cached() caches entire views</li>
+<li>@cache.cached() caches by arguments, while @cache.memoize() caches entire views</li>
+<li>Both cache entire views, memoize uses Redis by default</li>
+<li>Both identical, different syntax</li>
+</ul>
+<h2 id="q16-6406531045119-mcq-30-marks">Q16 · <code>6406531045119</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- It will display the indices, values and types of all the items of the array.
+- It will throw error on the console for the very first iteration.
+- It will display the index, value and type of the value for the first item of arrayand then will throw error for the next value.
+- None of these.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let x = [100, 'x', num =&gt; num + 1]; for (const i = 0; i&lt;x.length; i++) { console.log(i, x[i], typeof(x[i])) }
+</code></pre>
+<h2 id="q17-6406531045095-mcq-20-marks">Q17 · <code>6406531045095</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements is false when using the “async” and “await” keywords in JavaScript?</p>
+<p><strong>Options:</strong>
+- The “await” keyword can only be used inside an async function.
+- The “await” keyword pauses the execution of the surrounding async functionuntil the promise resolves.
+- The async functions always return a promise, even if the return value is not apromise.
+- The async functions run synchronously, but their await statements executeasynchronously.</p>
+<h2 id="q18-6406531045096-mcq-20-marks">Q18 · <code>6406531045096</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const obj = { name:&quot;Abhi&quot;, greet:function(){ console.log(this.name); } }; const greet = obj.greet; greet();
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Abhi</li>
+<li>undefined</li>
+<li>null</li>
+<li>Reference Error</li>
+<li>Garbage Value</li>
+</ul>
+<h2 id="q19-6406531045098-mcq-20-marks">Q19 · <code>6406531045098</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const person = { firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, fullName:function(){ return this.firstName + &quot; &quot; + this.lastName; } }
+const newPerson = person.fullName.bind({ firstName:&quot;Jane&quot;, lastName:&quot;Smith&quot; }); console.log(newPerson());
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>John Doe</li>
+<li>Jane Smith</li>
+<li>John Smith</li>
+<li>Jane Doe</li>
+<li>undefined</li>
+<li>null</li>
+<li>Reference Error</li>
+</ul>
+<h2 id="q20-6406531045102-mcq-20-marks">Q20 · <code>6406531045102</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements about the beforeDestroy and destroyed lifecycle hooks in Vue is true?</p>
+<p><strong>Options:</strong>
+- The “beforeDestroy” hook is called after the component is removed from theDOM, and the “destroyed” hook is called
+- before the component is destroyed.
+- The “beforeDestroy” hook is called before the component is removed from theDOM, and the “destroyed” hook is called
+- after the component is destroyed.
+- The “beforeDestroy” hook is called when the component is mounted, and the“destroyed” hook is called before the
+- component is destroyed.
+- Both hooks are called after the component is destroyed.</p>
+<h2 id="q21-6406531045104-mcq-20-marks">Q21 · <code>6406531045104</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function add(x){ return function(y){ return x + y; }; }; const addFive = add(5); console.log(addFive(10));
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>5</li>
+<li>10</li>
+<li>15</li>
+<li>20</li>
+</ul>
+<h2 id="q22-6406531045113-mcq-20-marks">Q22 · <code>6406531045113</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements is FALSE?</p>
+<p><strong>Options:</strong>
+- Cache-Control: no-store prevents caching
+- ETag helps validate cache freshness
+- Data stored in sessionStorage remains available even after the browser isclosed and reopened.
+- localStorage has larger storage limit than cookies</p>
+<h2 id="q23-6406531045115-mcq-20-marks">Q23 · <code>6406531045115</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>CSP Header: Content-Security-Policy: default-src 'self'; HTML: &lt;script src=&quot;https://otherurl.com/code.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>The script from otherurl.com will load normally</li>
+<li>The script will fail to load, and an error will be logged in the console</li>
+<li>The browser will display a warning and allow the script to load</li>
+<li>Nothing will happen; the CSP only affects inline scripts</li>
+</ul>
+<h2 id="q24-6406531045097-mcq-45-marks">Q24 · <code>6406531045097</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(grandparent &gt; parent &gt; child divs; ALL THREE listeners with capture:true logging GrandParent/Parent/Child; click &quot;Child&quot;)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>ChildParent GrandParent</li>
+<li>Child</li>
+<li>GrandParentParent Child</li>
+<li>None of these</li>
+</ul>
+<h2 id="q25-6406531045099-mcq-45-marks">Q25 · <code>6406531045099</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const store = new Vuex.Store({ state:{ counter:0 }, mutations:{ increment(state){ state.counter++; } },
+actions:{ async incrementAsync({ commit }){ await new Promise(resolve =&gt; setTimeout(resolve, 1000)); commit('increment'); } } })
+Execute: this.$store.dispatch('incrementAsync');
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>The increment mutation will be called immediately after the dispatch</li>
+<li>The state will be updated after the asynchronous operation completes</li>
+<li>The action will execute synchronously, committing before the promise resolves</li>
+<li>The action will be skipped since mutations cannot be called inside actions</li>
+</ul>
+<h2 id="q26-6406531045108-mcq-45-marks">Q26 · <code>6406531045108</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Vue.component('my-button', { template:`&lt;button @click=&quot;handleClick&quot;&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/button&gt;`,
+methods:{ handleClick(){ console.log('Button'); this.$emit('click') } } })
+new Vue({ el:'#app', template:`&lt;my-button @click=&quot;parentClick&quot;&gt;Click me&lt;/my-button&gt;`, methods:{ parentClick(){ console.log('Parent') } } })
+Button pressed once.
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Parent</li>
+<li>Button</li>
+<li>ButtonParent</li>
+<li>ParentButton</li>
+</ul>
+<h2 id="q27-6406531045116-mcq-45-marks">Q27 · <code>6406531045116</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>User: null</li>
+<li>The error will be logged, Nothing will be displayed</li>
+<li>User: Luke</li>
+</ul>
+<p><em>Note: question body was on a missing render page; only options visible.</em></p>
+<h2 id="q28-6406531045118-mcq-45-marks">Q28 · <code>6406531045118</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- The userData in the store is set to the data from the API.</p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q29-6406531045121-mcq-45-marks">Q29 · <code>6406531045121</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let bsCourses = { subject:'MAD II', stream:'Programming' }; let esCourses = bsCourses; let msCourses = {};
+for (let course in bsCourses){ msCourses[key] = bsCourses[key]; }
+esCourses.subject = 'Embedded C'; msCourses.stream = 'Electronics'; console.log(msCourses)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>{ subject:'MAD II', stream:'Programming' }</li>
+<li>{ subject:'Embedded C', stream:'Electronics' }</li>
+<li>{ subject:'MAD II', stream:'Electronics' }</li>
+<li>{ subject:'Embedded C', stream:'Programming' }</li>
+</ul>
+<p><em>Note: loop uses undefined variable <code>key</code> (ReferenceError in strict reading); options as printed.</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let bsCourses = { subject:'MAD II', stream:'Programming' }; let esCourses = bsCourses; let msCourses = {};
+for (let course in bsCourses){ msCourses[key] = bsCourses[key]; }
+esCourses.subject = 'Embedded C'; msCourses.stream = 'Electronics'; console.log(msCourses)
+</code></pre>
+<p><em>Note: loop uses undefined variable <code>key</code> (ReferenceError in strict reading); options as printed.</em></p>
+<h2 id="q30-6406531045122-mcq-45-marks">Q30 · <code>6406531045122</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>var var1 = 56;
+const exObj = { var2:24, var1:15, inObj:{ var1:75, inObjFunc:()=&gt;{ return &quot;Value is &quot; + this.var1; } },
+exObjFunc:function(){ let var2 = 14; return &quot;Value is &quot; + this.var2; } }
+let x = exObj.inObj; console.log(x.inObjFunc()); console.log(exObj.exObjFunc())
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Value is 75 / Value is 24</li>
+<li>Value is 56 / Value is 24</li>
+<li>Value is 15 / Value is 14</li>
+<li>Value is 56 / Value is 14</li>
+</ul>
+<h2 id="q31-6406531045120-msq-30-marks">Q31 · <code>6406531045120</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(same getter/setter myBox object as paper-5 Q8 with tool/cutter)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>console.log(myBox.tools)</li>
+<li>console.log(myBox.tools())</li>
+<li>console.log(myBox.tools('ScrewDriver Grinder'))</li>
+<li>console.log(myBox.tools = 'ScrewDriver Grinder')</li>
+</ul>
+<h2 id="q32-6406531045123-msq-45-marks">Q32 · <code>6406531045123</code> · MSQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(same v-if/v-show index1/index2 pair as paper-5 Q9)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>When the directive v-if is falsy, it removes the entire element from the DOM</li>
+<li>The raw HTML will be exactly the same when both values are set to true</li>
+<li>The raw HTML will be exactly the same for the current state of data</li>
+<li>When the directive v-show is falsy, it removes the entire element from the DOM</li>
+</ul>
+<h2 id="q33-6406531045100-msq-20-marks">Q33 · <code>6406531045100</code> · MSQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><em>Note: question content was blank in render; continuation page missing; unrecoverable.</em></p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-mad2-05-2024-apr28-iit.html">← MAD2 — 2024 Apr28  IIT</a> <a class="pn next" href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

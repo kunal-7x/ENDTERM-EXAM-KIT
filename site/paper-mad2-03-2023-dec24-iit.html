@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAD2 — 2023 Dec24  IIT Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MAD2 — 2023 Dec24  IIT</div>
+<div class="tools"><a class="btn2" href="papers/03-2023-dec24-iit.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-640653700686-mcq-00-marks">Q1 · 640653700686 · MCQ · 0.0 marks</a></li><li><a href="#q2-640653700687-msq-20-marks">Q2 · 640653700687 · MSQ · 2.0 marks</a></li><li><a href="#q3-640653700688-msq-20-marks">Q3 · 640653700688 · MSQ · 2.0 marks</a></li><li><a href="#q4-640653700689-msq-20-marks">Q4 · 640653700689 · MSQ · 2.0 marks</a></li><li><a href="#q5-640653700703-msq-20-marks">Q5 · 640653700703 · MSQ · 2.0 marks</a></li><li><a href="#q6-640653700705-msq-20-marks">Q6 · 640653700705 · MSQ · 2.0 marks</a></li><li><a href="#q7-640653700712-msq-20-marks">Q7 · 640653700712 · MSQ · 2.0 marks</a></li><li><a href="#q8-640653700713-msq-20-marks">Q8 · 640653700713 · MSQ · 2.0 marks</a></li><li><a href="#q9-640653700690-msq-30-marks">Q9 · 640653700690 · MSQ · 3.0 marks</a></li><li><a href="#q10-640653700706-msq-30-marks">Q10 · 640653700706 · MSQ · 3.0 marks</a></li><li><a href="#q11-640653700710-msq-30-marks">Q11 · 640653700710 · MSQ · 3.0 marks</a></li><li><a href="#q12-640653700714-msq-30-marks">Q12 · 640653700714 · MSQ · 3.0 marks</a></li><li><a href="#q13-640653700715-msq-30-marks">Q13 · 640653700715 · MSQ · 3.0 marks</a></li><li><a href="#q14-640653700716-msq-30-marks">Q14 · 640653700716 · MSQ · 3.0 marks</a></li><li><a href="#q15-640653700718-mcq-20-marks">Q15 · 640653700718 · MCQ · 2.0 marks</a></li><li><a href="#q16-640653700691-mcq-30-marks">Q16 · 640653700691 · MCQ · 3.0 marks</a></li><li><a href="#q17-640653700692-mcq-30-marks">Q17 · 640653700692 · MCQ · 3.0 marks</a></li><li><a href="#q18-640653700693-mcq-30-marks">Q18 · 640653700693 · MCQ · 3.0 marks</a></li><li><a href="#q19-640653700695-mcq-30-marks">Q19 · 640653700695 · MCQ · 3.0 marks</a></li><li><a href="#q20-640653700697-mcq-30-marks">Q20 · 640653700697 · MCQ · 3.0 marks</a></li><li><a href="#q21-640653700699-mcq-30-marks">Q21 · 640653700699 · MCQ · 3.0 marks</a></li><li><a href="#q22-640653700700-mcq-30-marks">Q22 · 640653700700 · MCQ · 3.0 marks</a></li><li><a href="#q23-640653700702-mcq-30-marks">Q23 · 640653700702 · MCQ · 3.0 marks</a></li><li><a href="#q24-640653700711-mcq-30-marks">Q24 · 640653700711 · MCQ · 3.0 marks</a></li><li><a href="#q25-640653700717-mcq-30-marks">Q25 · 640653700717 · MCQ · 3.0 marks</a></li><li><a href="#q26-640653700694-mcq-45-marks">Q26 · 640653700694 · MCQ · 4.5 marks</a></li><li><a href="#q27-640653700696-mcq-45-marks">Q27 · 640653700696 · MCQ · 4.5 marks</a></li><li><a href="#q28-640653700698-mcq-45-marks">Q28 · 640653700698 · MCQ · 4.5 marks</a></li><li><a href="#q29-640653700701-mcq-45-marks">Q29 · 640653700701 · MCQ · 4.5 marks</a></li><li><a href="#q30-640653700704-mcq-45-marks">Q30 · 640653700704 · MCQ · 4.5 marks</a></li><li><a href="#q31-640653700707-mcq-45-marks">Q31 · 640653700707 · MCQ · 4.5 marks</a></li><li><a href="#q32-640653700708-mcq-45-marks">Q32 · 640653700708 · MCQ · 4.5 marks</a></li><li><a href="#q33-640653700709-mcq-45-marks">Q33 · 640653700709 · MCQ · 4.5 marks</a></li></ul></nav>
+<article class="doc"><h1 id="mad2-2023-dec24-iit">MAD2 — 2023 Dec24  IIT</h1>
+<p><em>33 questions · transcribed from official practice paper (text layer + vision-checked)</em></p>
+<p>Legend: <strong>Accepted answer</strong> = the paper's own key (SA numerics). MCQ/MSQ keys are NOT printed in papers — answers: see the kit's RATTA / MCQ-MASTER files.</p>
+<h2 id="q1-640653700686-mcq-00-marks">Q1 · <code>640653700686</code> · MCQ · 0.0 marks</h2>
+<p>THIS IS QUESTION PAPER FOR THE SUBJECT "DIPLOMA LEVEL: MODERN APPLICATION DEVELOPMENT 2 (COMPUTER BASED EXAM)". ARE YOU SURE YOU HAVE TO WRITE EXAM FOR THIS SUBJECT?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>
+<p>YES</p>
+</li>
+<li>
+<p>NO</p>
+</li>
+</ul>
+<p><em>Answer: YES (0-mark confirmation — click YES and move on).</em></p>
+<h2 id="q2-640653700687-msq-20-marks">Q2 · <code>640653700687</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statements is/are false.</p>
+<p><strong>Options:</strong>
+- SMTP is a mail delivery protocol.
+- SMTP is a protocol to retrieve email from an email server.
+- IMAP is a mail delivery protocol.
+- IMAP is a protocol to retrieve email from an email server.</p>
+<h2 id="q3-640653700688-msq-20-marks">Q3 · <code>640653700688</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following is/are correct regarding CDN.</p>
+<p><strong>Options:</strong>
+- CDN is an acronym for Content Delivery Network.
+- CDN is a group of servers that helps in fast delivery of web contents.
+- Web content is always delivered from the closest server to the client in thenetwork.
+- None of these.</p>
+<h2 id="q4-640653700689-msq-20-marks">Q4 · <code>640653700689</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following is correct regarding Celery?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>SMTP is a mail delivery protocol</li>
+<li>SMTP is a protocol to retrieve email from an email server</li>
+<li>IMAP is a mail delivery protocol</li>
+<li>IMAP is a protocol to retrieve email from an email server</li>
+</ul>
+<h2 id="q5-640653700703-msq-20-marks">Q5 · <code>640653700703</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding javascript language?</p>
+<p><strong>Options:</strong>
+- Replit.com is an example of a javascript engine.
+- The language supports the concept of first class functions.
+- The language does not allow the implementation of user defined higher orderfunctions.
+- The language can be used for DOM manipulation.</p>
+<h2 id="q6-640653700705-msq-20-marks">Q6 · <code>640653700705</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following method(s) does not guarantee that the displayed state and system state are kept in sync at all times?</p>
+<p><strong>Options:</strong>
+- Ajax requests on each UI change
+- Periodic reloading of web-page
+- Vue bindings to update data reactively
+- Pure static pages with all updates rendered from server</p>
+<h2 id="q7-640653700712-msq-20-marks">Q7 · <code>640653700712</code> · MSQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>With point-to-point communication, the number of connection links will grow as O(n)</li>
+<li>...will grow as O(n2)</li>
+<li>With a central message broker, links will grow as O(n)</li>
+<li>...will grow as O(n2)</li>
+</ul>
+<h2 id="q8-640653700713-msq-20-marks">Q8 · <code>640653700713</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are false regarding webhooks?</p>
+<p><strong>Options:</strong>
+- A webhook uses HTTP protocol.
+- A webhook uses web socket protocol.
+- A webhook receiver must be deployed on the same origin as the webhookinitiator.
+- A webhook is supposed to be used for machine to machine communication</p>
+<h2 id="q9-640653700690-msq-30-marks">Q9 · <code>640653700690</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following is correct regarding XSS attacks?</p>
+<p><strong>Options:</strong>
+- XSS attack is an exploit where an attacker attaches a malicious code into awebsite.
+- XSS can be used to steal the user's cookie.
+- XSS is a client side injection attack.
+- It can be avoided by validating the user's input.</p>
+<h2 id="q10-640653700706-msq-30-marks">Q10 · <code>640653700706</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following is/are valid use(s) of “v-for” directive, assuming “obj” is an object having a number of key value pairs?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>v-for = "value in obj"</li>
+<li>v-for = "(value, name) in obj"</li>
+<li>v-for = "(value, name, index) in obj"</li>
+<li>None of these</li>
+</ul>
+<h2 id="q11-640653700710-msq-30-marks">Q11 · <code>640653700710</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>https://abc.com</li>
+<li>https://xyz.abc.com</li>
+<li>https://abc.com/page</li>
+<li>https://abc8.com</li>
+</ul>
+<h2 id="q12-640653700714-msq-30-marks">Q12 · <code>640653700714</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are false regarding long and short polling?</p>
+<p><strong>Options:</strong>
+- A webhook is the same as short polling.
+- The short polling can be used to know the state of an asynchronous task, andtrigger an action if the task gets completed.
+- The long polling cannot be achieved using HTTP protocol.
+- Long Polling can be used to achieve real time communication</p>
+<h2 id="q13-640653700715-msq-30-marks">Q13 · <code>640653700715</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are false regarding caching?</p>
+<p><strong>Options:</strong>
+- It is recommended to cache the social networking apps feed responses for alonger duration.</p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q14-640653700716-msq-30-marks">Q14 · <code>640653700716</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statements is true regarding CORS and CSRF?</p>
+<p><strong>Options:</strong>
+- CORS stands for Cross Origin Resource Sharing.
+- The CORS reduces chances of malicious code by explicitly saying which URLscan be originators of data.
+- CSRF stands for Cross Site Request Forgery.
+- None of these</p>
+<h2 id="q15-640653700718-mcq-20-marks">Q15 · <code>640653700718</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding Celery?</p>
+<p><strong>Options:</strong>
+- A celery system may consist of multiple brokers.
+- Redis must be used as a message broker for Celery.
+- The framework does not support periodic scheduling of tasks.
+- All of these.</p>
+<h2 id="q16-640653700691-mcq-30-marks">Q16 · <code>640653700691</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript code.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function goUpDown(num){ return new Promise((res, rej) =&gt; { setTimeout(() =&gt; {
+if (num &lt; 20) { return num &gt; 10 ? res('Go Up') : res('Go Down') } else { return rej('Number Too Large') } }, 1000) }) }
+async function getData(){ const data3 = await goUpDown(8); const data2 = await goUpDown(15); const data1 = await goUpDown(12) }
+getData().then((data) =&gt; { console.log(data) }, (err) =&gt; { console.log(err) })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Go Up</li>
+<li>Go Down</li>
+<li>Number Too Large</li>
+<li>None of these</li>
+</ul>
+<h2 id="q17-640653700692-mcq-30-marks">Q17 · <code>640653700692</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript code.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>async function getResponse(url){ try{ const response = await fetch(url)
+try{ const data = await response.json(); if (response.ok) { return data } else { return response.status } }
+catch{ return 'Network Error' } } catch{ return 'Response is not json' } }
+getResponse('url').then((data) =&gt; { console.log(data) })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Response is not json</li>
+<li>Network Error</li>
+<li>200</li>
+<li>None of these</li>
+</ul>
+<h2 id="q18-640653700693-mcq-30-marks">Q18 · <code>640653700693</code> · MCQ · 3.0 marks</h2>
+<p>Consider the JavaScript code.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(same getResponse code as Q17; url returns JSON with 500 status)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Response is not json</li>
+<li>Network Error</li>
+<li>404</li>
+<li>500</li>
+</ul>
+<h2 id="q19-640653700695-mcq-30-marks">Q19 · <code>640653700695</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript code.</p>
+<p><em>Note: code/options were on a missing render page (p010).</em></p>
+<h2 id="q20-640653700697-mcq-30-marks">Q20 · <code>640653700697</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with JavaScript “app.js” and markup “index.html” Consider the following Vue application with JavaScript “app.js” and markup “index.html”</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(cart app: items Apple(count1,price10), Orange(count1,price5); inscreeaseCount += 2; addToCart pushes item; amount = sum(count*price); buy logs Success if amount &lt;= totalAmount(50))
+Clicks: Increase+AddToCart for Apple once, then Orange once, then Buy.
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Success</li>
+<li>Failure</li>
+<li>NaN</li>
+<li>None of these</li>
+</ul>
+<h2 id="q21-640653700699-mcq-30-marks">Q21 · <code>640653700699</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue app with markup “index.html” and JavaScript “app.js”</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const Error = { template:`&lt;div&gt;Result Not Found&lt;/div&gt;` }
+const Dashboard = { template:`&lt;div&gt;This is dashboard of {{user}}&lt;/div&gt;`, props:['user'] }
+routes: [{ path:'/dashboard/:user', component:Dashboard, props:true }, { path:'*', component:Error }]
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>This is dashboard of User</li>
+<li>This is dashboard of 7</li>
+<li>Dashboard</li>
+<li>Result Not Found</li>
+</ul>
+<h2 id="q22-640653700700-mcq-30-marks">Q22 · <code>640653700700</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and JavaScript “app.js”</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const Home = { template:`&lt;div&gt;&lt;slot name=&quot;navbar&quot;&gt;This is navbar&lt;/slot&gt;&lt;slot&gt;&lt;/slot&gt;&lt;slot name=&quot;footer&quot;&gt;&lt;/slot&gt;&lt;/div&gt;` }
+new Vue({ el:'#app', template:`&lt;Home&gt;&lt;template slot=&quot;footer&quot;&gt;This is Footer&lt;/template&gt;&lt;template slot=&quot;navbar&quot;&gt;This is header&lt;/template&gt;&lt;div&gt;Welcome to exam&lt;/div&gt;&lt;/Home&gt;`, components:{ Home } })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>This is Footer / This is Header</li>
+<li>This is Footer / This is Header / Welcome to exam</li>
+<li>This is Header / This is Footer</li>
+<li>This is Header / Welcome to Exam / This is Footer</li>
+</ul>
+<h2 id="q23-640653700702-mcq-30-marks">Q23 · <code>640653700702</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following flask application.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(flask_caching RedisCache app: @cache.cached(timeout=40), home() sleeps 30s; user1 visits, user2 visits 3 min later)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>0 seconds</li>
+<li>30 seconds</li>
+<li>120 seconds</li>
+<li>None of these</li>
+</ul>
+<h2 id="q24-640653700711-mcq-30-marks">Q24 · <code>640653700711</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>for (var i = 0; i &lt; 3; i++) { setTimeout(() =&gt; console.log(i), (i+1)*1000); }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>0/1/2, Minimum Time Taken: 6 seconds</li>
+<li>0/1/2, Minimum Time Taken: 12 seconds</li>
+<li>3/3/3, Minimum Time Taken: 12 seconds</li>
+<li>3/3/3, Minimum Time Taken: 6 seconds</li>
+</ul>
+<h2 id="q25-640653700717-mcq-30-marks">Q25 · <code>640653700717</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below javascript program. Consider the below javascript program. What will be the output of the above program, if executed?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>async function func(){ const num = await Promise.resolve(2); console.log(&quot;Second&quot;); return num; }
+console.log(&quot;First&quot;); func().then((data) =&gt; console.log(data)); console.log(&quot;Third&quot;);
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>First / Second / Third / 2</li>
+<li>First / Error</li>
+<li>First / Third / Second / undefined</li>
+<li>First / Third / Second / 2</li>
+<li>The output cannot be predicted</li>
+</ul>
+<h2 id="q26-640653700694-mcq-45-marks">Q26 · <code>640653700694</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following JavaScript code.</p>
+<p><em>Note: code/options were on a missing render page (p018).</em></p>
+<h2 id="q27-640653700696-mcq-45-marks">Q27 · <code>640653700696</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with JavaScript “app.js” and markup “index.html” Consider the following Vue application with JavaScript “app.js” and markup “index.html”</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(same cart app as Q20; clicks: Increase Count on Apple 5 times, on Orange once, then Buy; nothing added to cart)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Success</li>
+<li>Failure</li>
+<li>NaN</li>
+<li>None of these</li>
+</ul>
+<h2 id="q28-640653700698-mcq-45-marks">Q28 · <code>640653700698</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue app with markup “index.html” and JavaScript “app.js”</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const Error = { template:`&lt;div&gt;Result Not Found&lt;/div&gt;` }
+(rest of app.js truncated in render; route /user question)
+</code></pre>
+<p><em>Note: app.js body was cut off in the render; options unknown.</em></p>
+<h2 id="q29-640653700701-mcq-45-marks">Q29 · <code>640653700701</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following flask application.</p>
+<p><em>[figure/code image — see kit engine pattern]</em></p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q30-640653700704-mcq-45-marks">Q30 · <code>640653700704</code> · MCQ · 4.5 marks</h2>
+<p>Consider the below javascript program.</p>
+<p><em>[figure/code image — see kit engine pattern]</em></p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q31-640653700707-mcq-45-marks">Q31 · <code>640653700707</code> · MCQ · 4.5 marks</h2>
+<p>Consider the below javascript program.</p>
+<p><em>[figure/code image — see kit engine pattern]</em></p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q32-640653700708-mcq-45-marks">Q32 · <code>640653700708</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><em>[figure/code image — see kit engine pattern]</em></p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q33-640653700709-mcq-45-marks">Q33 · <code>640653700709</code> · MCQ · 4.5 marks</h2>
+<p>Fill in code1 &amp; code2, which can be used in Vuex Store to update the “below_average” state variable with the objects of those students who have scored more than 50 marks. Fill in code1 &amp; code2, which can be used in Vuex Store to update the “below_average” state variable with the objects of those students who have scored more than 50 marks.</p>
+<p><em>[figure/code image — see kit engine pattern]</em></p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-mad2-02-2022-dec-iit-m.html">← MAD2 — 2022 Dec  IIT M</a> <a class="pn next" href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

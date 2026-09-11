@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAD2 — 2023 Sep03  IIT Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MAD2 — 2023 Sep03  IIT</div>
+<div class="tools"><a class="btn2" href="papers/04-2023-sep03-iit.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-640653609027-mcq-00-marks">Q1 · 640653609027 · MCQ · 0.0 marks</a></li><li><a href="#q2-640653609028-mcq-30-marks">Q2 · 640653609028 · MCQ · 3.0 marks</a></li><li><a href="#q3-640653609029-mcq-30-marks">Q3 · 640653609029 · MCQ · 3.0 marks</a></li><li><a href="#q4-640653609030-mcq-30-marks">Q4 · 640653609030 · MCQ · 3.0 marks</a></li><li><a href="#q5-640653609032-mcq-30-marks">Q5 · 640653609032 · MCQ · 3.0 marks</a></li><li><a href="#q6-640653609035-mcq-30-marks">Q6 · 640653609035 · MCQ · 3.0 marks</a></li><li><a href="#q7-640653609036-mcq-30-marks">Q7 · 640653609036 · MCQ · 3.0 marks</a></li><li><a href="#q8-640653609043-mcq-30-marks">Q8 · 640653609043 · MCQ · 3.0 marks</a></li><li><a href="#q9-640653609052-mcq-30-marks">Q9 · 640653609052 · MCQ · 3.0 marks</a></li><li><a href="#q10-640653609054-mcq-30-marks">Q10 · 640653609054 · MCQ · 3.0 marks</a></li><li><a href="#q11-640653609056-mcq-30-marks">Q11 · 640653609056 · MCQ · 3.0 marks</a></li><li><a href="#q12-640653609059-mcq-30-marks">Q12 · 640653609059 · MCQ · 3.0 marks</a></li><li><a href="#q13-640653609031-msq-20-marks">Q13 · 640653609031 · MSQ · 2.0 marks</a></li><li><a href="#q14-640653609042-msq-20-marks">Q14 · 640653609042 · MSQ · 2.0 marks</a></li><li><a href="#q15-640653609044-msq-20-marks">Q15 · 640653609044 · MSQ · 2.0 marks</a></li><li><a href="#q16-640653609045-msq-20-marks">Q16 · 640653609045 · MSQ · 2.0 marks</a></li><li><a href="#q17-640653609047-msq-20-marks">Q17 · 640653609047 · MSQ · 2.0 marks</a></li><li><a href="#q18-640653609051-msq-20-marks">Q18 · 640653609051 · MSQ · 2.0 marks</a></li><li><a href="#q19-640653609033-mcq-20-marks">Q19 · 640653609033 · MCQ · 2.0 marks</a></li><li><a href="#q20-640653609041-mcq-20-marks">Q20 · 640653609041 · MCQ · 2.0 marks</a></li><li><a href="#q21-640653609034-mcq-45-marks">Q21 · 640653609034 · MCQ · 4.5 marks</a></li><li><a href="#q22-640653609038-mcq-45-marks">Q22 · 640653609038 · MCQ · 4.5 marks</a></li><li><a href="#q23-640653609053-mcq-45-marks">Q23 · 640653609053 · MCQ · 4.5 marks</a></li><li><a href="#q24-640653609055-mcq-45-marks">Q24 · 640653609055 · MCQ · 4.5 marks</a></li><li><a href="#q25-640653609057-mcq-45-marks">Q25 · 640653609057 · MCQ · 4.5 marks</a></li><li><a href="#q26-640653609058-mcq-45-marks">Q26 · 640653609058 · MCQ · 4.5 marks</a></li><li><a href="#q27-640653609037-msq-45-marks">Q27 · 640653609037 · MSQ · 4.5 marks</a></li><li><a href="#q28-640653609039-msq-45-marks">Q28 · 640653609039 · MSQ · 4.5 marks</a></li><li><a href="#q29-640653609040-msq-30-marks">Q29 · 640653609040 · MSQ · 3.0 marks</a></li><li><a href="#q30-640653609046-msq-30-marks">Q30 · 640653609046 · MSQ · 3.0 marks</a></li><li><a href="#q31-640653609048-msq-30-marks">Q31 · 640653609048 · MSQ · 3.0 marks</a></li><li><a href="#q32-640653609049-msq-30-marks">Q32 · 640653609049 · MSQ · 3.0 marks</a></li><li><a href="#q33-640653609050-msq-30-marks">Q33 · 640653609050 · MSQ · 3.0 marks</a></li></ul></nav>
+<article class="doc"><h1 id="mad2-2023-sep03-iit">MAD2 — 2023 Sep03  IIT</h1>
+<p><em>33 questions · transcribed from official practice paper (text layer + vision-checked)</em></p>
+<p>Legend: <strong>Accepted answer</strong> = the paper's own key (SA numerics). MCQ/MSQ keys are NOT printed in papers — answers: see the kit's RATTA / MCQ-MASTER files.</p>
+<h2 id="q1-640653609027-mcq-00-marks">Q1 · <code>640653609027</code> · MCQ · 0.0 marks</h2>
+<p>THIS IS QUESTION PAPER FOR THE SUBJECT "DIPLOMA LEVEL: MODERN APPLICATION DEVELOPMENT 2 (COMPUTER BASED EXAM)". ARE YOU SURE YOU HAVE TO WRITE EXAM FOR THIS SUBJECT?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>
+<p>YES</p>
+</li>
+<li>
+<p>NO</p>
+</li>
+</ul>
+<p><em>Answer: YES (0-mark confirmation — click YES and move on).</em></p>
+<h2 id="q2-640653609028-mcq-30-marks">Q2 · <code>640653609028</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below HTML document. Consider the below HTML document. Suppose you open the “index.html” file in a browser, and click on the table cell with the text “Abhishek”. Which of the following shows the correct sequence of output?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>&lt;table id=&quot;table_id&quot;&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Standard&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td id=&quot;cell_id_1&quot;&gt;Abhishek&lt;/td&gt;&lt;td id=&quot;cell_id_2&quot;&gt;10th&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td id=&quot;cell_id_3&quot;&gt;Narendra&lt;/td&gt;&lt;td id=&quot;cell_id_4&quot;&gt;11th&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+table listener (capture TRUE): &quot;Table Clicked !!&quot;; cell listener (capture TRUE): &quot;Cell Clicked !!&quot;
+Click on cell &quot;Abhishek&quot;.
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Cell Clicked !! / Table Clicked !!</li>
+<li>Table Clicked !! / Cell Clicked !!</li>
+<li>Cell Clicked !!</li>
+<li>Table Clicked !!</li>
+</ul>
+<h2 id="q3-640653609029-mcq-30-marks">Q3 · <code>640653609029</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below HTML document. Consider the below HTML document. Suppose you open the “index.html” file in a browser, and click on the table cell with the text “Abhishek”. Which of the following shows the correct sequence of output?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(same table; BOTH listeners WITHOUT capture flag; click &quot;Abhishek&quot;)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Cell Clicked !! / Table Clicked !!</li>
+<li>Table Clicked !! / Cell Clicked !!</li>
+<li>Cell Clicked !!</li>
+<li>Table Clicked !!</li>
+</ul>
+<h2 id="q4-640653609030-mcq-30-marks">Q4 · <code>640653609030</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript program, and predict the output if executed. Consider the following JavaScript program, and predict the output if executed.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>var first = 1;
+obj1 = { 'first':2, 'second':function some(){ console.log(this.first); } }
+obj2 = { 'first':3, 'second':function some(){ console.log(&quot;Function Invoked !!&quot;); this.second(); } }
+obj2.second.call(obj1);
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Function Invoked !! / 1</li>
+<li>Function Invoked !! / 2</li>
+<li>Function Invoked !! / 3</li>
+<li>Infinite loop printing "Function Invoked !!"</li>
+</ul>
+<h2 id="q5-640653609032-mcq-30-marks">Q5 · <code>640653609032</code> · MCQ · 3.0 marks</h2>
+<p>Match the Vue directives / constructs with their function.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Match: 1.v-bind | 2.v-model | 3.v-cloak | 4.v-on  with  A.hide uncompiled mustache | B.two-way binding | C.bind HTML attribute to data | D.bind events
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>1-A, 2-B, 3-C, 4-D</li>
+<li>1-C, 2-B, 3-D, 4-A</li>
+<li>1-C, 2-D, 3-A, 4-B</li>
+<li>1-C, 2-B, 3-A, 4-D</li>
+</ul>
+<h2 id="q6-640653609035-mcq-30-marks">Q6 · <code>640653609035</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”.</p>
+<p><em>Note: code/options failed to load in render (blank); question unrecoverable from text.</em></p>
+<h2 id="q7-640653609036-mcq-30-marks">Q7 · <code>640653609036</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”. Consider the below Vue application with markup file “index.html” and javascript file “app.js”. Suppose you open the “index.html” file in a browser, and click on the link with the text “Home”. What will be rendered by the browser except the router links in the navigation menu?</p>
+<p><strong>Options:</strong>
+- Hello First Component !!
+- Hello Second Component !!
+- 404
+- Blank Page</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const First = Vue.component(&quot;first&quot;, { template:`&lt;div&gt;Hello First Component !!&lt;/div&gt;`, mounted(){ this.$router.push(&quot;/endpoint2&quot;); } })
+const Second = Vue.component(&quot;second&quot;, { template:`&lt;div&gt;Hello Second Component !!&lt;/div&gt;` })
+routes: [{path:&quot;/endpoint1&quot;,component:First},{path:&quot;/endpoint2&quot;,component:Second}]
+Click link &quot;Home&quot; (router-link to /endpoint1).
+</code></pre>
+<h2 id="q8-640653609043-mcq-30-marks">Q8 · <code>640653609043</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below javascript program, and predict the output, if executed. Consider the below javascript program, and predict the output, if executed.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Promise((reject, resolve) =&gt; { if (&quot;iitmiitm&quot;.split(&quot;iitm&quot;).length == 3) resolve(&quot;Promise is rejected&quot;); else reject(&quot;Promise is resolved&quot;); })
+.then(data =&gt; console.log(&quot;Promise Rejected :&quot;, data), data =&gt; console.log(&quot;Promise Resolved :&quot;, data))
+.then(data =&gt; { console.log(&quot;Value received from previous block :&quot;, data); return 34 })
+.catch(error =&gt; console.log(&quot;Error caused :&quot;, error))
+.finally(data =&gt; { console.log(&quot;In Finally block :&quot;, data); return 39 })
+.then(data =&gt; console.log(&quot;Value received from previous block :&quot;, data))
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Promise Resolved : Promise is resolved / Value : undefined / Finally : undefined / Value : 39</li>
+<li>Promise Resolved : Promise is rejected / Value : undefined / Finally : 34 / Value : 39</li>
+<li>Promise Resolved : Promise is rejected / Value : undefined / Finally : undefined / Value : 34</li>
+<li>Promise Rejected : Promise is resolved / Value : undefined / Finally : undefined / Value : 34</li>
+</ul>
+<h2 id="q9-640653609052-mcq-30-marks">Q9 · <code>640653609052</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following flask application.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(flask_caching RedisCache app: @cache.cached(timeout=100), get_name sleeps 30s; two hits to /name/mohan within 50s)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>30 Seconds</li>
+<li>40 Seconds</li>
+<li>0 Seconds</li>
+<li>None of these</li>
+</ul>
+<h2 id="q10-640653609054-mcq-30-marks">Q10 · <code>640653609054</code> · MCQ · 3.0 marks</h2>
+<p>What will be the output of the following javascript code.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function promoter(cgpa){ return new Promise((res, rej) =&gt; { if (cgpa &gt; 9.0) { res() } else { rej() } }) }
+promoter(8).then(() =&gt; { console.log('Promoted') }, () =&gt; { console.log('Not Promoted') }).finally(() =&gt; { console.log('Job Done') })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Not Promoted</li>
+<li>Promoted</li>
+<li>Not Promoted / Job Done</li>
+<li>Promoted / Job Done</li>
+</ul>
+<h2 id="q11-640653609056-mcq-30-marks">Q11 · <code>640653609056</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Vue({ el:'#app', template:`&lt;div&gt;{{message}}&lt;/div&gt;`, data:{ message:null },
+created(){ this.message = 'Hello from created' }, mounted(){ this.message = 'Hello from mounted' } })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Hello from created</li>
+<li>Hello from mounted</li>
+<li>null</li>
+<li>None of these</li>
+</ul>
+<h2 id="q12-640653609059-mcq-30-marks">Q12 · <code>640653609059</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”. Consider the below Vue application with markup file “index.html” and javascript file “app.js”.</p>
+<p><em>Note: app.js and options were on a missing render page; header only.</em></p>
+<h2 id="q13-640653609031-msq-20-marks">Q13 · <code>640653609031</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following is/are example(s) of ephemeral state?</p>
+<p><strong>Options:</strong>
+- Currently selected tab/page in a multi page/tab document
+- User Preferences
+- Loading Icons
+- Shopping Cart</p>
+<h2 id="q14-640653609042-msq-20-marks">Q14 · <code>640653609042</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are false in general?</p>
+<p><strong>Options:</strong>
+- As an application developer, it is not possible to hide javascript from the user.
+- “Denial of Service” is an attack that injects malicious client side scripts.
+- CORS is a mechanism used to control and manage cross-origin requests in aweb application
+- The terms “privacy” and “security” are the same when it comes to webapplications.</p>
+<h2 id="q15-640653609044-msq-20-marks">Q15 · <code>640653609044</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are correct regarding the execution context in JavaScript?</p>
+<p><strong>Options:</strong>
+- Global execution context is created when the script starts to run.
+- Function execution context is created when the script starts to run.
+- A function execution context is created when the function is called.
+- All of these.</p>
+<h2 id="q16-640653609045-msq-20-marks">Q16 · <code>640653609045</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statements is/are correct regarding the prototype in javascript?</p>
+<p><strong>Options:</strong>
+- Every object in JavaScript has a prototype.
+- Prototype of an object can be null.
+- Prototype of an object cannot be null.
+- None of these.</p>
+<h2 id="q17-640653609047-msq-20-marks">Q17 · <code>640653609047</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statements is/are correct?</p>
+<p><strong>Options:</strong>
+- Memoization term is used for a special kind of caching where the return valueof a function is cached based on its
+- parameters value.
+- Redis database can be used to cache data.
+- Caching can only be done at the browser level.
+- All of these</p>
+<h2 id="q18-640653609051-msq-20-marks">Q18 · <code>640653609051</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statements is/are true regarding the celery in python?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Celery is a task queue</li>
+<li>Celery typically runs the tasks asynchronously</li>
+<li>Celery typically runs the tasks synchronously</li>
+<li>None of these</li>
+</ul>
+<h2 id="q19-640653609033-mcq-20-marks">Q19 · <code>640653609033</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements are true regarding async and await?</p>
+<p><strong>Options:</strong>
+- The “await” can only be used inside an async function, except browser console.
+- The “await” keyword is typically used to wait for a promise and get itsfulfilment value.
+- The “await” keyword pauses the execution of code of the async function till thepromise is in pending state, and executes
+- the code outside the function, in the meantime.
+- All of these</p>
+<h2 id="q20-640653609041-mcq-20-marks">Q20 · <code>640653609041</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements is true regarding HTTP and fetch API?</p>
+<p><strong>Options:</strong>
+- A fetch call is capable of sending image data.
+- The “Accept” HTTP header is used by HTTP clients to tell the server which typeof content they expect/prefer as
+- response.
+- A fetch call allows a developer to add custom headers in the request.
+- All of these</p>
+<h2 id="q21-640653609034-mcq-45-marks">Q21 · <code>640653609034</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><em>Note: code/options were blank in render (lazy-load failure); unrecoverable.</em></p>
+<h2 id="q22-640653609038-mcq-45-marks">Q22 · <code>640653609038</code> · MCQ · 4.5 marks</h2>
+<p>Consider the below flask app, and an HTML file named “index.html”. Consider the below flask app, and an HTML file named “index.html”. Suppose you open the “index.html” in a browser. What will be the approximate time taken by the second fetch call (i.e., "http://127.0.0.1:5000/endpoint2") to complete and log the data on the console?</p>
+<p><strong>Options:</strong>
+- 20 seconds
+- 30 seconds
+- 10 seconds
+- 50 seconds</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(flask app threaded=False: /endpoint1 sleeps 20s, /endpoint2 sleeps 30s; browser fetches both at once)
+Time for the SECOND fetch (endpoint2) to complete and log?
+</code></pre>
+<h2 id="q23-640653609053-mcq-45-marks">Q23 · <code>640653609053</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following flask application. Consider the following flask application.</p>
+<p><strong>Options:</strong>
+- 30 Seconds
+- 40 Seconds
+- 0 Seconds
+- None of these</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(flask_caching RedisCache: @cache.cached(timeout=100) get_name sleeps 30s; hits to /name/mohan AND /name/sohan within 50s)
+</code></pre>
+<h2 id="q24-640653609055-mcq-45-marks">Q24 · <code>640653609055</code> · MCQ · 4.5 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”. Consider the below Vue application with markup file “index.html” and javascript file “app.js”.</p>
+<p><strong>Options:</strong>
+- On the circle
+- Not on the circle
+- true
+- False</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Vue({ el:'#app', template:`&lt;div&gt;Enter a point: &lt;input v-model='point' /&gt;&lt;div id='content'&gt;{{(isOnCircle?&quot;On the circle&quot;:&quot;Not on the circle&quot;)}}&lt;/div&gt;&lt;/div&gt;`,
+data:{ point:null }, computed:{ isOnCircle(){ if(!this.point){ return false } const [x,y] = this.point.split(','); return x**2 + y**2 == 25 } } })
+User enters '3,4'.
+</code></pre>
+<h2 id="q25-640653609057-mcq-45-marks">Q25 · <code>640653609057</code> · MCQ · 4.5 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Home component with router-view; app.js code blank in render)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Name: std1, Course: mad1</li>
+<li>Name: std2, Course: mad2</li>
+<li>Name: std3, Course: mad1</li>
+<li>std1 / std2 / std3</li>
+</ul>
+<p><em>Note: app.js code was blank in render; options as shown.</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Home component with router-view; app.js code blank in render)
+</code></pre>
+<p><em>Note: app.js code was blank in render; options as shown.</em></p>
+<h2 id="q26-640653609058-mcq-45-marks">Q26 · <code>640653609058</code> · MCQ · 4.5 marks</h2>
+<p>Consider the below Vue application with markup file “index.html” and javascript file “app.js”. Consider the below Vue application with markup file “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Home router-view app; app.js blank in render; URL /student/20)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Name: std1, Course: mad1</li>
+<li>Name: std2, Course: mad2</li>
+<li>Name: std3, Course: mad1</li>
+<li>std1 / std2 / std3</li>
+</ul>
+<p><em>Note: app.js code was blank in render; options as shown.</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Home router-view app; app.js blank in render; URL /student/20)
+</code></pre>
+<p><em>Note: app.js code was blank in render; options as shown.</em></p>
+<h2 id="q27-640653609037-msq-45-marks">Q27 · <code>640653609037</code> · MSQ · 4.5 marks</h2>
+<p>Consider the below Vue component and a Vuex store implementation. Consider the below Vue component and a Vuex store implementation. You are supposed to invoke the mutation function “update_total_cost” from the method named “update_store_cost” of the Vue component “product”. The “update_total_cost” mutation function should update the store data variable “total_cost” with an appropriate value. The cost is the product of “count” and “price” parameters of the function “update_store_cost”. Assume that both these parameters are of Numeric type, and need not be typecasted. Which of the following is/are the possible replacements for “placeholder1” and “placeholder2”?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const store = new Vuex.Store({ state:{ count:0, total_cost:0, products:[] },
+mutations:{ update_total_cost : Placeholder2 } })
+Vue.component(&quot;product&quot;, { template:`&lt;div&gt;Assume some code&lt;/div&gt;`,
+methods:{ update_store_cost : function(count, price){ Placeholder1 } } })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Placeholder1: this.$store.commit("update_total_cost", count * price); / Placeholder2: function (state, total_cost) { state.total_cost = total_cost; }</li>
+<li>Placeholder1: this.$store.commit("update_total_cost", count, price); / Placeholder2: function (state, count, price) { state.total_cost = count * price; }</li>
+<li>Placeholder1: this.$store.commit("update_total_cost", {"count":count, "price":price}); / Placeholder2: function (state, payload) { state.total_cost = payload.count * payload.price; }</li>
+<li>Placeholder1: this.$store.commit("update_total_cost", count, price); / Placeholder2: function (count, price) { total_cost = count * price; }</li>
+</ul>
+<h2 id="q28-640653609039-msq-45-marks">Q28 · <code>640653609039</code> · MSQ · 4.5 marks</h2>
+<p>Consider the given 2 implementations. Consider the given 2 implementations.</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Approach 1 will finish faster than approach 2</li>
+<li>Approach 2 will finish faster</li>
+<li>Both approaches comparable</li>
+<li>Both comparable if only 1 worker</li>
+</ul>
+<h2 id="q29-640653609040-msq-30-marks">Q29 · <code>640653609040</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are false regarding flask_caching and caching in general?</p>
+<p><strong>Options:</strong>
+- The cache decorator does not include the function parameters in the cachekey.
+- The memoize decorator does not include the function parameters in the cachekey.
+- The requests without request bodies are generally not cacheable.
+- Hard refreshing a web page clears the browser cache for that specific webpage.</p>
+<h2 id="q30-640653609046-msq-30-marks">Q30 · <code>640653609046</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statements is/are true?</p>
+<p><em>Note: code and continuation page missing (lazy-load failure); unrecoverable.</em></p>
+<h2 id="q31-640653609048-msq-30-marks">Q31 · <code>640653609048</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- Caching the total score by all players of a country on a backend server.
+- Caching the total score by all players of a country in the user's browser.
+- Caching will not improve the performance.
+- None of these.</p>
+<h2 id="q32-640653609049-msq-30-marks">Q32 · <code>640653609049</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding short polling?</p>
+<p><strong>Options:</strong>
+- The client repeatedly sends a request to the server after a fixed interval oftime.
+- The server sends the response immediately, even if the requested data is notavailable.
+- The response from server may be empty.
+- The response from the server cannot be empty.</p>
+<h2 id="q33-640653609050-msq-30-marks">Q33 · <code>640653609050</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statements is/are true in context of lighthouse?</p>
+<p><strong>Options:</strong>
+- “First contentful paint” for a webpage is the size of the smallest visible elementon a webpage.
+- “First contentful paint” for a webpage is the time the browser takes to paint thefirst visible content on the webpage.
+- “Largest contentful paint” for a webpage is the time the browser takes to paintthe largest visible content on the webpage.
+- “Largest contentfull paint” for a webpage is the size of the largest visiblecontent on the webpage.</p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-mad2-03-2023-dec24-iit.html">← MAD2 — 2023 Dec24  IIT</a> <a class="pn next" href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAD2 — Modern Applicat Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MAD2 — Modern Applicat</div>
+<div class="tools"><a class="btn2" href="papers/10-2026-may06.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-6406532128287-mcq-20-marks">Q1 · 6406532128287 · MCQ · 2.0 marks</a></li><li><a href="#q2-6406532128288-mcq-20-marks">Q2 · 6406532128288 · MCQ · 2.0 marks</a></li><li><a href="#q3-6406532128292-mcq-20-marks">Q3 · 6406532128292 · MCQ · 2.0 marks</a></li><li><a href="#q4-6406532128294-mcq-20-marks">Q4 · 6406532128294 · MCQ · 2.0 marks</a></li><li><a href="#q5-6406532128307-mcq-20-marks">Q5 · 6406532128307 · MCQ · 2.0 marks</a></li><li><a href="#q6-6406532128309-mcq-20-marks">Q6 · 6406532128309 · MCQ · 2.0 marks</a></li><li><a href="#q7-6406532128289-mcq-30-marks">Q7 · 6406532128289 · MCQ · 3.0 marks</a></li><li><a href="#q8-6406532128290-mcq-30-marks">Q8 · 6406532128290 · MCQ · 3.0 marks</a></li><li><a href="#q9-6406532128291-mcq-30-marks">Q9 · 6406532128291 · MCQ · 3.0 marks</a></li><li><a href="#q10-6406532128296-mcq-30-marks">Q10 · 6406532128296 · MCQ · 3.0 marks</a></li><li><a href="#q11-6406532128297-mcq-30-marks">Q11 · 6406532128297 · MCQ · 3.0 marks</a></li><li><a href="#q12-6406532128298-mcq-30-marks">Q12 · 6406532128298 · MCQ · 3.0 marks</a></li><li><a href="#q13-6406532128299-mcq-30-marks">Q13 · 6406532128299 · MCQ · 3.0 marks</a></li><li><a href="#q14-6406532128306-mcq-30-marks">Q14 · 6406532128306 · MCQ · 3.0 marks</a></li><li><a href="#q15-6406532128312-mcq-30-marks">Q15 · 6406532128312 · MCQ · 3.0 marks</a></li><li><a href="#q16-6406532128293-msq-20-marks">Q16 · 6406532128293 · MSQ · 2.0 marks</a></li><li><a href="#q17-6406532128320-msq-20-marks">Q17 · 6406532128320 · MSQ · 2.0 marks</a></li><li><a href="#q18-6406532128295-mcq-45-marks">Q18 · 6406532128295 · MCQ · 4.5 marks</a></li><li><a href="#q19-6406532128300-mcq-45-marks">Q19 · 6406532128300 · MCQ · 4.5 marks</a></li><li><a href="#q20-6406532128301-mcq-45-marks">Q20 · 6406532128301 · MCQ · 4.5 marks</a></li><li><a href="#q21-6406532128302-mcq-45-marks">Q21 · 6406532128302 · MCQ · 4.5 marks</a></li><li><a href="#q22-6406532128303-mcq-45-marks">Q22 · 6406532128303 · MCQ · 4.5 marks</a></li><li><a href="#q23-6406532128305-mcq-45-marks">Q23 · 6406532128305 · MCQ · 4.5 marks</a></li><li><a href="#q24-6406532128304-msq-30-marks">Q24 · 6406532128304 · MSQ · 3.0 marks</a></li><li><a href="#q25-6406532128308-msq-30-marks">Q25 · 6406532128308 · MSQ · 3.0 marks</a></li><li><a href="#q26-6406532128310-msq-30-marks">Q26 · 6406532128310 · MSQ · 3.0 marks</a></li><li><a href="#q27-6406532128311-msq-30-marks">Q27 · 6406532128311 · MSQ · 3.0 marks</a></li><li><a href="#q28-6406532128313-comprehension-00-marks">Q28 · 6406532128313 · COMPREHENSION · 0.0 marks</a></li><li><a href="#q29-6406532128314-mcq-30-marks">Q29 · 6406532128314 · MCQ · 3.0 marks</a></li><li><a href="#q30-6406532128315-mcq-30-marks">Q30 · 6406532128315 · MCQ · 3.0 marks</a></li><li><a href="#q31-6406532128316-mcq-30-marks">Q31 · 6406532128316 · MCQ · 3.0 marks</a></li><li><a href="#q32-6406532128317-comprehension-00-marks">Q32 · 6406532128317 · COMPREHENSION · 0.0 marks</a></li><li><a href="#q33-6406532128318-mcq-45-marks">Q33 · 6406532128318 · MCQ · 4.5 marks</a></li><li><a href="#q34-6406532128319-mcq-45-marks">Q34 · 6406532128319 · MCQ · 4.5 marks</a></li></ul></nav>
+<article class="doc"><h1 id="mad2-modern-applicat">MAD2 — Modern Applicat</h1>
+<p><em>34 questions · transcribed from official practice paper (text layer + vision-checked)</em></p>
+<p>Legend: <strong>Accepted answer</strong> = the paper's own key (SA numerics). MCQ/MSQ keys are NOT printed in papers — answers: see the kit's RATTA / MCQ-MASTER files.</p>
+<h2 id="q1-6406532128287-mcq-20-marks">Q1 · <code>6406532128287</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements is true regarding the "this" keyword in JavaScript?</p>
+<p><strong>Options:</strong>
+- "this" in an arrow function refers to the global object.
+- "this" inside a regular function refers to the object that owns the function.
+- Arrow functions do not have their own "this" and inherit it from the surrounding scope.
+- "this" always points to the window object in browser environments.</p>
+<p><em>Solved in practice render (unofficial, verify with kit): Arrow functions do not have their own "this" and inherit it from the surrounding scope</em></p>
+<h2 id="q2-6406532128288-mcq-20-marks">Q2 · <code>6406532128288</code> · MCQ · 2.0 marks</h2>
+<p>Consider the below JavaScript program. What will be the output of the above program?</p>
+<p><strong>Options:</strong>
+- 0
+- 3
+- 6
+- 9
+- 12</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let arr = [1, 2, 3]; let sum = arr.reduce((acc, val, idx, array) =&gt; acc + val, 0); console.log(sum);
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): 6</em></p>
+<h2 id="q3-6406532128292-mcq-20-marks">Q3 · <code>6406532128292</code> · MCQ · 2.0 marks</h2>
+<p>What is the main advantage of using JWT over session-based authentication?</p>
+<p><strong>Options:</strong>
+- JWTs require server-side storage for each session.
+- JWTs are stateless and eliminate the need for server-side session storage.
+- JWTs are longer and contain more data than session IDs.
+- JWTs automatically handle token expiration without additional logic.</p>
+<p><em>Solved in practice render (unofficial, verify with kit): JWTs are stateless and eliminate the need for server-side session storage</em></p>
+<h2 id="q4-6406532128294-mcq-20-marks">Q4 · <code>6406532128294</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following HTTP methods does WebSocket use for initial handshake?</p>
+<p><strong>Options:</strong>
+- GET
+- POST
+- PUT
+- DELETE</p>
+<p><em>Solved in practice render (unofficial, verify with kit): GET</em></p>
+<h2 id="q5-6406532128307-mcq-20-marks">Q5 · <code>6406532128307</code> · MCQ · 2.0 marks</h2>
+<p>You are building a cricket analytics app. The file battingStats.js contains the following exports: In another file app.js, which of the following import statements will correctly import both strikeRate and playerName ? ( Assume both files are in the same directory )</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>export const strikeRate = (runs, balls) =&gt; { return (runs / balls) * 100; };
+export const playerName = &quot;Virat Kohli&quot;;
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>import strikeRate, playerName from "./battingStats.js";</li>
+<li>import { strikeRate, playerName } from "./battingStats.js";</li>
+<li>import * as stats from "./battingStats.js";</li>
+<li>require("./battingStats.js");</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): import { strikeRate, playerName } from "./battingStats.js";</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>export const strikeRate = (runs, balls) =&gt; { return (runs / balls) * 100; };
+export const playerName = &quot;Virat Kohli&quot;;
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): import { strikeRate, playerName } from "./battingStats.js";</em></p>
+<h2 id="q6-6406532128309-mcq-20-marks">Q6 · <code>6406532128309</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Encryption keys used to secure the token</li>
+<li>User-related data (claims) such as identity and expiration time</li>
+<li>The algorithm used for signing the token</li>
+<li>The hashed signature of the token</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): User-related data (claims) such as identity and expiration time</em></p>
+<h2 id="q7-6406532128289-mcq-30-marks">Q7 · <code>6406532128289</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below JavaScript program. What will be the output of the above program?</p>
+<p><strong>Options:</strong>
+- Success!
+- Error!
+- Success! Error!
+- Error! Success!</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const promise = new Promise((resolve, reject) =&gt; { resolve('Success!'); reject('Error!'); });
+promise.then(console.log).catch(console.log);
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Success!</em></p>
+<h2 id="q8-6406532128290-mcq-30-marks">Q8 · <code>6406532128290</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below Vuex store configuration:</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const store = new Vuex.Store({ state:{ items:['Angular','Vue'] },
+mutations:{ addItem(state, item){ state.items.push(item); } },
+actions:{ addItemAsync({ commit }, item){ setTimeout(() =&gt; { commit('addItem', item); }, 500); } } });
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>['Angular','Vue']</li>
+<li>['Angular','Vue','React']</li>
+<li>['React']</li>
+<li>['Angular']</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): ['Angular','Vue','React']</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const store = new Vuex.Store({ state:{ items:['Angular','Vue'] },
+mutations:{ addItem(state, item){ state.items.push(item); } },
+actions:{ addItemAsync({ commit }, item){ setTimeout(() =&gt; { commit('addItem', item); }, 500); } } });
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): ['Angular','Vue','React']</em></p>
+<h2 id="q9-6406532128291-mcq-30-marks">Q9 · <code>6406532128291</code> · MCQ · 3.0 marks</h2>
+<p>Consider the below Vue app. What happens when the user navigates to an undefined route like "/random"?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>routes: [{ path:'/home', component:Home }, { path:'/about', component:About }, { path:'*', redirect:'/about' }]
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Browser navigates to /random and shows a blank page</li>
+<li>Browser navigates to /random but renders nothing</li>
+<li>Browser redirects to /about and displays "About"</li>
+<li>Error: No matching route</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): Browser redirects to /about and displays "About"</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>routes: [{ path:'/home', component:Home }, { path:'/about', component:About }, { path:'*', redirect:'/about' }]
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Browser redirects to /about and displays "About"</em></p>
+<h2 id="q10-6406532128296-mcq-30-marks">Q10 · <code>6406532128296</code> · MCQ · 3.0 marks</h2>
+<p>What will be the output of the following JavaScript code?</p>
+<p><strong>Options:</strong>
+- number, object, false, false
+- NaN, null, true, true
+- number, object, true, false
+- NaN, null, false, false</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>console.log(typeof NaN); console.log(typeof null); console.log(NaN == null); console.log(NaN === null);
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): number, object, false, false</em></p>
+<h2 id="q11-6406532128297-mcq-30-marks">Q11 · <code>6406532128297</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript program:</p>
+<p><em>Note: question body was on a missing render (p007); stem/options from text layer above if present.</em></p>
+<h2 id="q12-6406532128298-mcq-30-marks">Q12 · <code>6406532128298</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript program: What will be the output of the above program?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const person = { firstName:'John', lastName:'Doe', age:30, city:'New York' };
+const { firstName, city, ...rest } = person;
+const newPerson = { firstName, location:city, ...rest };
+console.log(firstName); console.log(rest); console.log(newPerson);
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>John { city:'New York', lastName:'Doe', age:30 } { firstName:'John', location:'New York', city:'New York', lastName:'Doe', age:30 }</li>
+<li>John { lastName:'Doe', age:30 } { firstName:'John', location:'New York', lastName:'Doe', age:30 }</li>
+<li>John { lastName:'Doe', age:30 } { firstName:'John', location:'New York', city:'New York', lastName:'Doe', age:30 }</li>
+<li>undefined { firstName:'John', city:'New York', lastName:'Doe', age:30 } { firstName:'John', location:'New York' }</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): John { lastName: 'Doe', age: 30 } { firstName: 'John', location: 'New York', lastName: 'Doe', age: 30 }</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const person = { firstName:'John', lastName:'Doe', age:30, city:'New York' };
+const { firstName, city, ...rest } = person;
+const newPerson = { firstName, location:city, ...rest };
+console.log(firstName); console.log(rest); console.log(newPerson);
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): John { lastName: 'Doe', age: 30 } { firstName: 'John', location: 'New York', lastName: 'Doe', age: 30 }</em></p>
+<h2 id="q13-6406532128299-mcq-30-marks">Q13 · <code>6406532128299</code> · MCQ · 3.0 marks</h2>
+<p>What happens when this Flask caching code runs?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(flask_caching SimpleCache: @cache.memoize(timeout=300) compute_data sleeps 5s; requests for user IDs 1, 2, 1 within 5 min)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>15 seconds</li>
+<li>10 seconds</li>
+<li>5 seconds</li>
+<li>0 seconds</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): 10 seconds</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(flask_caching SimpleCache: @cache.memoize(timeout=300) compute_data sleeps 5s; requests for user IDs 1, 2, 1 within 5 min)
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): 10 seconds</em></p>
+<h2 id="q14-6406532128306-mcq-30-marks">Q14 · <code>6406532128306</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following JavaScript program:</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const CAPACITY = 75; const TOTAL_PEOPLE = 213;
+function allocatePeople(){ return new Promise((resolve, reject) =&gt; { let slots = [0,0,0]; let remaining = TOTAL_PEOPLE;
+for (let i = 0; i &lt; slots.length; i++) { if (remaining &gt;= CAPACITY) { slots[i] = CAPACITY; remaining -= CAPACITY; } else { slots[i] = remaining; remaining = 0; } }
+reject(slots); }); }
+async function startAllocation(){ try{ const result = await allocatePeople(); console.log(&quot;Passed &quot; + JSON.stringify(result)); }
+catch(error){ console.log(&quot;Failed &quot; + JSON.stringify(error)); } }
+startAllocation();
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Passed [75,75,63]</li>
+<li>Failed [0,0,0]</li>
+<li>Failed [75,75,63]</li>
+<li>Passed [0,0,0]</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): Failed [75,75,63]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const CAPACITY = 75; const TOTAL_PEOPLE = 213;
+function allocatePeople(){ return new Promise((resolve, reject) =&gt; { let slots = [0,0,0]; let remaining = TOTAL_PEOPLE;
+for (let i = 0; i &lt; slots.length; i++) { if (remaining &gt;= CAPACITY) { slots[i] = CAPACITY; remaining -= CAPACITY; } else { slots[i] = remaining; remaining = 0; } }
+reject(slots); }); }
+async function startAllocation(){ try{ const result = await allocatePeople(); console.log(&quot;Passed &quot; + JSON.stringify(result)); }
+catch(error){ console.log(&quot;Failed &quot; + JSON.stringify(error)); } }
+startAllocation();
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Failed [75,75,63]</em></p>
+<h2 id="q15-6406532128312-mcq-30-marks">Q15 · <code>6406532128312</code> · MCQ · 3.0 marks</h2>
+<p>Match the Vue directive in Directive with its correct functionality in Description using Vue.js.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Match: 1.v-if→? 2.v-for→? 3.v-bind→? 4.v-model→? with A.two-way binding | B.conditional render | C.bind attributes | D.render list
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>1-A, 2-D, 3-C, 4-B</li>
+<li>1-D, 2-B, 3-C, 4-A</li>
+<li>1-B, 2-C, 3-D, 4-A</li>
+<li>1-B, 2-D, 3-C, 4-A</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): 1-B, 2-D, 3-C, 4-A</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Match: 1.v-if→? 2.v-for→? 3.v-bind→? 4.v-model→? with A.two-way binding | B.conditional render | C.bind attributes | D.render list
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): 1-B, 2-D, 3-C, 4-A</em></p>
+<h2 id="q16-6406532128293-msq-20-marks">Q16 · <code>6406532128293</code> · MSQ · 2.0 marks</h2>
+<p>In a Single Page Application (SPA), what are the benefits of client-side routing over server-side routing?</p>
+<p><strong>Options:</strong>
+- Slower navigation between pages
+- Reduced load on the backend server
+- Better SEO performance by default
+- Seamless page transitions without full reloads</p>
+<h2 id="q17-6406532128320-msq-20-marks">Q17 · <code>6406532128320</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following is the correct statement?</p>
+<p><strong>Options:</strong>
+- Cookie size can impact the website performance.
+- Cookie size does not affect performance in any practical/meaningful sense.
+- A request to static.example.com will include cookies set for example.com.
+- A request to static.example.com will not include cookies set for example.com.</p>
+<h2 id="q18-6406532128295-mcq-45-marks">Q18 · <code>6406532128295</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with markup index.html and JavaScript file app.js.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Vue({ el:'#app', template:'&lt;div&gt;Status: {{status}}&lt;br&gt;Value: {{value}}&lt;/div&gt;', data:{ status:&quot;Initial&quot;, value:10 },
+beforeCreate(){ this.status = this.status + &quot; -&gt; Created&quot;; this.value = this.value + 5 },
+beforeMount(){ this.status = this.status + &quot; -&gt; Ready&quot;; this.value = this.value - 2 },
+created(){ this.status = this.status + &quot; -&gt; Mounted&quot;; this.value = this.value * 2 },
+mounted(){ this.status = this.status + &quot; -&gt; Done&quot;; this.value = this.value / 2 } })
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Status: Initial → Created → Ready → Mounted → Done Value: 13</li>
+<li>Status: Initial → Ready → Mounted → Done Value: 8</li>
+<li>Status: Initial → Created → Mounted → Ready → Done Value: 14</li>
+<li>Status: Initial → Mounted → Ready → Done Value: 9</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): Status: Initial → Mounted → Ready → Done Value: 9</em></p>
+<p><em>Note: hook ORDER in output follows data-mutation sequence quirk; solved value as shown.</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Vue({ el:'#app', template:'&lt;div&gt;Status: {{status}}&lt;br&gt;Value: {{value}}&lt;/div&gt;', data:{ status:&quot;Initial&quot;, value:10 },
+beforeCreate(){ this.status = this.status + &quot; -&gt; Created&quot;; this.value = this.value + 5 },
+beforeMount(){ this.status = this.status + &quot; -&gt; Ready&quot;; this.value = this.value - 2 },
+created(){ this.status = this.status + &quot; -&gt; Mounted&quot;; this.value = this.value * 2 },
+mounted(){ this.status = this.status + &quot; -&gt; Done&quot;; this.value = this.value / 2 } })
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Status: Initial → Mounted → Ready → Done Value: 9</em></p>
+<p><em>Note: hook ORDER in output follows data-mutation sequence quirk; solved value as shown.</em></p>
+<h2 id="q19-6406532128300-mcq-45-marks">Q19 · <code>6406532128300</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following endpoints created with a working setup of flask-security and flask-sqlalchemy.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(@app.route('/api/open') open; @auth_required('token') /api/secure; @auth_required + @roles_required('superuser') /api/superuser)
+Requests: GET /api/open (no auth) → ?; GET /api/secure (no auth) → ?; GET /api/superuser (valid token, role 'basic') → ?
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>200, 200, 200</li>
+<li>200, 401, 403</li>
+<li>200, 403, 401</li>
+<li>401, 403, 403</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): 200, 401, 403</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(@app.route('/api/open') open; @auth_required('token') /api/secure; @auth_required + @roles_required('superuser') /api/superuser)
+Requests: GET /api/open (no auth) → ?; GET /api/secure (no auth) → ?; GET /api/superuser (valid token, role 'basic') → ?
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): 200, 401, 403</em></p>
+<h2 id="q20-6406532128301-mcq-45-marks">Q20 · <code>6406532128301</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following code snippet running in a browser. What will be the output on the console?</p>
+<p><strong>Options:</strong>
+- Ambrane 20 50 30
+- Polycab 50 50 30
+- Ambrane 50 50 30</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function inventory(){ const item = { name:&quot;Polycab&quot;, stats:{ power:20 } };
+const ref1 = item; const ref2 = { ...item }; const ref3 = { name:item.name, stats:{ ...item.stats } };
+ref1.name = &quot;Ambrane&quot;; ref2.stats.power = 50; ref3.stats.power = 30;
+console.log(item.name); console.log(item.stats.power); console.log(ref2.stats.power); console.log(ref3.stats.power); }
+inventory();
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Ambrane 50 50 30</em></p>
+<h2 id="q21-6406532128302-mcq-45-marks">Q21 · <code>6406532128302</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following code snippet running on a browser. What is the output on the console?</p>
+<p><strong>Options:</strong>
+- 100 100 100
+- 100 undefined 100
+- undefined undefined undefined
+- 100 undefined undefined</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const obj = { value:100, outerFunc:function(){ const innerFunc = () =&gt; { console.log(this.value); }; return innerFunc; },
+otherFunc:function(){ console.log(this.value); } };
+const func1 = obj.outerFunc(); const func2 = obj.outerFunc; const func3 = obj.otherFunc;
+func1(); func2()(); func3();
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): 100 undefined undefined</em></p>
+<h2 id="q22-6406532128303-mcq-45-marks">Q22 · <code>6406532128303</code> · MCQ · 4.5 marks</h2>
+<p>Consider the flask application app.py and an HTML file index.html:</p>
+<p><em>Note: question body was on a missing render (p015); only partial options (50, 50) visible.</em></p>
+<h2 id="q23-6406532128305-mcq-45-marks">Q23 · <code>6406532128305</code> · MCQ · 4.5 marks</h2>
+<p>A student is going on a trip and wants to check whether all essential items are packed. The application uses Vue 2 and Vuex to manage the list of packed items.The following Vue application is incomplete. Two lines of code are missing and are marked as Line X and Line Y. Which of the following options correctly fills Line X and Line Y so that the application works as expected?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Vuex store: state.packed [], ADD_ITEM mutation; component computed Line X, methods packItem Line Y)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Line X packedItems() { return this.store.state.packed; } / Line Y this.store.commit</li>
+<li>Line X packedItems() { return this.$store.state.packed; } / Line Y this.$store.commit</li>
+<li>Line X packedItems() { return this.$store.packed; } / Line Y this.commit</li>
+<li>Line X packedItems: this.$store.state.packed / Line Y dispatch</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): Line X packedItems() { return this.$store.state.packed; } / Line Y this.$store.commit("ADD_ITEM", item)</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Vuex store: state.packed [], ADD_ITEM mutation; component computed Line X, methods packItem Line Y)
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Line X packedItems() { return this.$store.state.packed; } / Line Y this.$store.commit("ADD_ITEM", item)</em></p>
+<h2 id="q24-6406532128304-msq-30-marks">Q24 · <code>6406532128304</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are true about GraphQL?</p>
+<p><strong>Options:</strong>
+- Mutations in GraphQL can be used to change the underlying data store.
+- GraphQL services are created by defining types and fields of those types, then providing functions for each field.
+- GraphQL can only fetch data from a single source.
+- GraphQL allows only GET operations.</p>
+<h2 id="q25-6406532128308-msq-30-marks">Q25 · <code>6406532128308</code> · MSQ · 3.0 marks</h2>
+<p>Consider the following code:</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Flask + Flask-JWT-Extended: POST /login {username:Jassi} → token; GET /stats @jwt_required returns Welcome user)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>/stats returns "Welcome Jassi" only with valid JWT in Authorization header</li>
+<li>No token → unauthorized error</li>
+<li>Token must be sent as JSON in body</li>
+<li>None of these</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): Valid-JWT-header option || No-token-unauthorized option</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Flask + Flask-JWT-Extended: POST /login {username:Jassi} → token; GET /stats @jwt_required returns Welcome user)
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): Valid-JWT-header option || No-token-unauthorized option</em></p>
+<h2 id="q26-6406532128310-msq-30-marks">Q26 · <code>6406532128310</code> · MSQ · 3.0 marks</h2>
+<p>Hamza is working on a project using Git and performs the following operations: Creates a new branch and switches to it1. Stages changes for commit2. Commits changes with a message3. Pushes the branch to a remote repository4. Which of the following commands are correctly used for these operations?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>git checkout -b feature-branch</li>
+<li>git add .</li>
+<li>git commit -m "Initial commit"</li>
+<li>git push origin feature-branch</li>
+<li>git branch feature-branch &amp;&amp; git checkout main</li>
+<li>git push feature-branch origin</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): git checkout -b feature-branch || git add . || git commit -m "Initial commit" || git push origin feature-branch</em></p>
+<h2 id="q27-6406532128311-msq-30-marks">Q27 · <code>6406532128311</code> · MSQ · 3.0 marks</h2>
+<p>Prerna and Swathy are using a web application built with Vue.js for the BS Degree program. When the page loads, the sidebar content appears instantly• However, when they click on an Assignments link, the main content takes noticeable time to load • A simplified version of the component is shown below: Which of the following statements correctly explain why the Assignments page takes time to load?</p>
+<p><strong>Options:</strong>
+- The sidebar is likely part of a parent component and is already rendered before the API call
+- The Assignments component waits for the API response before displaying data
+- Vue blocks rendering of all components until API calls complete
+- The delay is caused because data is fetched asynchronously after the component is created</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(Assignments component fetches /api/assignments in created(); sidebar instant, main slow)
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): sidebar-parent option || waits-for-API option || async-fetch option</em></p>
+<h2 id="q28-6406532128313-comprehension-00-marks">Q28 · <code>6406532128313</code> · COMPREHENSION · 0.0 marks</h2>
+<p>Consider the following Vue.js application:</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Vue({ el:&quot;#app&quot;, data:{ a:1, b:2, time:0 },
+computed:{ bigNumber(){ console.log(&quot;computed run&quot;); let s = 0; for (let i = 0; i &lt; 10000000; i++) s += i; return s + this.a + this.b; } },
+methods:{ calculate(){ this.time = Date.now(); } } })
+</code></pre>
+<h2 id="q29-6406532128314-mcq-30-marks">Q29 · <code>6406532128314</code> · MCQ · 3.0 marks</h2>
+<p>How many times will "computed run" be logged in the console during the initial render?</p>
+<p><strong>Options:</strong>
+- 0
+- 1
+- Multiple times due to the loop
+- Depends on user interaction</p>
+<p><em>Solved in practice render (unofficial, verify with kit): 1</em></p>
+<h2 id="q30-6406532128315-mcq-30-marks">Q30 · <code>6406532128315</code> · MCQ · 3.0 marks</h2>
+<p>If the method is modified as follows: What will happen when the button is clicked?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>calculate() { this.a = this.a + 1; }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>bigNumber() will not run again</li>
+<li>bigNumber() will run again because a dependency changed</li>
+<li>Only time will update</li>
+<li>Vue will throw an error</li>
+</ul>
+<p><em>Solved in practice render (unofficial, verify with kit): bigNumber() will run again because a dependency changed</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>calculate() { this.a = this.a + 1; }
+</code></pre>
+<p><em>Solved in practice render (unofficial, verify with kit): bigNumber() will run again because a dependency changed</em></p>
+<h2 id="q31-6406532128316-mcq-30-marks">Q31 · <code>6406532128316</code> · MCQ · 3.0 marks</h2>
+<p>Why is defined as a computed property instead of a method?</p>
+<p><strong>Options:</strong>
+- Computed properties are always faster than methods
+- Methods cannot access data properties
+- Computed properties are cached based on their dependencies
+- Computed properties run only once</p>
+<p><em>Solved in practice render (unofficial, verify with kit): Computed properties are cached based on their dependencies</em></p>
+<h2 id="q32-6406532128317-comprehension-00-marks">Q32 · <code>6406532128317</code> · COMPREHENSION · 0.0 marks</h2>
+<p>Consider the following Vue 2 application:</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const Item = { template:'&lt;p&gt;Item ID from route: {{ $route.params.id }}&lt;/p&gt;', updated(){ console.log(&quot;updated hook called&quot;); } };
+routes: [{ path:&quot;/item/:id&quot;, component:Item }]; watch: { &quot;$route.params.id&quot;(newId){ this.currentId = newId; } }
+Load #/item/1, click Item 2 link.
+</code></pre>
+<h2 id="q33-6406532128318-mcq-45-marks">Q33 · <code>6406532128318</code> · MCQ · 4.5 marks</h2>
+<p>What happens immediately after clicking "Item 2"?</p>
+<p><strong>Options:</strong>
+- The Item component is destroyed and recreated, so
+- is never called
+- The route changes, the component is reused, and
+- is called
+- The route changes, but neither watcher nor lifecycle hooks run
+- A new Vue instance is created for the route</p>
+<p><em>Solved in practice render (unofficial, verify with kit): The route changes, the component is reused, and updated() is called</em></p>
+<h2 id="q34-6406532128319-mcq-45-marks">Q34 · <code>6406532128319</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><em>Note: question body was beyond rendered pages (p022+); stem/options from text layer above if present.</em></p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-mad2-09-2025-aug31-iit.html">← MAD2 — 2025 Aug31  IIT</a> <a class="pn next" href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

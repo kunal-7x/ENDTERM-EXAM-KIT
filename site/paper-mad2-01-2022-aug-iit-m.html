@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAD2 — 2022 Aug  IIT M Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MAD2 — 2022 Aug  IIT M</div>
+<div class="tools"><a class="btn2" href="papers/01-2022-aug-iit-m.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-640653354794-mcq-00-marks">Q1 · 640653354794 · MCQ · 0.0 marks</a></li><li><a href="#q2-640653354795-msq-20-marks">Q2 · 640653354795 · MSQ · 2.0 marks</a></li><li><a href="#q3-640653354801-msq-20-marks">Q3 · 640653354801 · MSQ · 2.0 marks</a></li><li><a href="#q4-640653354802-msq-20-marks">Q4 · 640653354802 · MSQ · 2.0 marks</a></li><li><a href="#q5-640653354810-msq-20-marks">Q5 · 640653354810 · MSQ · 2.0 marks</a></li><li><a href="#q6-640653354811-msq-20-marks">Q6 · 640653354811 · MSQ · 2.0 marks</a></li><li><a href="#q7-640653354813-msq-20-marks">Q7 · 640653354813 · MSQ · 2.0 marks</a></li><li><a href="#q8-640653354814-msq-20-marks">Q8 · 640653354814 · MSQ · 2.0 marks</a></li><li><a href="#q9-640653354796-mcq-30-marks">Q9 · 640653354796 · MCQ · 3.0 marks</a></li><li><a href="#q10-640653354799-mcq-30-marks">Q10 · 640653354799 · MCQ · 3.0 marks</a></li><li><a href="#q11-640653354804-mcq-30-marks">Q11 · 640653354804 · MCQ · 3.0 marks</a></li><li><a href="#q12-640653354817-mcq-30-marks">Q12 · 640653354817 · MCQ · 3.0 marks</a></li><li><a href="#q13-640653354818-mcq-30-marks">Q13 · 640653354818 · MCQ · 3.0 marks</a></li><li><a href="#q14-640653354819-mcq-30-marks">Q14 · 640653354819 · MCQ · 3.0 marks</a></li><li><a href="#q15-640653354821-mcq-30-marks">Q15 · 640653354821 · MCQ · 3.0 marks</a></li><li><a href="#q16-640653354822-mcq-30-marks">Q16 · 640653354822 · MCQ · 3.0 marks</a></li><li><a href="#q17-640653354823-mcq-30-marks">Q17 · 640653354823 · MCQ · 3.0 marks</a></li><li><a href="#q18-640653354824-mcq-30-marks">Q18 · 640653354824 · MCQ · 3.0 marks</a></li><li><a href="#q19-640653354826-mcq-30-marks">Q19 · 640653354826 · MCQ · 3.0 marks</a></li><li><a href="#q20-640653354797-msq-30-marks">Q20 · 640653354797 · MSQ · 3.0 marks</a></li><li><a href="#q21-640653354803-msq-30-marks">Q21 · 640653354803 · MSQ · 3.0 marks</a></li><li><a href="#q22-640653354806-msq-30-marks">Q22 · 640653354806 · MSQ · 3.0 marks</a></li><li><a href="#q23-640653354809-msq-30-marks">Q23 · 640653354809 · MSQ · 3.0 marks</a></li><li><a href="#q24-640653354812-msq-30-marks">Q24 · 640653354812 · MSQ · 3.0 marks</a></li><li><a href="#q25-640653354798-mcq-45-marks">Q25 · 640653354798 · MCQ · 4.5 marks</a></li><li><a href="#q26-640653354800-mcq-45-marks">Q26 · 640653354800 · MCQ · 4.5 marks</a></li><li><a href="#q27-640653354805-mcq-45-marks">Q27 · 640653354805 · MCQ · 4.5 marks</a></li><li><a href="#q28-640653354807-mcq-45-marks">Q28 · 640653354807 · MCQ · 4.5 marks</a></li><li><a href="#q29-640653354815-mcq-45-marks">Q29 · 640653354815 · MCQ · 4.5 marks</a></li><li><a href="#q30-640653354816-mcq-45-marks">Q30 · 640653354816 · MCQ · 4.5 marks</a></li><li><a href="#q31-640653354820-mcq-45-marks">Q31 · 640653354820 · MCQ · 4.5 marks</a></li><li><a href="#q32-640653354825-mcq-45-marks">Q32 · 640653354825 · MCQ · 4.5 marks</a></li><li><a href="#q33-640653354808-mcq-20-marks">Q33 · 640653354808 · MCQ · 2.0 marks</a></li></ul></nav>
+<article class="doc"><h1 id="mad2-2022-aug-iit-m">MAD2 — 2022 Aug  IIT M</h1>
+<p><em>33 questions · transcribed from official practice paper (text layer + vision-checked)</em></p>
+<p>Legend: <strong>Accepted answer</strong> = the paper's own key (SA numerics). MCQ/MSQ keys are NOT printed in papers — answers: see the kit's RATTA / MCQ-MASTER files.</p>
+<h2 id="q1-640653354794-mcq-00-marks">Q1 · <code>640653354794</code> · MCQ · 0.0 marks</h2>
+<p>THIS IS QUESTION PAPER FOR THE SUBJECT "DIPLOMA LEVEL: MODERN APPLICATION DEVELOPMENT 2 (COMPUTER BASED EXAM)". ARE YOU SURE YOU HAVE TO WRITE EXAM FOR THIS SUBJECT?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>
+<p>YES</p>
+</li>
+<li>
+<p>NO</p>
+</li>
+</ul>
+<p><em>Answer: YES (0-mark confirmation — click YES and move on).</em></p>
+<h2 id="q2-640653354795-msq-20-marks">Q2 · <code>640653354795</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding JavaScript language?</p>
+<p><strong>Options:</strong>
+- JavaScript is a low level programming language.
+- The “const” keyword can be used to declare objects with block level scope.
+- Int, char are some primitive data types in the JavaScript language.
+- The JavaScript language supports both the first order and higher orderfunctions.</p>
+<h2 id="q3-640653354801-msq-20-marks">Q3 · <code>640653354801</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are false?</p>
+<p><strong>Options:</strong>
+- A web application must implement token based authentication to make theapplication secure.
+- The JAMStack approach separates out the frontend from the backend, andthey both can be updated/modified
+- independently without affecting the other.
+- It is recommended to avoid the usage of verbs in the API data URLs.
+- The idea behind bringing an API is to implement caching.</p>
+<h2 id="q4-640653354802-msq-20-marks">Q4 · <code>640653354802</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding Celery and Redis?</p>
+<p><strong>Options:</strong>
+- A Celery system can only use Redis as the message broker.
+- A Celery system may consist of a number of batch jobs.
+- A Celery system needs worker(s) to execute tasks.
+- All of these</p>
+<p><em>Note: question content was on a missing render page (p003); stem/options from text layer above if present.</em></p>
+<h2 id="q5-640653354810-msq-20-marks">Q5 · <code>640653354810</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding webhooks and polling?</p>
+<p><strong>Options:</strong>
+- A webhook uses HTTP protocol.
+- The term “polling” generally refers to short polling.
+- Webhooks are used for 1 way communication, unlike web sockets.
+- In polling, the connection to the server is kept open, until the data is available.</p>
+<p><em>Note: question content was on a missing render page (p003); stem/options from text layer above if present.</em></p>
+<h2 id="q6-640653354811-msq-20-marks">Q6 · <code>640653354811</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding cookies?</p>
+<p><strong>Options:</strong>
+- Cookies are stored on the server.
+- Cookies are stored on the browser.
+- Browser sends the cookies to the origin server automatically in general.
+- Client has to include cookies manually with the request, in general.</p>
+<p><em>Note: question content was on a missing render page (p003); stem/options from text layer above if present.</em></p>
+<h2 id="q7-640653354813-msq-20-marks">Q7 · <code>640653354813</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding OAuth?</p>
+<p><strong>Options:</strong>
+- It is a protocol to allow access to resources, hosted on a different server, onbehalf of a user.
+- It is used for authorization.
+- It is used for authentication.
+- None of these</p>
+<h2 id="q8-640653354814-msq-20-marks">Q8 · <code>640653354814</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following is true regarding the Closure in JavaScript?</p>
+<p><strong>Options:</strong>
+- Closure is the state of the outer function.
+- Closure is the state of a variable.
+- Closure is a function along with its lexical environment or surrounding state.
+- Closures are created every time a function is created in JavaScript.</p>
+<h2 id="q9-640653354796-mcq-30-marks">Q9 · <code>640653354796</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following shows the correct output if the javascript program written below is executed? Which of the following shows the correct output if the javascript program written below is executed?</p>
+<p><strong>Options:</strong>
+- [1, 8, 125, 343, 512]
+- [8, 27, 64, 343, 512]
+- [8, 27, 125, 343, 512]
+- None of these</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const arr = [1, 2, 3, 4, 5, 6, 7, 8]
+const arr1 = arr.map(r =&gt; r**3)
+const arr2 = arr1.filter(r =&gt; ((r % 3 == 2) || (r % 4 == 3)))
+console.log(arr2)
+</code></pre>
+<h2 id="q10-640653354799-mcq-30-marks">Q10 · <code>640653354799</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”. Suppose you open “index.html” file in a browser, and type the text “IIT Madras” in the text box shown (after removing the previous text, if any), and hard refresh the page twice, without clicking anywhere. What will be the value shown in the text box, and the “age” placeholder, respectively?</p>
+<p><strong>Options:</strong>
+- The app will show an error in the console
+- Default, Default
+- IIT, Madras
+- None of these</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>index.html: &lt;div id=&quot;app&quot;&gt;&lt;input v-model=&quot;name&quot; @input=&quot;do_something&quot;&gt;&lt;p&gt;{{age}}&lt;/p&gt;&lt;/div&gt;
+app.js: new Vue({ el:&quot;#app&quot;, data:{ name:&quot;#app&quot;, age:0 },
+mounted(){ try{ this.name = localStorage.getItem(&quot;name&quot;).split(&quot; &quot;)[0]; this.age = localStorage.getItem(&quot;name&quot;).split(&quot; &quot;)[1]; }
+catch{ this.name=&quot;Default&quot;; this.age=&quot;Default&quot;; } },
+methods:{ do_something(){ localStorage.setItem(&quot;name&quot;, this.name); localStorage.setItem(&quot;age&quot;, this.age); } } })
+</code></pre>
+<h2 id="q11-640653354804-mcq-30-marks">Q11 · <code>640653354804</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following statements is false regarding CORS and CSRF?</p>
+<p><strong>Options:</strong>
+- The flask framework enforces CSRF protection by default.
+- The CORS mechanism allows a developer to secure a web application fromexternal origins.
+- The CORS headers are generally prefixed with the value “Access-Control-Allow”.
+- An anti CSRF token must be sent with the request, if CSRF protection isenabled.</p>
+<h2 id="q12-640653354817-mcq-30-marks">Q12 · <code>640653354817</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>index.html: &lt;div id=&quot;app&quot;&gt;&lt;div :class=&quot;{onstrike:changeStrike}&quot; id=&quot;run&quot;&gt;{{run}}&lt;/div&gt;
+&lt;button @click=&quot;run+=4&quot;&gt;Six&lt;/button&gt;&lt;button @click=&quot;run+=3&quot;&gt;Four&lt;/button&gt;&lt;/div&gt;
+app.js: new Vue({ el:'#app', data:{ run:0 }, computed:{ changeStrike(){ return this.run % 2 === 0 ? true : false } } })
+CSS: .onstrike { color: blue; }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Black</li>
+<li>Blue</li>
+<li>White</li>
+<li>None of these</li>
+</ul>
+<h2 id="q13-640653354818-mcq-30-marks">Q13 · <code>640653354818</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>index.html: &lt;div id=&quot;app&quot;&gt;&lt;Home class=&quot;bold&quot; /&gt;&lt;/div&gt;
+app.js: Vue.component('Home', { template: `&lt;div class='active'&gt;IITM online degree&lt;/div&gt;` }); new Vue({ el:'#app' })
+CSS: .active{color:blue} .bold{font-weight:bold}
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>blue, normal</li>
+<li>black, normal</li>
+<li>blue, bold</li>
+<li>black, bold</li>
+</ul>
+<h2 id="q14-640653354819-mcq-30-marks">Q14 · <code>640653354819</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>app.js: new Vue({ el:'#app', data:{ partnerShip:210, contributions:[{player:'Rohit',run:100},{player:'Kohli',run:110}] } })
+template: v-for=&quot;cont in contributions&quot;: {{cont.player}}: {{cont.run}}/{{partnerShip}}
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Rohit: 100/210Kohli: 110/210</li>
+<li>Rohit: 0.48Kohli: 0.52</li>
+<li>Rohit: 100Kohli: 110</li>
+<li>None of these</li>
+</ul>
+<h2 id="q15-640653354821-mcq-30-marks">Q15 · <code>640653354821</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>23467</li>
+<li>246</li>
+<li>37</li>
+<li>None of these</li>
+</ul>
+<p><em>Note: app.js code was on a missing render page; same family as Q31 (Numbers filter → 246).</em></p>
+<h2 id="q16-640653354822-mcq-30-marks">Q16 · <code>640653354822</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”. Suppose the user types “Apple” in the input box (after removing the existing text, if any). What will be rendered inside the div with ID “result”?</p>
+<p><strong>Options:</strong>
+- Searching for:
+- Apple
+- Searching for: ‘type something …’</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Vue.component('custom-input', { props:['value'], template:`&lt;input v-bind:value=&quot;value&quot; v-on:input=&quot;$emit('input', $event.target.value)&quot;&gt;` })
+new Vue({ el:'#app', data:{ searchText:'type something ...' } }); div#result shows &quot;Searching for: {{searchText}}&quot;
+</code></pre>
+<h2 id="q17-640653354823-mcq-30-marks">Q17 · <code>640653354823</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const Profile = { template: `&lt;div&gt;Welcome {{this.$route.params.name}}&lt;/div&gt;` }
+const Home = { template:`&lt;div&gt;This is home page &lt;button @click='goToProfile'&gt;Go to profile&lt;/button&gt;&lt;/div&gt;`,
+methods:{ goToProfile(){ this.$router.push({ name:'profile', params:{ name:'narendra' } }) } } }
+routes: [{ path:'/profile/:name', name:'profile', component:Profile }, { path:'/', component:Home }]
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Welcome narendra</li>
+<li>Welcome</li>
+<li>narendra</li>
+<li>None of these</li>
+</ul>
+<h2 id="q18-640653354824-mcq-30-marks">Q18 · <code>640653354824</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>MoviesSome Error</li>
+<li>MoviesSoley</li>
+<li>MoviesDexter</li>
+</ul>
+<p><em>Note: app.js was on a missing render page; options transcribed from image.</em></p>
+<h2 id="q19-640653354826-mcq-30-marks">Q19 · <code>640653354826</code> · MCQ · 3.0 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”. What will be rendered inside the “custom-comp” component?</p>
+<p><strong>Options:</strong>
+- Welcome Rohit Sharma
+- Welcome Virat Kohli
+- Welcome
+- None of these</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Vue.component('custom-comp', { data(){ return { name:'Rohit Sharma' } }, template:`&lt;div&gt;Welcome {{name}}&lt;/div&gt;` })
+new Vue({ el:'#app', mounted(){ this.$refs.custom.name = 'Virat Kohli' } })
+</code></pre>
+<h2 id="q20-640653354797-msq-30-marks">Q20 · <code>640653354797</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following is the correct way to do class binding in Vue (to apply ‘classA’ on the div element), if the data object in the Vue constructor is defined as below? Which of the following is the correct way to do class binding in Vue (to apply ‘classA’ on the div element), if the data object in the Vue constructor is defined as below?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>data: { classObj:{ classA:true, classB:false }, classA:true, classB:false }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li><div :class='{classA : classA, classB : classB}'> </div></li>
+<li><div :class="{classA : 'classA', classB : 'classB'}"></div></li>
+<li><div :class="classObj"> </div></li>
+<li><div :class="(classObj)"></div></li>
+</ul>
+<h2 id="q21-640653354803-msq-30-marks">Q21 · <code>640653354803</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are false?</p>
+<p><strong>Options:</strong>
+- The server sent events is a mechanism for a server to push events, and it mustrequire service workers on the client to
+- function properly.
+- In general, a webhook is meant to pull message(s) from an application.
+- The usage of a message broker over “point-to-point” communication makesthe application scalable.
+- There is no difference between webhooks and short polling.</p>
+<h2 id="q22-640653354806-msq-30-marks">Q22 · <code>640653354806</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>The approach 1 will wait for a user input before dispatching the task</li>
+<li>The approach 2 will dispatch after waiting 10 seconds and start execution</li>
+<li>The approach 2 will immediately dispatch but start execution after 10 seconds</li>
+<li>The approach 1 will immediately dispatch and start execution</li>
+</ul>
+<h2 id="q23-640653354809-msq-30-marks">Q23 · <code>640653354809</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are false regarding Vuex and Vue router?</p>
+<p><strong>Options:</strong>
+- In general, an application should have separate Vuex stores for all thecomponents.
+- A path defined in the routes array in Vue router can consist of a number ofchildren paths.
+- The wildcard (*) should be put at the top of the routes array in the Vue router,so that it matches with all the paths, which
+- are not implemented.
+- A Vuex store must be used with all Vue applications.</p>
+<h2 id="q24-640653354812-msq-30-marks">Q24 · <code>640653354812</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following statement(s) is/are true regarding fetch API?</p>
+<p><strong>Options:</strong>
+- The credentials property of the Request interface allows the user agent tosend or receive cookies in cross-origin requests.
+- The value “omit” of “credentials” will force the browser not to send cookies withthe request.
+- The value “include” of “credentials” will allow the browser to send credentialseven in cross-origin requests.
+- The value “include” of “credentials” will allow the browser to send credentialsonly for same origin requests.</p>
+<h2 id="q25-640653354798-mcq-45-marks">Q25 · <code>640653354798</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>new Promise((reject, resolve) =&gt; { let a = 2*4 || 0/4; let b = 3*4 &amp;&amp; 0/4; if (a &gt; b) resolve(a); else reject(b); })
+.then(d =&gt; console.log(&quot;Passed:&quot;, d)).catch(e =&gt; console.log(&quot;Failed:&quot;, e))
+.finally(d =&gt; { console.log(&quot;About to finish&quot;); return &quot;Over&quot;; }).then(d =&gt; console.log(&quot;Finished !!&quot;, d))
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Failed: 2About to finishFinished !! Over</li>
+<li>Passed: 0About to finishFinished !! undefined</li>
+<li>Passed: 0About to finishFinished !! Over</li>
+<li>Failed: 8About to finishFinished !! undefined</li>
+</ul>
+<h2 id="q26-640653354800-mcq-45-marks">Q26 · <code>640653354800</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><em>Note: Vuex shortlist code image was on a missing render page (p019).</em></p>
+<h2 id="q27-640653354805-mcq-45-marks">Q27 · <code>640653354805</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following javascript program, and predict the output, if executed. Consider the following javascript program, and predict the output, if executed.</p>
+<p><strong>Options:</strong>
+- 10 30
+- 10 20
+- 10 undefined
+- The program will raise an error</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let propA = 10;
+const obj1 = { propA:20, propB:function(){ console.log(propA, this.propA) } }
+const obj2 = { propA:30, propB:function(){ let func = () =&gt; console.log(propA, this.propA); func() } }
+obj2.propB.call(obj1);
+</code></pre>
+<h2 id="q28-640653354807-mcq-45-marks">Q28 · <code>640653354807</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following javascript program, and predict the output, if executed. Also, predict the minimum time taken (in seconds) to log the value “Executing” on the console.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>async function some(){ let promise = await new Promise((res, rej) =&gt; { setTimeout(() =&gt; res(&quot;Execution Started&quot;), 1000) });
+let a = await promise; let b = a.replace(&quot;e&quot;, &quot;&quot;); return new Promise((rej, res) =&gt; { let c = a + &quot;\n&quot; + b; rej(c); }) }
+some().then(d =&gt; console.log(d)).catch(e =&gt; console.log(&quot;Error&quot;)); console.log(&quot;Executing&quot;)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>ExecutingExecution StartedExecution StartedTime: 2 seconds</li>
+<li>Execution StartedExcution StartedExecutingTime: 2 seconds</li>
+<li>ExecutingExecution StartedExcution StartedTime: 0 seconds</li>
+<li>Execution StartedExcution StartedExecutingTime: 0 seconds</li>
+</ul>
+<h2 id="q29-640653354815-mcq-45-marks">Q29 · <code>640653354815</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following JavaScript program. Consider the following JavaScript program. What will be logged on to the console?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const p = function(t){ return new Promise((resolve, reject) =&gt; { setTimeout(() =&gt; { resolve(t) }, t*1000) }) }
+data = []; asyncFunc = async function(){ p1 = await p(1); p2 = await p(2); data.push(p2); data.push(p1) }
+asyncFunc(); data.push('Outer'); console.log(data)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>['Outer', 2, 1]</li>
+<li>['Outer', 1, 2]</li>
+<li>[2, 1, 'Outer']</li>
+<li>['Outer']</li>
+</ul>
+<h2 id="q30-640653354816-mcq-45-marks">Q30 · <code>640653354816</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”. What will be rendered inside the div for ID “run”, if the user clicks on the button with text “Six”, 3 times and the button with text “Four”, 4 times?</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(same run-computed app as Q12: run 0, Six→run+=4, Four→run+=3)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>24</li>
+<li>34</li>
+<li>48</li>
+<li>None of these</li>
+</ul>
+<h2 id="q31-640653354820-mcq-45-marks">Q31 · <code>640653354820</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”. Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Vue.component('Numbers', { template:`&lt;div&gt;&lt;span v-for=&quot;num in numbers&quot;&gt;{{num}}&lt;/span&gt;&lt;/div&gt;`, props:['numbers'] })
+new Vue({ el:'#app', data:{ numbers:[2,3,4,6,7], collType:'typeOne' },
+computed:{ typeOne(){ return this.numbers.filter((num) =&gt; num % 2 === 0) }, typeTwo(){ return this.numbers.filter((num) =&gt; num % 2 != 0) } } })
+template shows Numbers with v-show per collType
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>23467</li>
+<li>246</li>
+<li>37</li>
+<li>None of these</li>
+</ul>
+<h2 id="q32-640653354825-mcq-45-marks">Q32 · <code>640653354825</code> · MCQ · 4.5 marks</h2>
+<p>Consider the following Vue application with markup “index.html” and javascript file “app.js”.</p>
+<p><em>Note: question body/options were on missing pages; header only.</em></p>
+<h2 id="q33-640653354808-mcq-20-marks">Q33 · <code>640653354808</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statement(s) is/are correct regarding cookies, local storage, and session storage?</p>
+<p><strong>Options:</strong>
+- The local storage is a browser based persistent storage.
+- Cookies are preferred over session or local storage, when the data needs to besent with every request.
+- The cookies can be set from the server as well as using javascript on the client.
+- All of these</p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-ba-11-2026-may06.html">← BA — Busi</a> <a class="pn next" href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

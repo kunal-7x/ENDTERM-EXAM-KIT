@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLP — 06 May 26: Machine Learning Practice (100 marks) Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MLP — 06 May 26: Machine Learning Practice (100 marks)</div>
+<div class="tools"><a class="btn2" href="papers/10-2026-may26.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-6406532125944-mcq-4m">Q1 · 6406532125944 · MCQ · 4m</a></li><li><a href="#q2-6406532125949-mcq-4m">Q2 · 6406532125949 · MCQ · 4m</a></li><li><a href="#q3-6406532125950-mcq-4m">Q3 · 6406532125950 · MCQ · 4m</a></li><li><a href="#q4-6406532125965-mcq-4m">Q4 · 6406532125965 · MCQ · 4m</a></li><li><a href="#q5-6406532125945-sa-3m">Q5 · 6406532125945 · SA · 3m</a></li><li><a href="#q6-6406532125946-msq-5m">Q6 · 6406532125946 · MSQ · 5m</a></li><li><a href="#q7-6406532125947-msq-5m">Q7 · 6406532125947 · MSQ · 5m</a></li><li><a href="#q8-6406532125948-msq-5m">Q8 · 6406532125948 · MSQ · 5m</a></li><li><a href="#q9-6406532125949-msq-5m">Q9 · 6406532125949 · MSQ · 5m</a></li><li><a href="#q10-6406532125947-sa-4m">Q10 · 6406532125947 · SA · 4m</a></li><li><a href="#q11-6406532125948-sa-4m">Q11 · 6406532125948 · SA · 4m</a></li><li><a href="#q12-6406532125947-sa-4m">Q12 · 6406532125947 · SA · 4m</a></li><li><a href="#q13-6406532125952-sa-5m">Q13 · 6406532125952 · SA · 5m</a></li><li><a href="#q14-6406532125966-msq-3m">Q14 · 6406532125966 · MSQ · 3m</a></li><li><a href="#q15-6406532125966-msq-3m">Q15 · 6406532125966 · MSQ · 3m</a></li><li><a href="#q16-6406532125954-msq-4m">Q16 · 6406532125954 · MSQ · 4m</a></li><li><a href="#q17-6406532125960-msq-4m">Q17 · 6406532125960 · MSQ · 4m</a></li><li><a href="#q18-6406532125963-msq-4m">Q18 · 6406532125963 · MSQ · 4m</a></li><li><a href="#q19-6406532125955-mcq-3m">Q19 · 6406532125955 · MCQ · 3m</a></li><li><a href="#q20-6406532125962-mcq-3m">Q20 · 6406532125962 · MCQ · 3m</a></li><li><a href="#q21-6406532125969-mcq-3m">Q21 · 6406532125969 · MCQ · 3m</a></li><li><a href="#q22-6406532125968-mcq-3m">Q22 · 6406532125968 · MCQ · 3m</a></li><li><a href="#q23-6406532125957-comprehension-0m">Q23 · 6406532125957 · COMPREHENSION · 0m</a></li><li><a href="#q24-6406532125958-sa-5m">Q24 · 6406532125958 · SA · 5m</a></li><li><a href="#q25-6406532125959-sa-4m">Q25 · 6406532125959 · SA · 4m</a></li><li><a href="#q26-6406532125964-mcq-5m">Q26 · 6406532125964 · MCQ · 5m</a></li></ul></nav>
+<article class="doc"><h1 id="mlp-06-may-26-machine-learning-practice-100-marks">MLP — 06 May 26: Machine Learning Practice (100 marks)</h1>
+<p><em>Transcribed from official practice-paper screenshots (tail pages p146+ plus header range). Q1–Q23 heads in render range; [calc] = verified; [kit] = kit-derived.</em></p>
+<h2 id="q1-6406532125944-mcq-4m">Q1 · <code>6406532125944</code> · MCQ · 4m</h2>
+<p>Naive Bayes variant for Gender from Height/Weight/Age (continuous)?
+<strong>Options:</strong> CategoricalNB || BernoulliNB || MultinomialNB || GaussianNB
+<strong>Answer [kit]:</strong> GaussianNB.</p>
+<h2 id="q2-6406532125949-mcq-4m">Q2 · <code>6406532125949</code> · MCQ · 4m</h2>
+<p>ARIMA order=(1,1,1) — role of d=1?
+<strong>Options:</strong> lag count || differencing count || MA window || forecast horizon
+<strong>Answer [kit]:</strong> number of times data is differenced.</p>
+<h2 id="q3-6406532125950-mcq-4m">Q3 · <code>6406532125950</code> · MCQ · 4m</h2>
+<p>Assertion (precision always &gt; recall) + Reason (recall independent of FN)?
+<strong>Options:</strong> both true + explains || both true, no-explain || A true R false || A false R true || both false
+<strong>Answer [kit]:</strong> both false (precision priority is problem-dependent; recall depends on FN).</p>
+<h2 id="q4-6406532125965-mcq-4m">Q4 · <code>6406532125965</code> · MCQ · 4m</h2>
+<p>Pandas filter: (Age&gt;30 &amp; Salary&gt;70000) | (IT &amp; Exp&lt;6) on 6-employee df → included?
+<strong>Options:</strong> Sara, Mike, Anna, Tom || Sara, Mike, Anna || Mike, Anna, Tom || Sara, Anna, Tom
+<strong>Answer [kit]:</strong> Sara, Mike, Anna, Tom.</p>
+<h2 id="q5-6406532125945-sa-3m">Q5 · <code>6406532125945</code> · SA · 3m</h2>
+<p>DummyRegressor(mean) train [10,15,20,25,30], test [35,40] → MSE?
+<strong>Answer [calc]:</strong> <code>312.5</code>.</p>
+<h2 id="q6-6406532125946-msq-5m">Q6 · <code>6406532125946</code> · MSQ · 5m</h2>
+<p>AdaBoost(depth-1) vs AdaBoost(depth-3)?
+<strong>Options:</strong> adb1 safer (shallow) || more estimators always better || smaller lr reduces train acc || adb2 lower-bias higher-variance
+<strong>Answer [kit]:</strong> adb1-safer + adb2-bias-variance.</p>
+<h2 id="q7-6406532125947-msq-5m">Q7 · <code>6406532125947</code> · MSQ · 5m</h2>
+<p>KMeans(9 clusters, kmeans++, n_init=10, max_iter=20)?
+<strong>Options:</strong> converges&lt;20 ⇒ nearest-centroid guaranteed || k validatable via silhouette/elbow || 20 independent runs || init picks 9 fully-random points
+<strong>Answer [kit]:</strong> silhouette/elbow validation only (10 runs not 20; kmeans++ not random; no mapping guarantee).</p>
+<h2 id="q8-6406532125948-msq-5m">Q8 · <code>6406532125948</code> · MSQ · 5m</h2>
+<p>PIL/numpy image chain — which FALSE?
+<strong>Options:</strong> image_0 has 3 channels || max pixel value is 256 || resize drops channels || convert flips image
+<strong>Answer [kit]:</strong> 256-max + resize-channels + flip (all false; max is 255).</p>
+<h2 id="q9-6406532125949-msq-5m">Q9 · <code>6406532125949</code> · MSQ · 5m</h2>
+<p>fetch_california pipeline — error lines? (y = data.label / scaler.fit_transform(X_test) / mse(X_test_scaled, y_test))
+<strong>Options:</strong> Line1 || Line2 || Line3 || Line4
+<strong>Answer [kit]:</strong> Line1 (.target not .label) + Line3 (never fit on test) + Line4 (MSE needs y_pred).</p>
+<h2 id="q10-6406532125947-sa-4m">Q10 · <code>6406532125947</code> · SA · 4m</h2>
+<p>KNN k=3 on 6-point set → predict([[3,2]])?
+<strong>Answer [calc]:</strong> <code>0</code>.</p>
+<h2 id="q11-6406532125948-sa-4m">Q11 · <code>6406532125948</code> · SA · 4m</h2>
+<p>CountVectorizer bigrams (lowercase=False) on 2 docs → array sum?
+<strong>Answer [calc]:</strong> <code>6</code>.</p>
+<h2 id="q12-6406532125947-sa-4m">Q12 · <code>6406532125947</code> · SA · 4m</h2>
+<p>f1_score class 1: Y_True 7-ones + Y_Pred mixed (8-list)?
+<strong>Answer [calc]:</strong> <code>0.73</code> (8/11 = 0.7273).</p>
+<h2 id="q13-6406532125952-sa-5m">Q13 · <code>6406532125952</code> · SA · 5m</h2>
+<p>Multiclass (7×0, 6×1, 7×2) → precision class 1?
+<strong>Answer [calc]:</strong> <code>0.5</code> (4/8).</p>
+<h2 id="q14-6406532125966-msq-3m">Q14 · <code>6406532125966</code> · MSQ · 3m</h2>
+<p>Data augmentation techniques?
+<strong>Options:</strong> random cropping || normalize to [0,1] || fixed-size resize || small-angle rotation
+<strong>Answer [kit]:</strong> random cropping + small rotation (normalize/resize = preprocessing, not augmentation).</p>
+<h2 id="q15-6406532125966-msq-3m">Q15 · <code>6406532125966</code> · MSQ · 3m</h2>
+<p>mlp1((5,)relu-adam) vs mlp2((10,5)tanh-sgd) on iris?
+<strong>Options:</strong> mlp2 more params || seed changes preds || sgd always beats adam || tanh always beats relu
+<strong>Answer [kit]:</strong> more-params + seed-matters.</p>
+<h2 id="q16-6406532125954-msq-4m">Q16 · <code>6406532125954</code> · MSQ · 4m</h2>
+<p>TfidfVectorizer truths?
+<strong>Options:</strong> smooth_idf=True ⇒ all-doc term IDF=0 || lowercase=True adds lowercase copies || max_features=1000 keeps top-1000 || min_df=3 ignores df&lt;3
+<strong>Answer [kit]:</strong> max_features + min_df (smoothing avoids exact 0; lowercase replaces).</p>
+<h2 id="q17-6406532125960-msq-4m">Q17 · <code>6406532125960</code> · MSQ · 4m</h2>
+<p>Employees in departments with avg salary &gt; 65000?
+<strong>Options:</strong> groupby.filter(mean&gt;65000) || groupby.apply misaligned || df[Salary &gt; grouped-means] || transform&gt;6500 typo
+<strong>Answer [kit]:</strong> groupby('Dept').filter(lambda x: x['Salary'].mean() &gt; 65000).</p>
+<h2 id="q18-6406532125963-msq-4m">Q18 · <code>6406532125963</code> · MSQ · 4m</h2>
+<p>FALSE statements?
+<strong>Options:</strong> RF uses sampling WITHOUT replacement || Boosting reduces bias sequentially || Bagging reduces bias by averaging || Boosting trains parallel
+<strong>Answer [kit]:</strong> all three false-statements (RF = WITH replacement; bagging cuts variance; boosting is sequential).</p>
+<h2 id="q19-6406532125955-mcq-3m">Q19 · <code>6406532125955</code> · MCQ · 3m</h2>
+<p>LogisticRegression CANNOT do multinomial?
+<strong>Options:</strong> liblinear || lbfgs || sag || saga
+<strong>Answer [kit]:</strong> liblinear (ovr only).</p>
+<h2 id="q20-6406532125962-mcq-3m">Q20 · <code>6406532125962</code> · MCQ · 3m</h2>
+<p>metric = 1 − Σ(y−ŷ)²/Σ(y−ȳ)² range?
+<strong>Options:</strong> 0–1 || −∞–1 || −1–1 || −∞–∞
+<strong>Answer [kit]:</strong> −infinity to 1 (R²).</p>
+<h2 id="q21-6406532125969-mcq-3m">Q21 · <code>6406532125969</code> · MCQ · 3m</h2>
+<p>LeaveOneOut + cross_val_score on 5 samples → ?
+<strong>Options:</strong> trains 5 times || trains 1 time || code wrong
+<strong>Answer [kit]:</strong> trains 5 times.</p>
+<h2 id="q22-6406532125968-mcq-3m">Q22 · <code>6406532125968</code> · MCQ · 3m</h2>
+<p>Lasso(0.01) vs Lasso(1.0) — correct statements?
+<strong>Options:</strong> 2 and 3 || 1 and 2 || 3 and 4 || 1 and 4
+<strong>Answer [kit]:</strong> 1 and 2 (lasso2 smaller coefs; lasso1 fewer zeros).</p>
+<h2 id="q23-6406532125957-comprehension-0m">Q23 · <code>6406532125957</code> · COMPREHENSION · 0m</h2>
+<p>(Parent header on last rendered page; sub-questions beyond.)</p>
+<h2 id="q24-6406532125958-sa-5m">Q24 · <code>6406532125958</code> · SA · 5m</h2>
+<p>ColumnTransformer(MaxAbs[0] + OHE-drop-first[1]) on 6×3 array → sum of first column?
+<strong>Answer [calc]:</strong> <code>-0.45</code>.</p>
+<h2 id="q25-6406532125959-sa-4m">Q25 · <code>6406532125959</code> · SA · 4m</h2>
+<p>Same pipeline → X_transformed[2,1]?
+<strong>Answer [calc]:</strong> <code>1</code>.</p>
+<h2 id="q26-6406532125964-mcq-5m">Q26 · <code>6406532125964</code> · MCQ · 5m</h2>
+<p>RandomizedSearchCV(RandomForest, n_iter=4, cv=3) — true?
+<strong>Options:</strong> tries all combos || only 4 random combos || random_state irrelevant || cv=8 cheaper
+<strong>Answer [kit]:</strong> only 4 random combinations tested.</p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-mlp-09-2025-dec18.html">← MLP — 18 Dec 25: Modern Application... (ML Practice End Term, 10</a> <a class="pn next" href="papers-hub.html">Real Papers Hub →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

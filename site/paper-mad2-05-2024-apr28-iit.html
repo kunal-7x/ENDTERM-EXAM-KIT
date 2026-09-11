@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAD2 — 2024 Apr28  IIT Â· ENDTERM EXAM-KIT</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+<button class="hamburger" id="hamburger" aria-label="Menu">â˜°</button>
+<a class="brand" href="index.html">ðŸŽ“ EXAM-KIT</a>
+<div class="searchwrap"><input id="search" type="search" placeholder="ðŸ” Search any topicâ€¦" autocomplete="off"><div id="results"></div></div>
+<a class="gh" href="https://github.com/kunal-7x/ENDTERM-EXAM-KIT" target="_blank" rel="noopener">GitHub</a>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="navsec">Start</div><ul><li><a href="index.html" data-href="index.html">Home</a></li><li><a href="start-tonight.html" data-href="start-tonight.html">Start Tonight</a></li><li><a href="exam-day-os.html" data-href="exam-day-os.html">Exam-Day OS</a></li><li><a href="last-6-hours.html" data-href="last-6-hours.html">Last 6 Hours</a></li></ul><div class="navsec">BA</div><ul><li><a href="ba-hub.html" data-href="ba-hub.html">BA Hub</a></li><li><a href="ba-00-index.html" data-href="ba-00-index.html">BA 80/20 Index</a></li><li><a href="ba-01-stats.html" data-href="ba-01-stats.html">BA Engine: Stats</a></li><li><a href="ba-02-regression.html" data-href="ba-02-regression.html">BA Engine: Regression</a></li><li><a href="ba-03-dea-lp.html" data-href="ba-03-dea-lp.html">BA Engine: DEA + LP</a></li><li><a href="ba-04-ratta.html" data-href="ba-04-ratta.html">BA Ratta Q&A</a></li><li><a href="ba-05-sheet.html" data-href="ba-05-sheet.html">BA Formula Sheet</a></li><li><a href="ba-06-sa-dump.html" data-href="ba-06-sa-dump.html">BA Solved SA Dump</a></li></ul><div class="navsec">MAD2</div><ul><li><a href="mad2-hub.html" data-href="mad2-hub.html">MAD2 Hub</a></li><li><a href="mad2-00-index.html" data-href="mad2-00-index.html">MAD2 80/20 Index</a></li><li><a href="mad2-01-js.html" data-href="mad2-01-js.html">MAD2 Engine: JavaScript</a></li><li><a href="mad2-02-vue.html" data-href="mad2-02-vue.html">MAD2 Engine: Vue</a></li><li><a href="mad2-03-web.html" data-href="mad2-03-web.html">MAD2 Engine: Web</a></li><li><a href="mad2-04-mcq.html" data-href="mad2-04-mcq.html">MAD2 MCQ Master</a></li><li><a href="mad2-05-msq.html" data-href="mad2-05-msq.html">MAD2 MSQ Playbook</a></li><li><a href="mad2-06-sheet.html" data-href="mad2-06-sheet.html">MAD2 Cheatsheet</a></li><li><a href="mad2-07-dump.html" data-href="mad2-07-dump.html">MAD2 Full Q Dump</a></li></ul><div class="navsec">MLP</div><ul><li><a href="mlp-hub.html" data-href="mlp-hub.html">MLP Hub</a></li><li><a href="mlp-00-index.html" data-href="mlp-00-index.html">MLP 80/20 Index</a></li><li><a href="mlp-01-core.html" data-href="mlp-01-core.html">MLP Engine: Core</a></li><li><a href="mlp-02-models.html" data-href="mlp-02-models.html">MLP Engine: Models</a></li><li><a href="mlp-03-ratta.html" data-href="mlp-03-ratta.html">MLP Ratta Q&A</a></li><li><a href="mlp-04-sa.html" data-href="mlp-04-sa.html">MLP Solved SA</a></li><li><a href="mlp-05-sheet.html" data-href="mlp-05-sheet.html">MLP Cheatsheet</a></li><li><a href="mlp-predicted-paper.html" data-href="mlp-predicted-paper.html">MLP Predicted Paper</a></li><li><a href="mlp-read-and-go.html" data-href="mlp-read-and-go.html">MLP Read-and-Go (70 marks)</a></li></ul><div class="navsec">Real Papers</div><ul><li><a href="papers-hub.html" data-href="papers-hub.html">All Papers Hub</a></li><li><a href="all-papers.html" data-href="all-papers.html">Print All → PDF</a></li><li><a href="paper-ba-01-2022-aug.html" data-href="paper-ba-01-2022-aug.html">BA — 2022</a></li><li><a href="paper-ba-02-2022-dec.html" data-href="paper-ba-02-2022-dec.html">BA — 2022</a></li><li><a href="paper-ba-03-2023-apr30.html" data-href="paper-ba-03-2023-apr30.html">BA — 2023</a></li><li><a href="paper-ba-04-2023-dec24.html" data-href="paper-ba-04-2023-dec24.html">BA — 2023</a></li><li><a href="paper-ba-05-2023-sep03.html" data-href="paper-ba-05-2023-sep03.html">BA — 2023</a></li><li><a href="paper-ba-06-2024-apr28.html" data-href="paper-ba-06-2024-apr28.html">BA — 2024</a></li><li><a href="paper-ba-07-2024-dec22.html" data-href="paper-ba-07-2024-dec22.html">BA — 2024</a></li><li><a href="paper-ba-08-2024-sep01.html" data-href="paper-ba-08-2024-sep01.html">BA — 2024</a></li><li><a href="paper-ba-09-2025-apr13.html" data-href="paper-ba-09-2025-apr13.html">BA — 2025</a></li><li><a href="paper-ba-10-2025-aug31.html" data-href="paper-ba-10-2025-aug31.html">BA — 2025</a></li><li><a href="paper-ba-11-2026-may06.html" data-href="paper-ba-11-2026-may06.html">BA — Busi</a></li><li><a href="paper-mad2-01-2022-aug-iit-m.html" data-href="paper-mad2-01-2022-aug-iit-m.html">MAD2 — 2022 Aug  IIT M</a></li><li><a href="paper-mad2-02-2022-dec-iit-m.html" data-href="paper-mad2-02-2022-dec-iit-m.html">MAD2 — 2022 Dec  IIT M</a></li><li><a href="paper-mad2-03-2023-dec24-iit.html" data-href="paper-mad2-03-2023-dec24-iit.html">MAD2 — 2023 Dec24  IIT</a></li><li><a href="paper-mad2-04-2023-sep03-iit.html" data-href="paper-mad2-04-2023-sep03-iit.html">MAD2 — 2023 Sep03  IIT</a></li><li><a href="paper-mad2-05-2024-apr28-iit.html" data-href="paper-mad2-05-2024-apr28-iit.html">MAD2 — 2024 Apr28  IIT</a></li><li><a href="paper-mad2-06-2024-dec22-iit.html" data-href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT</a></li><li><a href="paper-mad2-07-2024-sep01-iit.html" data-href="paper-mad2-07-2024-sep01-iit.html">MAD2 — 2024 Sep01  IIT</a></li><li><a href="paper-mad2-08-2025-apr13-iit.html" data-href="paper-mad2-08-2025-apr13-iit.html">MAD2 — 2025 Apr13  IIT</a></li><li><a href="paper-mad2-09-2025-aug31-iit.html" data-href="paper-mad2-09-2025-aug31-iit.html">MAD2 — 2025 Aug31  IIT</a></li><li><a href="paper-mad2-10-2026-may06.html" data-href="paper-mad2-10-2026-may06.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mad2-11-2025-dec18.html" data-href="paper-mad2-11-2025-dec18.html">MAD2 — Modern Applicat</a></li><li><a href="paper-mlp-01-2023-apr30-et1.html" data-href="paper-mlp-01-2023-apr30-et1.html">MLP — 2023 Apr30: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-02-2023-dec24-fdf2.html" data-href="paper-mlp-02-2023-dec24-fdf2.html">MLP — 2023 Dec24: IIT M FN EXAM FDF2 (100 </a></li><li><a href="paper-mlp-03-2023-sep03-et1.html" data-href="paper-mlp-03-2023-sep03-et1.html">MLP — 2023 Sep03: IIT M DIPLOMA ET1 EXAM (</a></li><li><a href="paper-mlp-04-2024-apr28-qdf2.html" data-href="paper-mlp-04-2024-apr28-qdf2.html">MLP — 2024 Apr28: IIT M FN EXAM QDF2 (100 </a></li><li><a href="paper-mlp-05-2024-dec22-qdd2.html" data-href="paper-mlp-05-2024-dec22-qdd2.html">MLP — 2024 Dec22: IITM FN EXAM QDD2 (50 ma</a></li><li><a href="paper-mlp-06-2024-sep01-qdf1.html" data-href="paper-mlp-06-2024-sep01-qdf1.html">MLP — 2024 Sep01: IIT M FN EXAM QDF1 (50 m</a></li><li><a href="paper-mlp-07-2025-apr13-qdd2.html" data-href="paper-mlp-07-2025-apr13-qdd2.html">MLP — 2025 Apr13: IIT M FN EXAM QDD2 (100 </a></li><li><a href="paper-mlp-08-2025-aug31-qic4.html" data-href="paper-mlp-08-2025-aug31-qic4.html">MLP — 2025 Aug31: IIT M AN EXAM QIC4 (50 m</a></li><li><a href="paper-mlp-09-2025-dec18.html" data-href="paper-mlp-09-2025-dec18.html">MLP — 18 Dec 25: Modern Application... (ML</a></li><li><a href="paper-mlp-10-2026-may26.html" data-href="paper-mlp-10-2026-may26.html">MLP — 06 May 26: Machine Learning Practice</a></li></ul></aside>
+<div class="scrim" id="scrim"></div>
+<main class="content">
+<div class="crumbs">Papers / MAD2 — 2024 Apr28  IIT</div>
+<div class="tools"><a class="btn2" href="papers/05-2024-apr28-iit.md">⬇ Download .md</a> <a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>
+<nav class="onpage"><div class="onpage-t">On this page</div><ul><li><a href="#q1-640653816158-mcq-00-marks">Q1 · 640653816158 · MCQ · 0.0 marks</a></li><li><a href="#q2-640653816159-mcq-20-marks">Q2 · 640653816159 · MCQ · 2.0 marks</a></li><li><a href="#q3-640653816160-mcq-20-marks">Q3 · 640653816160 · MCQ · 2.0 marks</a></li><li><a href="#q4-640653816166-mcq-20-marks">Q4 · 640653816166 · MCQ · 2.0 marks</a></li><li><a href="#q5-640653816172-mcq-20-marks">Q5 · 640653816172 · MCQ · 2.0 marks</a></li><li><a href="#q6-640653816174-mcq-20-marks">Q6 · 640653816174 · MCQ · 2.0 marks</a></li><li><a href="#q7-640653816175-mcq-20-marks">Q7 · 640653816175 · MCQ · 2.0 marks</a></li><li><a href="#q8-640653816161-msq-30-marks">Q8 · 640653816161 · MSQ · 3.0 marks</a></li><li><a href="#q9-640653816169-msq-30-marks">Q9 · 640653816169 · MSQ · 3.0 marks</a></li><li><a href="#q10-640653816170-msq-30-marks">Q10 · 640653816170 · MSQ · 3.0 marks</a></li><li><a href="#q11-640653816180-msq-30-marks">Q11 · 640653816180 · MSQ · 3.0 marks</a></li><li><a href="#q12-640653816186-msq-30-marks">Q12 · 640653816186 · MSQ · 3.0 marks</a></li><li><a href="#q13-640653816162-mcq-30-marks">Q13 · 640653816162 · MCQ · 3.0 marks</a></li><li><a href="#q14-640653816164-mcq-30-marks">Q14 · 640653816164 · MCQ · 3.0 marks</a></li><li><a href="#q15-640653816165-mcq-30-marks">Q15 · 640653816165 · MCQ · 3.0 marks</a></li><li><a href="#q16-640653816168-mcq-30-marks">Q16 · 640653816168 · MCQ · 3.0 marks</a></li><li><a href="#q17-640653816178-mcq-30-marks">Q17 · 640653816178 · MCQ · 3.0 marks</a></li><li><a href="#q18-640653816181-mcq-30-marks">Q18 · 640653816181 · MCQ · 3.0 marks</a></li><li><a href="#q19-640653816182-mcq-30-marks">Q19 · 640653816182 · MCQ · 3.0 marks</a></li><li><a href="#q20-640653816183-mcq-30-marks">Q20 · 640653816183 · MCQ · 3.0 marks</a></li><li><a href="#q21-640653816184-mcq-30-marks">Q21 · 640653816184 · MCQ · 3.0 marks</a></li><li><a href="#q22-640653816185-mcq-30-marks">Q22 · 640653816185 · MCQ · 3.0 marks</a></li><li><a href="#q23-640653816187-mcq-30-marks">Q23 · 640653816187 · MCQ · 3.0 marks</a></li><li><a href="#q24-640653816163-mcq-45-marks">Q24 · 640653816163 · MCQ · 4.5 marks</a></li><li><a href="#q25-640653816167-mcq-45-marks">Q25 · 640653816167 · MCQ · 4.5 marks</a></li><li><a href="#q26-640653816171-mcq-45-marks">Q26 · 640653816171 · MCQ · 4.5 marks</a></li><li><a href="#q27-640653816173-mcq-45-marks">Q27 · 640653816173 · MCQ · 4.5 marks</a></li><li><a href="#q28-640653816177-mcq-45-marks">Q28 · 640653816177 · MCQ · 4.5 marks</a></li><li><a href="#q29-640653816179-mcq-45-marks">Q29 · 640653816179 · MCQ · 4.5 marks</a></li><li><a href="#q30-640653816188-mcq-45-marks">Q30 · 640653816188 · MCQ · 4.5 marks</a></li><li><a href="#q31-640653816189-mcq-45-marks">Q31 · 640653816189 · MCQ · 4.5 marks</a></li><li><a href="#q32-640653816176-msq-20-marks">Q32 · 640653816176 · MSQ · 2.0 marks</a></li><li><a href="#q33-640653816190-msq-20-marks">Q33 · 640653816190 · MSQ · 2.0 marks</a></li></ul></nav>
+<article class="doc"><h1 id="mad2-2024-apr28-iit">MAD2 — 2024 Apr28  IIT</h1>
+<p><em>33 questions · transcribed from official practice paper (text layer + vision-checked)</em></p>
+<p>Legend: <strong>Accepted answer</strong> = the paper's own key (SA numerics). MCQ/MSQ keys are NOT printed in papers — answers: see the kit's RATTA / MCQ-MASTER files.</p>
+<h2 id="q1-640653816158-mcq-00-marks">Q1 · <code>640653816158</code> · MCQ · 0.0 marks</h2>
+<p>THIS IS QUESTION PAPER FOR THE SUBJECT "DIPLOMA LEVEL: MODERN APPLICATION DEVELOPMENT 2 (COMPUTER BASED EXAM)". ARE YOU SURE YOU HAVE TO WRITE EXAM FOR THIS SUBJECT?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>
+<p>YES</p>
+</li>
+<li>
+<p>NO</p>
+</li>
+</ul>
+<p><em>Answer: YES (0-mark confirmation — click YES and move on).</em></p>
+<h2 id="q2-640653816159-mcq-20-marks">Q2 · <code>640653816159</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let langName = 'Python'; function showLanguage(){ let langName = &quot;JavaScript&quot;; let message = 'Learn ' + langName; console.log(message); }
+let message = 'Learn ' + langName; console.log(message); console.log(showLanguage());
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Learn JavaScript / Learn Python</li>
+<li>Learn JavaScript / Learn JavaScript / undefined</li>
+<li>Learn Python / Learn JavaScript</li>
+<li>Learn Python / Learn JavaScript / undefined</li>
+</ul>
+<h2 id="q3-640653816160-mcq-20-marks">Q3 · <code>640653816160</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let x = [1, 'p', a =&gt; a + 1]; for (const i = 0; i&lt;x.length; i++) { console.log(i, x[i], typeof(x[i])) }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>It will throw error on the console for the very first iteration</li>
+<li>It will display index/value/type for the first item then throw error</li>
+<li>It will display the indices, values and types of all the items</li>
+<li>None of these</li>
+</ul>
+<h2 id="q4-640653816166-mcq-20-marks">Q4 · <code>640653816166</code> · MCQ · 2.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- The JSON data from the specified URL followed by “End of script”.
+- "End of script" will be logged first, followed by the JSON data.
+- An error will be logged, and the script will terminate.
+- "End of script" will be logged, but the JSON data retrieval will fail.</p>
+<h2 id="q5-640653816172-mcq-20-marks">Q5 · <code>640653816172</code> · MCQ · 2.0 marks</h2>
+<p>Which of the following statements is false regarding JavaScript and its behavior?</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>The language supports both first class and higher order functions</li>
+<li>The language supports higher order functions, but not first class functions</li>
+<li>A variable declared without var/let/const is not hoisted at all</li>
+<li>Variables declared with let and const are also hoisted</li>
+</ul>
+<h2 id="q6-640653816174-mcq-20-marks">Q6 · <code>640653816174</code> · MCQ · 2.0 marks</h2>
+<p>Where is system state commonly stored in a web application?</p>
+<p><strong>Options:</strong>
+- Client Side local storage
+- In Memory Cache
+- Session Cookies
+- Server Side Database</p>
+<h2 id="q7-640653816175-mcq-20-marks">Q7 · <code>640653816175</code> · MCQ · 2.0 marks</h2>
+<p>Which technology is commonly used to manage application state in a Vue.js application?</p>
+<p><strong>Options:</strong>
+- Vue.js
+- React.js
+- Vuex
+- Redux
+- Express.js
+- Angular</p>
+<h2 id="q8-640653816161-msq-30-marks">Q8 · <code>640653816161</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let myQual = { degree:&quot;B-tech&quot;, college:&quot;IIT Delhi&quot;,
+get qualification(){ return `degree: ${this.degree}, college: ${this.college}` },
+set qualification(q){ let components = q.split(' '); this.degree = components[0]; this.college = components[1]; } }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>console.log(myQual.qualification())</li>
+<li>console.log(myQual.qualification)</li>
+<li>console.log(myQual.qualification = 'M-tech IIT-Madras')</li>
+<li>console.log(myQual.qualification('M-tech IIT-Madras'))</li>
+</ul>
+<h2 id="q9-640653816169-msq-30-marks">Q9 · <code>640653816169</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><em>[figure/code image — see kit engine pattern]</em></p>
+<p><em>Options image not recovered — check the kit's RATTA / MCQ-MASTER files for this question family.</em></p>
+<h2 id="q10-640653816170-msq-30-marks">Q10 · <code>640653816170</code> · MSQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>script.js: var app = new Vue({ el:'#app', data:{ result:false, final:false } })
+index1.html: &lt;h1 v-if=&quot;result&quot;&gt;Hello am I visible?&lt;/h1&gt;; index2.html: &lt;h1 v-show=&quot;final&quot;&gt;Hello am I visible?&lt;/h1&gt;
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li><h2 v-for="item in items">{{item.name}}</h2></li>
+<li><h2 v-for="item in items" {{item.id}}>{{item.name}}</h2></li>
+<li><h2 v-for="item in items" :id="item.id">{{item.name}}</h2></li>
+<li><h2 v-for="items" :id="item.id">item.name</h2></li>
+</ul>
+<p><em>Note: options belong to the v-for mad1/mad2/mad3 sub-question (script.js items list); correct = :id binding option.</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>script.js: var app = new Vue({ el:'#app', data:{ result:false, final:false } })
+index1.html: &lt;h1 v-if=&quot;result&quot;&gt;Hello am I visible?&lt;/h1&gt;; index2.html: &lt;h1 v-show=&quot;final&quot;&gt;Hello am I visible?&lt;/h1&gt;
+</code></pre>
+<p><em>Note: options belong to the v-for mad1/mad2/mad3 sub-question (script.js items list); correct = :id binding option.</em></p>
+<h2 id="q11-640653816180-msq-30-marks">Q11 · <code>640653816180</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following HTTP status code(s) is/are commonly used in RESTful APIs for successful responses?</p>
+<p><strong>Options:</strong>
+- 200
+- 201
+- 400
+- 404</p>
+<h2 id="q12-640653816186-msq-30-marks">Q12 · <code>640653816186</code> · MSQ · 3.0 marks</h2>
+<p>Which of the following is/are potential benefit(s) of using caching in web applications?</p>
+<p><strong>Options:</strong>
+- Reduced latency and faster response times
+- Lower server load and reduced bandwidth usage
+- Improved scalability and better handling of traffic spikes
+- Enhanced security and protection against DDoS attacks</p>
+<h2 id="q13-640653816162-mcq-30-marks">Q13 · <code>640653816162</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>class Twowheeler { constructor(name){ this.name=name; this.gear=4; this.seating=2; }
+get description(){ return `${this.name} has ${this.gear} gear and has ${this.engine} engine.` } }
+class Moped extends Twowheeler { constructor(name){ super(name); this.engine='4 stroke' } }
+let myBike = new Twowheeler(&quot;Discover&quot;); let myDrive = new Moped(&quot;Activa&quot;)
+console.log(myDrive.description); console.log(myBike.description)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Discover...4 stroke / Activa...4 stroke</li>
+<li>Activa...undefined / Discover...4 stroke</li>
+<li>Activa...4 stroke / Discover...undefined</li>
+<li>Discover...undefined / Activa...undefined</li>
+</ul>
+<h2 id="q14-640653816164-mcq-30-marks">Q14 · <code>640653816164</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>function parentFunc(name){ return { sayHello:()=&gt;&quot;Hi! &quot;+name, sayBye:()=&gt;&quot;Bye! &quot;+name, changeName:(newName)=&gt;{ name=newName; } }; }
+const arpan = parentFunc(&quot;Arpan&quot;); const beli = parentFunc(&quot;Beli&quot;)
+console.log(arpan.sayHello()); console.log(beli.sayHello()); arpan.changeName(&quot;Beli&quot;); console.log(arpan.sayBye());
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Hi! Arpan / Bye! Arpan</li>
+<li>Hi! Arpan / Hi! Beli / Bye! Beli</li>
+<li>Hi! Arpan / reference Error</li>
+<li>Reference Error</li>
+</ul>
+<h2 id="q15-640653816165-mcq-30-marks">Q15 · <code>640653816165</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>(two Vue instances #app1 (title App No 1, computed greetings) and #app2 (title App No 2); #app1 nested inside #app2 element)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>App No 1 / hello from App No 1 / App No 2 / hello from App No 2</li>
+<li>App No 2 / hello from App No 2</li>
+<li>App No 1 / App No 2</li>
+<li>Blank page</li>
+</ul>
+<h2 id="q16-640653816168-mcq-30-marks">Q16 · <code>640653816168</code> · MCQ · 3.0 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>var var1 = 25; var var2 = 35;
+const myObj = { var2:45, var1:35, ObjFunc:function(var3){ let var4 = var3**2; return 10 + this.var2 + var4; } }
+let m = myObj.ObjFunc; console.log(m.bind()(5)); console.log(m.call(myObj,6))
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>70 / 81</li>
+<li>70 / 91</li>
+<li>80 / 81</li>
+<li>80 / 91</li>
+</ul>
+<h2 id="q17-640653816178-mcq-30-marks">Q17 · <code>640653816178</code> · MCQ · 3.0 marks</h2>
+<p>What does the “finally” method do in promises?</p>
+<p><strong>Options:</strong>
+- The method is executed when the promise is fulfilled.
+- The method is executed when the promise is rejected.
+- The method is executed regardless of whether the promise is fulfilled orrejected.
+- The method can not be used with promises at all.</p>
+<h2 id="q18-640653816181-mcq-30-marks">Q18 · <code>640653816181</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following statements regarding Celery task execution is correct?</p>
+<p><strong>Options:</strong>
+- Celery tasks are executed synchronously by default.
+- Celery tasks can only be executed on the same machine where the flaskapplication is running.
+- Celery tasks are executed asynchronously by default.
+- Celery tasks can only be executed once they are defined as part of a flaskapplication.</p>
+<h2 id="q19-640653816182-mcq-30-marks">Q19 · <code>640653816182</code> · MCQ · 3.0 marks</h2>
+<p>What is the primary objective of using a message broker?</p>
+<p><strong>Options:</strong>
+- Eliminates the need for network communication
+- Decouples producers and consumers
+- Decreases CPU utilization
+- Reduces the need for data serialization</p>
+<h2 id="q20-640653816183-mcq-30-marks">Q20 · <code>640653816183</code> · MCQ · 3.0 marks</h2>
+<p>In a message broker system, what does the term "topic" refer to?</p>
+<p><strong>Options:</strong>
+- The physical location where messages are stored.
+- A unique identifier for a message.
+- The process of encrypting messages.
+- A channel to which messages are published.</p>
+<h2 id="q21-640653816184-mcq-30-marks">Q21 · <code>640653816184</code> · MCQ · 3.0 marks</h2>
+<p>What is the primary advantage of using server-sent events over traditional polling?</p>
+<p><strong>Options:</strong>
+- Server-sent events support bidirectional communication.
+- Server-sent events can handle larger payloads.
+- Server-sent events reduce server load by eliminating the need for frequentpolling.
+- Server-sent events provide lower latency compared to polling.</p>
+<h2 id="q22-640653816185-mcq-30-marks">Q22 · <code>640653816185</code> · MCQ · 3.0 marks</h2>
+<p>Which of the following protocols is commonly used for implementing polling?</p>
+<p><strong>Options:</strong>
+- HTTP
+- Web Sockets
+- FTP
+- SMTP</p>
+<h2 id="q23-640653816187-mcq-30-marks">Q23 · <code>640653816187</code> · MCQ · 3.0 marks</h2>
+<p>What is the primary purpose of CORS in web security?</p>
+<p><strong>Options:</strong>
+- To prevent unauthorized access to confidential data
+- To mitigate cross-site scripting (XSS) attacks
+- To enable controlled access to resources from different origins
+- To protect against SQL injection attacks</p>
+<h2 id="q24-640653816163-mcq-45-marks">Q24 · <code>640653816163</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>let Obj1 = { subject:'Mechanics', stream:'Physics' }; let Obj2 = Obj1; let Obj3 = {};
+for (let key in Obj1){ Obj3[key] = Obj1[key]; }
+Obj2.subject = 'Thermodynamics'; Obj3.stream = 'Chemistry'; console.log(Obj1)
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>{ subject:'Thermodynamics', stream:'Physics' }</li>
+<li>{ subject:'Mechanics', stream:'Chemistry' }</li>
+<li>{ subject:'Mechanics', stream:'Physics' }</li>
+<li>{ subject:'Thermodynamics', stream:'Chemistry' }</li>
+</ul>
+<h2 id="q25-640653816167-mcq-45-marks">Q25 · <code>640653816167</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>var var1 = 25;
+const exObj = { var2:45, var1:35, inObj:{ var1:45, inObjFunc:()=&gt;{ return &quot;Value is &quot; + this.var1; } },
+exObjFunc:function(){ let var2 = 10; return &quot;Value is &quot; + this.var2; } }
+let x = exObj.inObj; console.log(x.inObjFunc()); console.log(exObj.exObjFunc())
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Value is 35 / Value is 10</li>
+<li>Value is 35 / Value is 45</li>
+<li>Value is 25 / Value is 10</li>
+<li>Value is 25 / Value is 45</li>
+</ul>
+<h2 id="q26-640653816171-mcq-45-marks">Q26 · <code>640653816171</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Uncaught ReferenceError: extFunc is not defined / Now I am loaded, let's support / callback function executed here / loaded and run from external script</li>
+</ul>
+<p><em>Note: only this option was visible; scenario = dynamic script + immediate extFunc() call (throws first).</em></p>
+<h2 id="q27-640653816173-mcq-45-marks">Q27 · <code>640653816173</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- arr
+- Array
+- this
+- The program cannot yield such an output, and is implemented in a wrong way.</p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>Array.prototype.double = function(arr){ const res = []; for (let i=0; i&lt;placeholder.length; i++) res.push(placeholder[i]*2); return res; }
+const arr = [2, 3, 7, 8]; console.log(arr.double()); // target output [4, 6, 14, 16]
+</code></pre>
+<h2 id="q28-640653816177-mcq-45-marks">Q28 · <code>640653816177</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><em>Note: question content was blank in render (lazy-load failure); unrecoverable.</em></p>
+<h2 id="q29-640653816179-mcq-45-marks">Q29 · <code>640653816179</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Code / figure:</strong></p>
+<pre><code>const cartModule = { state:{ items:[] }, mutations:{ addItem(state, item){ state.items.push(item); } },
+actions:{ async addToCart({ commit }, item){ /* TODO */ } } }
+</code></pre>
+<p><strong>Options:</strong></p>
+<ul>
+<li>addToCart({ commit }, item) { commit('addItem', item); }</li>
+<li>addToCart({ state, commit }, item) { const existingItem = state.items.find(i =&gt; i.id === item.id); if (existingItem) { commit('addItem', existingItem); } else { commit('addItem', item); } }</li>
+<li>addToCart({ commit }, item) { commit('addItem', { ...item }); }</li>
+<li>All of these</li>
+</ul>
+<h2 id="q30-640653816188-mcq-45-marks">Q30 · <code>640653816188</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><em>Note: question content was blank in render; continuation page missing; unrecoverable.</em></p>
+<h2 id="q31-640653816189-mcq-45-marks">Q31 · <code>640653816189</code> · MCQ · 4.5 marks</h2>
+<p><em>[stem on image — see EXTRA below]</em></p>
+<p><strong>Options:</strong>
+- An error indicating that the id prop is not defined.
+- User ProfileUser ID: Jyoti
+- An error indicating that the data object is not defined.
+- An error indicating that the route does not exist.
+- User ProfileUser ID:</p>
+<h2 id="q32-640653816176-msq-20-marks">Q32 · <code>640653816176</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following is/are built in Vue.js lifecycle hook(s)?</p>
+<p><strong>Options:</strong>
+- beforeLoad
+- preUpdate
+- mounted
+- updated</p>
+<h2 id="q33-640653816190-msq-20-marks">Q33 · <code>640653816190</code> · MSQ · 2.0 marks</h2>
+<p>Which of the following JavaScript method(s) is/are used to remove data from the session storage?</p>
+<p><strong>Options:</strong>
+- clear()
+- removeItem()
+- deleteItem()
+- unSet()</p></article>
+<nav class="prevnext"><a class="pn prev" href="paper-mad2-04-2023-sep03-iit.html">← MAD2 — 2023 Sep03  IIT</a> <a class="pn next" href="paper-mad2-06-2024-dec22-iit.html">MAD2 — 2024 Dec22  IIT →</a></nav>
+<footer class="foot">ENDTERM EXAM-KIT Â· 27 papers Â· 1,100+ questions Â· exact numbers â†’ vault Â· new numbers â†’ engine</footer>
+</main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -69,6 +69,7 @@ PAGE_TMPL = """<!DOCTYPE html>
 <div class="scrim" id="scrim"></div>
 <main class="content">
 <div class="crumbs">{{SECTION}} / {{TITLE}}</div>
+{{TOOLS}}
 {{ONPAGE}}
 <article class="doc">{{CONTENT}}</article>
 <nav class="prevnext">{{PREV}} {{NEXT}}</nav>
@@ -125,15 +126,16 @@ def build():
     landing = open(os.path.join(TOOLS, "landing.fragment.html"), encoding="utf-8").read()
     by_out = {p[0]: p for p in PAGES}
     index = {"index.html": ("ENDTERM EXAM-KIT", "Home")}
-    search_idx = [{"t": "Home â€” ENDTERM EXAM-KIT", "u": "index.html"}]
+    search_idx = [{"t": "Home - ENDTERM EXAM-KIT", "u": "index.html"}]
     nav = nav_html()
 
-    def emit(out, title, section, content):
+    def emit(out, title, section, content, tools=""):
         i = CHAIN.index(out)
-        prev = '<a class="pn prev" href="%s">â† %s</a>' % (CHAIN[i - 1], short(CHAIN[i - 1])) if i > 0 else "<span></span>"
-        nxt = '<a class="pn next" href="%s">%s â†’</a>' % (CHAIN[i + 1], short(CHAIN[i + 1])) if i < len(CHAIN) - 1 else "<span></span>"
+        prev = '<a class="pn prev" href="%s">← %s</a>' % (CHAIN[i - 1], short(CHAIN[i - 1])) if i > 0 else "<span></span>"
+        nxt = '<a class="pn next" href="%s">%s →</a>' % (CHAIN[i + 1], short(CHAIN[i + 1])) if i < len(CHAIN) - 1 else "<span></span>"
         page = PAGE_TMPL.replace("{{TITLE}}", title).replace("{{SECTION}}", section)
         page = page.replace("{{NAV}}", nav).replace("{{CONTENT}}", content)
+        page = page.replace("{{TOOLS}}", tools)
         page = page.replace("{{ONPAGE}}", onpage_box(content)).replace("{{PREV}}", prev).replace("{{NEXT}}", nxt)
         open(os.path.join(OUT, out), "w", encoding="utf-8").write(page)
 
@@ -142,6 +144,64 @@ def build():
             return "Home"
         return by_out[out][1]
 
+    # ---- real papers extension ----
+    import zipfile
+    PAPER_PAGES = []
+    for subj in ["BA", "MAD2", "MLP"]:
+        for fn in sorted(os.listdir(os.path.join(ROOT, "papers", subj))):
+            if not fn.endswith(".md"):
+                continue
+            first = open(os.path.join(ROOT, "papers", subj, fn), encoding="utf-8").readline().strip("# \n")[:64]
+            out = "paper-%s-%s.html" % (subj.lower(), fn[:-3])
+            PAPER_PAGES.append((out, first, "Papers", "%d questions" % 0, "paper", "%s/%s" % (subj, fn)))
+    for _o, _t, _s, _b, _k, _sr in PAPER_PAGES:
+        PAGES.append((_o, _t, _s, _b, _k, _sr))
+    PAGES.append(("papers-hub.html", "Real Papers Hub", "Papers", "All 32 papers", "papershub", ""))
+    PAGES.append(("all-papers.html", "All Papers - Print / PDF", "Papers", "One printable bundle", "allpapers", ""))
+    for _o, _t, _s, _b, _k, _sr in PAPER_PAGES:
+        CHAIN.append(_o)
+    CHAIN.append("papers-hub.html")
+    CHAIN.append("all-papers.html")
+    NAV_SECTIONS.append(("Real Papers", [("papers-hub.html", "All Papers Hub"),
+                                         ("all-papers.html", "Print All → PDF")] +
+                                        [(p[0], p[1][:42]) for p in PAPER_PAGES]))
+    nav = nav_html()
+
+    def paper_tools(mdfile):
+        return ('<div class="tools"><a class="btn2" href="papers/%s">⬇ Download .md</a> '
+                '<a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save as PDF</a></div>') % mdfile
+
+    def papers_hub_html():
+        parts = ['<div class="hubhead"><h1>📚 Real Papers - all 32</h1><p>Every official practice paper: questions + options + tables + code + paper keys. '
+                 '<a href="papers/all-papers.zip"><b>⬇ Download ALL (.md zip)</b></a> · '
+                 '<a href="all-papers.html"><b>🖨 Print all → single PDF</b></a></p></div>']
+        for subj in ["BA", "MAD2", "MLP"]:
+            parts.append("<h2>%s</h2>" % {"BA": "📊 Business Analytics (11)", "MAD2": "🟦 MAD2 (11)", "MLP": "🟣 ML Practice (10)"}[subj])
+            parts.append('<div class="cards">')
+            for p in PAPER_PAGES:
+                if ("-%s-" % subj.lower()) not in p[0] and not p[0].startswith("paper-%s-" % subj.lower()):
+                    continue
+                mdfile = p[5].split("/")[1]
+                parts.append(CARD_TMPL.format(url=p[0], title=p[1][:60],
+                            desc='<a href="papers/%s">⬇ .md</a>' % mdfile))
+            parts.append("</div>")
+        return "".join(parts)
+
+    def allpapers_html():
+        parts = ['<div class="tools"><a class="btn2" href="#" onclick="window.print();return false;">🖨 Print / Save whole bundle as PDF</a> '
+                 '<a class="btn2" href="papers/all-papers.zip">⬇ .md zip</a></div>']
+        for p in PAPER_PAGES:
+            subj, fn = p[5].split("/")
+            text = open(os.path.join(ROOT, "papers", subj, fn), encoding="utf-8").read()
+            h = markdown.markdown(text, extensions=["extra", "toc", "sane_lists"])
+            h = h.replace("<table>", '<div class="table-scroll"><table>').replace("</table>", "</table></div>")
+            parts.append('<section class="paperbundle"><div class="pbreak"></div>' + h + "</section>")
+        return "".join(parts)
+
+    for _o, _t, _s, _b, _k, _sr in PAPER_PAGES:
+        by_out[_o] = (_o, _t, _s, _b, _k, _sr)
+    by_out["papers-hub.html"] = ("papers-hub.html", "Real Papers Hub", "Papers", "", "", "")
+    by_out["all-papers.html"] = ("all-papers.html", "All Papers - Print / PDF", "Papers", "", "", "")
     emit("index.html", "ENDTERM EXAM-KIT", "Home", landing)
     for out, title, section, blurb, kind, src in PAGES:
         if kind == "md":
@@ -151,14 +211,32 @@ def build():
         elif kind == "hub":
             cards = "".join(CARD_TMPL.format(url=p[0], title=p[1], desc=p[3])
                             for p in PAGES if p[2] == src and p[4] in ("md", "fragment", "graft"))
-            descs = {"BA": "Business Analytics â€” 45 marks. Engines, ratta, sheets, 219 solved numerics.",
-                     "MAD2": "Modern App Dev II â€” 100 marks. JS, Vue, Web engines, MCQ master, MSQ playbook.",
-                     "MLP": "ML Practice â€” 100 marks. sklearn engines, ratta, verified answers, predicted paper."}
+            descs = {"BA": "Business Analytics - 45 marks. Engines, ratta, sheets, 219 solved numerics.",
+                     "MAD2": "Modern App Dev II - 100 marks. JS, Vue, Web engines, MCQ master, MSQ playbook.",
+                     "MLP": "ML Practice - 100 marks. sklearn engines, ratta, verified answers, predicted paper."}
             h1 = {"BA": "ðŸ“Š Business Analytics", "MAD2": "ðŸŸ¦ Modern App Dev II", "MLP": "ðŸŸ£ ML Practice"}[src]
             emit(out, title, section, HUB_TMPL.replace("{{H1}}", h1).replace("{{DESC}}", descs[src]).replace("{{CARDS}}", cards))
         elif kind == "graft":
             graft_mlp(out, title, section)
-        search_idx.append({"t": "%s â€” %s" % (title, section), "u": out})
+        elif kind == "paper":
+            subj, fn = src.split("/")
+            emit(out, title, section, md_to_html("papers/%s/%s" % (subj, fn)),
+                 tools=paper_tools(fn))
+        elif kind == "papershub":
+            emit(out, title, section, papers_hub_html())
+        elif kind == "allpapers":
+            emit(out, title, section, allpapers_html())
+        search_idx.append({"t": "%s - %s" % (title, section), "u": out})
+    import shutil as _sh
+    pdir = os.path.join(OUT, "papers")
+    os.makedirs(pdir, exist_ok=True)
+    zf = zipfile.ZipFile(os.path.join(pdir, "all-papers.zip"), "w", zipfile.ZIP_DEFLATED)
+    for subj in ["BA", "MAD2", "MLP"]:
+        for fn in sorted(os.listdir(os.path.join(ROOT, "papers", subj))):
+            if fn.endswith(".md"):
+                _sh.copy(os.path.join(ROOT, "papers", subj, fn), os.path.join(pdir, fn))
+                zf.write(os.path.join(ROOT, "papers", subj, fn), "%s/%s" % (subj, fn))
+    zf.close()
     json.dump(search_idx, open(os.path.join(ASSETS, "search-index.json"), "w", encoding="utf-8"))
     print("built pages:", len(CHAIN), "| search entries:", len(search_idx))
 
